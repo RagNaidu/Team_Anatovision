@@ -1,0 +1,249 @@
+LECTURE NOTES WITH COMMENTS
+AI review completed 1 October 2026
+All ten lectures were read. Highlights and Word comments identify possible factual errors, misleading mechanisms and material omissions. These are proposals for faculty review, not certified corrections. No original wording has been replaced.
+Workflow: upload these files to Lecture Notes (With Comments). Professor reviews suggestions, edits accepted changes, and places clean approved copies in Lecture Notes (Revised). Only those copies should feed the student AI.
+Open in Microsoft Word and use Review > Show Comments. Yellow highlight marks the original paragraph.
+
+Lecture 01 — Vertebral Column: 7 findings
+Lecture_01_-_The_Vertebral_Column_-_Notes_-_With_Comments.docx
+F-01 | paragraph 258 | Disease classification
+Issue: The notes describe ankylosing spondylitis as a form of rheumatoid arthritis. The clinical reference identifies it as axial spondyloarthritis, a separate inflammatory arthritis. Faculty should review this classification.
+Suggestion: Ankylosing spondylitis is an inflammatory arthritis within axial spondyloarthritis. It can cause spinal stiffness and, in advanced disease, vertebral fusion.
+Evidence: https://rheumatology.org/patients/spondyloarthritis
+Evidence: https://www.niams.nih.gov/health-topics/ankylosing-spondylitis
+F-02 | paragraph 58 | Laminectomy terminology
+Issue: The notes use “transection.” The clinical reference describes removal of the lamina; cutting across it alone is an imprecise definition.
+Suggestion: Laminectomy is surgical removal of some or all of the lamina to create space in the spinal canal and relieve pressure on the spinal cord or nerve roots.
+Evidence: https://medlineplus.gov/ency/article/007389.htm
+F-03 | paragraph 265 | Tectorial membrane attachment
+Issue: The notes identify the atlas as the inferior attachment. Anatomical research reports attachment to the body of the axis (C2) and the cranial base. This proposed correction requires faculty review.
+Suggestion: The tectorial membrane continues superiorly from the posterior longitudinal ligament, attaching to the posterior body of the axis (C2) and the cranial base of the occiput.
+Evidence: https://pubmed.ncbi.nlm.nih.gov/16617439/
+F-04 | paragraph 125 | Hangman's fracture: neurological risk
+Issue: Typical hangman fractures often widen the canal; spinal cord injury is uncommon rather than common. Atypical patterns can cause neurological injury.
+Suggestion: Hangman's fracture is a traumatic fracture of the C2 pars region. Neurological injury is uncommon in typical patterns, but can occur, especially in atypical or unstable injuries.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC4836940/
+F-05 | paragraph 155 | Ilium versus ileum
+Issue: The pelvic bone is the ilium; ileum names part of the small intestine.
+Suggestion: Triangular shape – due to inferolateral dissipation of force through auricular surface to ilium
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-pelvis-and-perineum/
+F-06 | paragraph 157 | Ilium versus ileum
+Issue: The pelvic bone is the ilium; ileum names part of the small intestine.
+Suggestion: Auricular surface – roughened lateral surface for articulation with ilium of hip
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-pelvis-and-perineum/
+F-07 | paragraph 161 | Sacral foramina transmit rami
+Issue: These foramina transmit spinal nerve rami, after roots have united.
+Suggestion: Four pairs of anterior and posterior sacral foramina transmit ventral and dorsal rami, respectively.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-pelvis-and-perineum/
+
+Lecture 02 — Muscles of the Back: 3 findings
+Lecture_02_-_Muscles_of_the_Back_-_Notes_-_With_Comments.docx
+F-08 | paragraph 95 | Serratus posterior inferior attachment
+Issue: The standard attachment is ribs 9–12; rib 8 should be checked for a stated variant.
+Suggestion: Inferior borders of ribs 9–12, near their angles.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-back-region/
+F-09 | paragraph 114 | Unilateral versus bilateral splenius action
+Issue: The ipsilateral action belongs to unilateral contraction, not bilateral contraction.
+Suggestion: Unilateral contraction produces ipsilateral lateral flexion and rotation of the head and neck.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-back-region/
+F-10 | paragraph 199 | Pelvic landmark terminology
+Issue: The posterior superior iliac spine is on the ilium, not the ileum.
+Suggestion: Location of the posterior superior iliac spine (on the ilium).
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-pelvis-and-perineum/
+
+Lecture 03 — Nerves, Spinal Cord, and Meninges: 7 findings
+Lecture_03_-_Nerves_Spinal_Cord_and_Meninges_-_Notes_-_With_Comments.docx
+F-11 | paragraph 20 | CNS versus PNS myelination
+Issue: The definition incorrectly generalizes Schwann-cell myelination to all axons.
+Suggestion: Myelin is formed by Schwann cells in the PNS and oligodendrocytes in the CNS.
+Evidence: https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue
+F-12 | paragraph 97 | Lumbar nerve labels
+Issue: C1–C8 identifies cervical nerves, not the five lumbar pairs.
+Suggestion: 5 lumbar pairs (L1–L5).
+Evidence: https://nba.uth.tmc.edu/neuroscience/m/s2/chapter03.html
+F-13 | paragraph 170 | Epidural space boundaries
+Issue: External to the cord also includes intradural spaces; the epidural boundary must specify dura.
+Suggestion: The spinal epidural space lies between the spinal dura mater and vertebral canal wall; it contains fat, connective tissue and venous plexuses.
+Evidence: https://openstax.org/books/anatomy-and-physiology-2e/pages/13-3-circulation-and-the-central-nervous-system
+F-14 | paragraph 188 | CSF circulation versus reabsorption
+Issue: Sulci contain subarachnoid CSF; they are not its venous reabsorption destination.
+Suggestion: CSF circulates in the subarachnoid space, including sulci, and is reabsorbed through arachnoid granulations into dural venous sinuses; other clearance pathways also contribute.
+Evidence: https://openstax.org/books/anatomy-and-physiology-2e/pages/13-3-circulation-and-the-central-nervous-system
+F-50 | paragraph 89 | Thoracolumbar lateral horn extent
+Issue: The sympathetic lateral horn extends across thoracic segments, not just lower thoracic levels.
+Suggestion: The prominent sympathetic lateral horn is classically described at T1–L2 spinal cord segments; exact boundaries vary among descriptions.
+Evidence: https://www.ncbi.nlm.nih.gov/sites/books/NBK545206/
+F-51 | paragraph 163 | Continuous spinal catheterization is possible
+Issue: An intrathecal catheter can be used for continuous spinal anesthesia; inability to catheterize is incorrect.
+Suggestion: Single-shot spinal anesthesia is common; continuous spinal anesthesia is also possible using an intrathecal catheter in selected settings.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC9463624/
+F-52 | paragraph 165 | Hangover headache mechanism needs evidence
+Issue: The proposed CSF-loss and dural-sagging explanation is not established here. The cited agency describes multiple contributing mechanisms.
+Suggestion: Alcohol hangover is multifactorial; dehydration, inflammation and other effects can contribute. Do not equate ordinary hangover headache with CSF-leak headache without supporting evidence.
+Evidence: https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/hangovers
+
+Lecture 04 — The Shoulder: 3 findings
+Lecture_04_-_The_Shoulder_-_Notes_-_With_Comments.docx
+F-15 | paragraph 27 | Clavicular ossification pattern
+Issue: The medial/lateral two-thirds split reverses and oversimplifies clavicular development.
+Suggestion: The clavicular shaft develops predominantly by intramembranous ossification; cartilaginous end regions undergo endochondral ossification. Its curvature and cross-sectional geometry contribute to fracture vulnerability.
+Evidence: https://actaorthop.org/actao/article/view/22403
+F-16 | paragraph 130 | Missing posterior deltoid origin
+Issue: The origin omits the scapular spine and thus the posterior fibers.
+Suggestion: Origin: lateral third of clavicle, acromion and spine of scapula.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/
+F-17 | paragraph 137 | Gravity and initiation of abduction
+Issue: Gravity does not initiate upward arm abduction in an upright person; it opposes it.
+Suggestion: Supraspinatus assists initiation of arm abduction, with deltoid contributing to abduction. In an upright person gravity opposes lifting the arm.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/
+
+Lecture 05 — The Axilla: 2 findings
+Lecture_05_-_The_Axilla_-_Notes_-_With_Comments.docx
+F-18 | paragraph 86 | Scalene interval of plexus roots
+Issue: The standard interval is between anterior and middle scalene.
+Suggestion: The brachial plexus is formed chiefly by ventral rami C5–T1, emerging between anterior and middle scalene muscles.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC8480370/
+F-19 | paragraph 128 | Subscapular nerve root values
+Issue: Assigning C5 alone and C6 alone omits the usual shared root contributions.
+Suggestion: Upper and lower subscapular nerves usually carry C5–C6 fibers; contributions can vary.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-upper-limb/
+
+Lecture 06 — The Brachium: 1 findings
+Lecture_06_-_The_Brachium_-_Notes_-_With_Comments.docx
+F-20 | paragraph 131 | Median nerve in cubital fossa
+Issue: The median nerve lies medial to the artery, rather than occupying its middle position.
+Suggestion: The median nerve passes through the medial cubital fossa, medial to the brachial artery.
+Evidence: https://anatomy.ttuhscep.edu/schemes/axilla_ans.html
+
+Lecture 07 — The Antebrachium: 10 findings
+Lecture_07_-_The_Antebrachium_-_Notes_-_With_Comments.docx
+F-21 | paragraph 23 | Distal ulna and the wrist
+Issue: The ulnar head articulates with the distal radius, while an articular disc separates it from the carpus.
+Suggestion: The ulnar head participates in the distal radioulnar joint; the TFCC separates it from the carpal bones.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC9322592/
+F-22 | paragraph 39 | Wrist flexors and the carpal tunnel
+Issue: The rule needs an FCR exception and must distinguish retinacular structures.
+Suggestion: FDS, FDP and FPL tendons traverse the carpal tunnel. FCR usually travels in a separate fibro-osseous tunnel, rather than with them.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC8569728/
+F-23 | paragraph 93 | FDP action and joint types
+Issue: FDP does not flex every hand joint, and the wrist is not a hinge joint.
+Suggestion: FDP flexes digits 2–5, especially their distal interphalangeal joints, and assists wrist flexion.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/
+F-24 | paragraph 116 | Brachioradialis insertion
+Issue: The named insertion should be lateral, not anterior.
+Suggestion: Brachioradialis inserts on the lateral distal radius near the styloid process.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/
+F-25 | paragraph 137 | Extensor digiti minimi insertion
+Issue: The extensor expansion belongs to the fifth digit, not the metacarpal bone.
+Suggestion: Inserts into the extensor expansion of the fifth digit.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/
+F-26 | paragraph 152 | Extensor indicis origin
+Issue: This muscle arises from distal ulna, not radius.
+Suggestion: Origin: posterior distal ulna and adjacent interosseous membrane.
+Evidence: https://anatomy.ttuhscep.edu/anatomytables/muscles_alpha.html
+F-27 | paragraph 166 | Extensor pollicis brevis action
+Issue: Standard EPB insertion/action primarily extends the MCP joint; IP extension is principally EPL. Variants exist.
+Suggestion: EPB primarily extends the thumb at its MCP joint; EPL is the principal IP extensor.
+Evidence: https://anatomy.ttuhscep.edu/anatomytables/muscles_alpha.html
+F-28 | paragraph 172 | Brachial artery relative to biceps tendon
+Issue: The artery is medial to the tendon rather than superficial to it.
+Suggestion: The brachial artery lies medial to the biceps tendon and divides into radial and ulnar arteries in the cubital fossa.
+Evidence: https://anatomy.ttuhscep.edu/schemes/axilla_ans.html
+F-29 | paragraph 257 | PIN palsy versus complete wrist drop
+Issue: Isolated PIN dysfunction chiefly impairs finger/thumb extension; wrist extension can remain, with radial deviation.
+Suggestion: Compression affecting the posterior interosseous nerve may cause finger and thumb extension weakness without cutaneous sensory loss. Wrist extension is often preserved or weakened with radial deviation, rather than complete wrist drop.
+Evidence: https://pubmed.ncbi.nlm.nih.gov/2172858/
+F-30 | paragraph 258 | Arm versus forearm compartment
+Issue: The PIN supplies forearm extensors; arm names the brachium.
+Suggestion: Supplies muscles of the posterior compartment of the forearm.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-upper-limb/
+
+Lecture 08 — The Lower Limb: 11 findings
+Lecture_08_-_Anterior_and_Medial_Thigh_-_Notes_-_With_Comments.docx
+F-31 | paragraph 90 | Ilium versus ileum
+Issue: The intended pelvic bone is the ilium.
+Suggestion: Ilium
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-pelvis-and-perineum/
+F-32 | paragraph 114 | Fovea capitis terminology
+Issue: Fovea centralis names a retinal structure; the femoral pit is fovea capitis.
+Suggestion: The fovea capitis on the femoral head provides attachment for the ligament of the head of the femur.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/bone-tables/bones-of-the-lower-limb/
+F-33 | paragraph 115 | Adult femoral head blood supply
+Issue: This overstates the usual adult contribution of the ligament artery; the main supply travels along the neck.
+Suggestion: In adults, the principal femoral head supply comes from retinacular vessels, chiefly branches of the medial circumflex femoral artery. Their disruption can cause avascular necrosis; the ligament artery is not usually the dominant supply.
+Evidence: https://pubmed.ncbi.nlm.nih.gov/10963165/
+F-34 | paragraph 150 | Adult femoral head blood supply
+Issue: This overstates the usual adult contribution of the ligament artery; the main supply travels along the neck.
+Suggestion: In adults, the principal femoral head supply comes from retinacular vessels, chiefly branches of the medial circumflex femoral artery. Their disruption can cause avascular necrosis; the ligament artery is not usually the dominant supply.
+Evidence: https://pubmed.ncbi.nlm.nih.gov/10963165/
+F-35 | paragraph 191 | Psoas minor does not join iliopsoas insertion
+Issue: The preceding list includes psoas minor, whose insertion differs.
+Suggestion: Psoas major and iliacus join the iliopsoas tendon to the lesser trochanter. Psoas minor, when present, inserts near the iliopubic eminence and pectineal region.
+Evidence: https://www.elsevier.com/resources/anatomy/muscular-system/muscles-of-lower-limb/psoas-minor/21724
+F-36 | paragraph 219 | Adductor magnus has two origins
+Issue: This describes the adductor part but omits the hamstring part.
+Suggestion: Adductor magnus: adductor part originates from ischiopubic rami; hamstring part from the ischial tuberosity.
+Evidence: https://anatomy.ttuhscep.edu/anatomytables/muscles_alpha.html
+F-37 | paragraph 232 | Superior femoral triangle boundary
+Issue: The superior boundary is the inguinal ligament, not the canal.
+Suggestion: Superior boundary: inguinal ligament.
+Evidence: https://www.ncbi.nlm.nih.gov/books/NBK538501/
+F-38 | paragraph 249 | Adductor canal terminology
+Issue: The named passage is the adductor canal.
+Suggestion: The saphenous nerve accompanies femoral vessels through the adductor canal, then leaves before the adductor hiatus.
+Evidence: https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh.html
+F-39 | paragraph 256 | Femoral artery becomes popliteal
+Issue: The artery does not become a tibial artery at the hiatus.
+Suggestion: After passing through the adductor hiatus, the femoral artery continues as the popliteal artery.
+Evidence: https://www.ncbi.nlm.nih.gov/books/NBK537125/
+F-40 | paragraph 262 | Circumflex artery contribution
+Issue: The lateral transverse branch should not be presented as the major femoral head supply.
+Suggestion: The medial circumflex femoral artery provides the principal adult femoral head supply. The lateral circumflex transverse branch contributes to regional anastomoses.
+Evidence: https://pubmed.ncbi.nlm.nih.gov/10963165/
+F-41 | paragraph 273 | Femoral canal accommodates vein
+Issue: This switches the vein to the artery.
+Suggestion: The femoral canal permits expansion of the femoral vein during increased venous return.
+Evidence: https://www.ncbi.nlm.nih.gov/sites/books/NBK482388/
+
+Lecture 09 — The Hand: 8 findings
+Lecture_09_-_The_Hand_-_Notes_-_With_Comments.docx
+F-42 | paragraph 27 | Typical punching fracture
+Issue: The classic boxer fracture concerns the fifth metacarpal neck, not a special third-metacarpal susceptibility.
+Suggestion: Punching a hard object commonly causes a fifth metacarpal neck (boxer) fracture; other metacarpals may also be injured.
+Evidence: https://www.orthoinfo.org/diseases--conditions/hand-fractures/
+F-43 | paragraph 56 | FCR retinacular relationship
+Issue: The superficial rule needs an exception for the usual separate FCR tunnel.
+Suggestion: FCU is superficial to the flexor retinaculum; FCR usually passes through its own fibro-osseous tunnel, separate from the carpal tunnel.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC8569728/
+F-44 | paragraph 121 | Hypothenar compartment
+Issue: Opponens digiti minimi belongs to the hypothenar, not thenar, compartment.
+Suggestion: Deep portion of the hypothenar eminence.
+Evidence: https://anatomy.ttuhscep.edu/anatomytables/muscles_alpha.html
+F-45 | paragraph 168 | De Quervain versus trigger finger
+Issue: These are distinct conditions, involving different tendon tunnels.
+Suggestion: De Quervain tenosynovitis affects APL and EPB in the first dorsal wrist compartment. Trigger finger involves digital flexor tendons, usually at the A1 pulley.
+Evidence: https://www.orthoinfo.org/diseases--conditions/de-quervains-tendinosis/
+Evidence: https://www.orthoinfo.org/diseases--conditions/trigger-finger/
+F-46 | paragraph 190 | Primary versus secondary Raynaud
+Issue: Idiopathic applies to primary disease; Raynaud can also be secondary.
+Suggestion: Raynaud phenomenon causes episodic digital vasospasm, often triggered by cold or stress. Primary disease is idiopathic; secondary disease is associated with another condition.
+Evidence: https://www.niams.nih.gov/health-topics/raynauds-phenomenon
+F-47 | paragraph 219 | Ulnar lumbrical motor branch
+Issue: Placed under superficial-branch discussion, this wrongly implies superficial supply.
+Suggestion: Lumbricals 3 and 4 receive motor supply from the deep branch of the ulnar nerve.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-upper-limb/
+F-48 | paragraph 223 | Superficial radial nerve distribution
+Issue: The branch passes to the dorsolateral hand, not into the palm superficial to palmar fascia.
+Suggestion: The superficial radial nerve passes to the dorsolateral wrist and hand, supplying dorsal cutaneous branches.
+Evidence: https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-upper-limb/
+F-53 | paragraph 207 | Median neuropathy is not inevitably irreversible
+Issue: The absolute claim ignores lesion location, severity and recovery after treatment; carpal tunnel symptoms can improve.
+Suggestion: Median nerve dysfunction depends on lesion location and severity. Thenar weakness or atrophy may occur; recovery varies, and persistent severe compression can cause permanent damage.
+Evidence: https://www.orthoinfo.org/diseases--conditions/carpal-tunnel-syndrome/
+
+Lecture 10 — The Leg: 1 findings
+Lecture_10_-_Anterior_and_Lateral_Leg_-_Notes_-_With_Comments.docx
+F-49 | paragraph 139 | Fifth metatarsal avulsion mechanism
+Issue: Plantarflexion alone misses the usual inversion mechanism.
+Suggestion: Inversion injury, often with plantarflexion, may avulse the fifth metatarsal tuberosity through traction from fibularis brevis and lateral plantar fascia.
+Evidence: https://pmc.ncbi.nlm.nih.gov/articles/PMC8788151/

@@ -1,0 +1,6 @@
+# Optional for local Q&A after notes are approved. Never commit real values.
+OPENAI_API_KEY=""
+OPENAI_MODEL="gpt-4.1"
+# Used by production-preview; normal local development bypasses the reviewer gate.
+REVIEW_USERNAME="reviewer"
+REVIEW_PASSWORD="replace-with-a-long-random-password"
