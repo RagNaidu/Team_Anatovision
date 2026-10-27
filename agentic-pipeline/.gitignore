@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+.streamlit/secrets.toml
+data/raw/
+data/index/
+data/processed/
+data/*.db*
+data/users.json
+data/question_log.jsonl
+data/web_cache/
