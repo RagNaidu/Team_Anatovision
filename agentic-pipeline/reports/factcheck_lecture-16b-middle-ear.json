@@ -1,0 +1,403 @@
+{
+  "scope": "lecture-16b-middle-ear",
+  "partial": false,
+  "date": "2026-10-06",
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "prompt_version": "v3",
+  "verify_version": "ver1",
+  "sections_checked": 12,
+  "sections_with_errors": [],
+  "dropped_below_min_confidence": 2,
+  "min_confidence": 0.6,
+  "dropped_wrong_after_verification": [],
+  "usage": {
+    "fresh": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "calls": 0
+    },
+    "cached": {
+      "input_tokens": 69351,
+      "output_tokens": 3935,
+      "calls": 14
+    }
+  },
+  "cost_usd": {
+    "this_session_fresh": 0,
+    "all_calls_at_list_price": 0.178052
+  },
+  "issues": [
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "II. External Ear",
+        "7. Tympanic Membrane (ear drum)"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 8,
+      "claim_quote": "Perforation of the tympanic membrane causes deafness in the affected ear",
+      "quote_verified": true,
+      "issue": "A perforated tympanic membrane typically causes partial conductive hearing loss, not complete deafness. Overstated clinical claim.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "medium",
+      "type": "factual",
+      "confidence": 0.7,
+      "verification": {
+        "verdict": "confirmed",
+        "reason": "Tympanic membrane perforation typically causes only partial conductive hearing loss (at most about 40-50 dB), because the ossicular chain still conducts some sound and bone conduction remains intact, so 'deafness' and the claim that vibrations are not conducted to the ossicles overstate the effect."
+      },
+      "tier": "likely_factual"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "3. Walls of the Middle Ear"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 11,
+      "claim_quote": "Vascular structures (Jugular vein and internal carotid artery).",
+      "quote_verified": true,
+      "issue": "The inferior wall (floor) is related to the jugular bulb (internal jugular vein). The internal carotid artery is related to the anterior wall (carotid wall), not the floor. Listing it as part of the inferior wall is misleading.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "medium",
+      "type": "factual",
+      "confidence": 0.6,
+      "verification": {
+        "verdict": "confirmed",
+        "reason": "The floor (jugular wall) of the tympanic cavity relates to the jugular bulb, whereas the internal carotid artery lies against the anterior (carotid) wall, so listing it with the inferior wall is incorrect."
+      },
+      "tier": "likely_factual"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "II. External Ear",
+        "7. Tympanic Membrane (ear drum)"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 8,
+      "claim_quote": "and then to the cochlear nerve in the cochlea of the inner ear).",
+      "quote_verified": true,
+      "issue": "Ossicle vibrations are transmitted via the stapes at the oval window to the fluid (perilymph) of the cochlea, where hair cells transduce them. They do not pass directly to the cochlear nerve; the nerve carries the signal afterwards. Misleading simplification.",
+      "what_references_say": "The reference describes the stapes attached to the oval window, vibrations creating fluid waves in the scala vestibuli and scala tympani of the cochlea, with sensory neurons transducing the signal.",
+      "basis": "openstax",
+      "reference": {
+        "id": "R1",
+        "cite": "OpenStax A&P 2e §14.1",
+        "section_path": [
+          "The Somatic Nervous System",
+          "Sensory Perception",
+          "Sensory Modalities",
+          "Audition (Hearing)"
+        ],
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      },
+      "reference_quote": "As vibrations of the ossicles travel through the oval window, the fluid of the scala vestibuli and scala tympani moves in a wave-like motion.",
+      "reference_quote_note": "",
+      "severity": "medium",
+      "type": "wording",
+      "confidence": 0.65,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "I. Basic Subdivisions of the Ear"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > I. Basic Subdivisions of the Ear",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 1,
+      "claim_quote": "External ear- Ear and external acoustic meatus.",
+      "quote_verified": true,
+      "issue": "The external ear is described as 'Ear and external acoustic meatus', which is circular and omits the tympanic membrane. The external ear comprises the auricle (pinna), the external acoustic meatus and the lateral surface of the tympanic membrane. 'Ear' as a component of the external ear is imprecise and could mislead students.",
+      "what_references_say": "The text says the auricle, ear canal, and tympanic membrane are together referred to as the external ear.",
+      "basis": "openstax",
+      "reference": {
+        "id": "R1",
+        "cite": "OpenStax A&P 2e §14.1",
+        "section_path": [
+          "The Somatic Nervous System",
+          "Sensory Perception",
+          "Sensory Modalities",
+          "Audition (Hearing)"
+        ],
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/14-1-sensory-perception"
+      },
+      "reference_quote": "The auricle, ear canal, and tympanic membrane are often referred to as the external ear.",
+      "reference_quote_note": "",
+      "severity": "medium",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "II. External Ear",
+        "1. Auricle"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > II. External Ear > 1. Auricle",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 2,
+      "claim_quote": "attached to the skull by skin, ligaments, muscles (auricular muscles) and the external acoustic meatus",
+      "quote_verified": true,
+      "issue": "The external acoustic meatus is not an attachment of the auricle in the same sense as skin, ligaments and muscles. The auricular cartilage is continuous with the cartilaginous part of the external acoustic meatus, so it is a continuity of cartilage rather than a separate attachment to the skull. A student could read this as the meatus anchoring the auricle to the skull.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "II. External Ear",
+        "2. Ear Lobe"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > II. External Ear > 2. Ear Lobe",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 3,
+      "claim_quote": "Mostly fibrous tissue and blood vessels.",
+      "quote_verified": true,
+      "issue": "The ear lobe (lobule) lacks the elastic cartilage that supports the rest of the auricle. It is made of areolar and fatty tissue with a rich blood supply, plus skin. Calling it 'mostly fibrous tissue' omits the fat and is imprecise. Fat is the main bulk of the lobule, so this could mislead a student about its composition.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "II. External Ear",
+        "7. Tympanic Membrane (ear drum)"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 8,
+      "claim_quote": "Umbo – is a concavity in the central part of the membrane to which the malleus is attached",
+      "quote_verified": true,
+      "issue": "The umbo is the depressed central point of the tympanic membrane when viewed from the external ear, but it is the tip of the malleus handle pulling the membrane inward, producing a convexity on the medial (middle ear) side. Calling it a 'concavity' is acceptable externally, so this is only a wording concern. However, the notes' description is mostly fine; the main risk is imprecision.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "2. Major structures include"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 10,
+      "claim_quote": "Embedded in the tympanic membrane.",
+      "quote_verified": true,
+      "issue": "The handle (manubrium) of the malleus is attached to the tympanic membrane and draws it inward at the umbo. It is not embedded in the membrane, so \"embedded\" is imprecise and could mislead students.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "2. Major structures include"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 10,
+      "claim_quote": "The tensor tympani arises from canal above eustachian tube",
+      "quote_verified": true,
+      "issue": "The tensor tympani lies in the semicanal (musculotubal canal) above the auditory tube. Describing the origin as just a \"canal\" is vague, but the main problem is the description of the origin, since the muscle also arises from the cartilaginous part of the tube and the greater wing of the sphenoid. This is imprecise but not strongly wrong.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "3. Walls of the Middle Ear"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 11,
+      "claim_quote": "Stapedius muscle – attaches to stapes bone (increases tension and dampens vibration of the oval window membrane).",
+      "quote_verified": true,
+      "issue": "The stapedius stiffens the ossicular chain and dampens vibration of the stapes. It does not increase tension in an 'oval window membrane'; the oval window is closed by the stapes footplate and its annular ligament, so 'membrane' is imprecise. Also, stapedius is in the posterior wall (pyramidal eminence) and is innervated by CN VII, a point that may be worth stating.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "3. Walls of the Middle Ear"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 11,
+      "claim_quote": "Aditus- entrance to the mastoid antrum (the largest and most superior cavity (e.g. room) in the mastoid region",
+      "quote_verified": true,
+      "issue": "The mastoid antrum is described as the largest and most superior cavity, which is acceptable, but the aditus ad antrum connects the epitympanic recess to the antrum. 'Posterior canaliculus for the chorda tympani' is fine. This is not clearly wrong, so low confidence.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "3. Walls of the Middle Ear"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 11,
+      "claim_quote": "Chorda tympani nerve.",
+      "quote_verified": true,
+      "issue": "The chorda tympani crosses the middle ear on the medial surface of the tympanic membrane and the handle of the malleus, so it relates to the lateral wall. However, it is not part of the wall itself, which is minor. Also it is listed with the 'Posterior canaliculus' separately, which is acceptable.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "IV. Inner Ear"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > IV. Inner Ear",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 12,
+      "claim_quote": "Perforation of the Tympanic Membrane (results in middle ear deafness)",
+      "quote_verified": true,
+      "issue": "Perforation of the tympanic membrane causes conductive hearing loss, usually mild to moderate and often temporary. 'Deafness' overstates the effect and 'middle ear deafness' is nonstandard wording, which could mislead students.",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "wording",
+      "confidence": 0.6,
+      "tier": "second_look"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "II. External Ear",
+        "7. Tympanic Membrane (ear drum)"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 8,
+      "claim_quote": "the rest is very taught.",
+      "quote_verified": true,
+      "issue": "'taught' is a misspelling of 'taut' (tight).",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "typo",
+      "confidence": 0.9,
+      "tier": "typo"
+    },
+    {
+      "lecture": "Lecture 16b - Middle Ear",
+      "lecture_id": "L16b-middle-ear",
+      "section_path": [
+        "III. Middle Ear (Tympanic Cavity)",
+        "2. Major structures include"
+      ],
+      "breadcrumb": "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include",
+      "source_file": "Lecture 16b - Middle Ear - Notes.doc",
+      "order": 10,
+      "claim_quote": "inserts on staped bone",
+      "quote_verified": true,
+      "issue": "\"staped\" is a misspelling of \"stapes\".",
+      "what_references_say": "Not covered by the provided OpenStax text. Verify with a standard reference.",
+      "basis": "general_anatomy_knowledge",
+      "reference": null,
+      "reference_quote": "",
+      "reference_quote_note": "",
+      "severity": "low",
+      "type": "typo",
+      "confidence": 0.8,
+      "tier": "typo"
+    }
+  ]
+}

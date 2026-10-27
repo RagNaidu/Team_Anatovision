@@ -1,0 +1,1033 @@
+[
+  {
+    "i": 0,
+    "group": "keyword",
+    "question": "apex",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 5.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "term",
+    "tier": "term",
+    "search_query": "apex",
+    "n_citations": 6,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Apex appears in:\n- **Boundaries of the Axilla** (Lecture 05): The apex of the axilla is the superior location of the pyramid, bounded by the 1st rib, clavicle, and scapula [Lecture 05 - The Axilla > Boundaries of the Axilla > Superior]\n- **Anterior and Medial Thigh** (Lecture 08): The adductor canal is a muscular compartment located distal to the apex of the femoral triangle [Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > Adductor (Subsartorial) Canal]\n- **Boundaries/Geometry of the Perineum** (Lecture 15): The perineum is a diamond shaped region with an anterior apex at the symphysis pubis inferior margin, a posterior apex at the coccyx tip, and bilateral apices at the ischial tuberosities inferior points [Lecture 15 - The Perineum > Boundaries/Geometry of the Perineum]\n- **Soft Palate and Contents** (Lecture 22): The levator veli palatini muscle arises from the eustachian tube and the petrous apex of the temporal bone [Lecture 22 - Oral Cavity > I. Palate (Bony or hard palate and soft palate) > B. Soft Palate and Contents]\n- **General Structure of a “Typical” Vertebra** (Lecture 01): The spinous process is the apex of the arch and the fusion point of the bilateral lamina [Lecture 01 - The Vertebral Column > Vertebral Column > General Structure of a “Typical” Vertebra > Arch]\n- **The Mediastinum and Heart** (Class 26): The apex of the heart is lifted superiorly during the process of removing the heart [Dissection Guide, Class 26, slide 7]\nAsk about a specific one for more detail.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 05, The Axilla, Superior",
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Adductor (Subsartorial) Canal",
+      "Dr. Inglis's lecture notes: Lecture 15, The Perineum, Boundaries/Geometry of the Perineum",
+      "Dr. Inglis's lecture notes: Lecture 22, Oral Cavity, B. Soft Palate and Contents",
+      "Dr. Inglis's lecture notes: Lecture 01, The Vertebral Column, Arch",
+      "Dissection Guide, Class 26, slide 7"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 05 - The Axilla > Boundaries of the Axilla > Superior",
+      "Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > Adductor (Subsartorial) Canal",
+      "Lecture 15 - The Perineum > Boundaries/Geometry of the Perineum",
+      "Lecture 22 - Oral Cavity > I. Palate (Bony or hard palate and soft palate) > B. Soft Palate and Contents",
+      "Lecture 01 - The Vertebral Column > Vertebral Column > General Structure of a “Typical” Vertebra > Arch",
+      "Dissection Guide, Class 26, slide 7"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the provided citations.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 1,
+    "group": "keyword",
+    "question": "thenar",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 4.0,
+    "status": "answered",
+    "reason": "",
+    "mode": "term",
+    "tier": "term",
+    "search_query": "thenar",
+    "n_citations": 5,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Thenar appears in:\n- **Thenar Compartment** (Lecture 09): Located lateral to the central compartment, it contains the thenar muscles and includes a potential space called the thenar space [Lecture 09 - The Hand > Fascia and Compartments > Thenar Compartment]\n- **Compartments** (Lecture 12): The medial compartment of the foot, containing intrinsic muscles of the great toe, is comparable to the thenar compartment of the hand [Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments]\n- **Abductor Pollicis Brevis** (Lecture 09): This muscle forms the superficial lateral portion of the thenar eminence [Lecture 09 - The Hand > Muscles of the Hand > Thenar Muscles > Abductor Pollicis Brevis]\n- **Adductor Compartment** (Lecture 09): This compartment is located intermediate to the interosseus and thenar compartments [Lecture 09 - The Hand > Fascia and Compartments > Adductor Compartment]\n- **Median Nerve** (Lecture 09): The recurrent branch of this nerve provides innervation to thenar muscles, with the exception of the deep head of the FPB. Dr. Inglis is reviewing this line. Check with him before relying on it. [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve]\n\nAsk about a specific one for more detail.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Thenar Compartment",
+      "Dr. Inglis's lecture notes: Lecture 12, Posterior Leg and Plantar Surface of Foot, Compartments",
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Abductor Pollicis Brevis",
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Adductor Compartment",
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Median Nerve"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 09 - The Hand > Fascia and Compartments > Thenar Compartment",
+      "Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments",
+      "Lecture 09 - The Hand > Muscles of the Hand > Thenar Muscles > Abductor Pollicis Brevis",
+      "Lecture 09 - The Hand > Fascia and Compartments > Adductor Compartment",
+      "Lecture 09 - The Hand > Nerves of the Hand > Median Nerve"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the cited lecture passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 2,
+    "group": "keyword",
+    "question": "hypothenar",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 4.6,
+    "status": "answered",
+    "reason": "",
+    "mode": "term",
+    "tier": "term",
+    "search_query": "hypothenar",
+    "n_citations": 6,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Hypothenar appears in:\n- **Hypothenar Compartment** (Lecture): the hypothenar compartment is medial to the central compartment and contains hypothenar muscles that form the fleshy tissue at the base of the small finger [Lecture 09 - The Hand > Fascia and Compartments > Hypothenar Compartment]\n- **Compartments** (Lecture): the lateral compartment of the foot, containing intrinsic muscles of the 5th digit, is comparable to the hypothenar compartment of the hand [Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments]\n- **Abductor Digiti Minimi** (Lecture): the abductor digiti minimi is located superficial and medial to the hypothenar eminence [Lecture 09 - The Hand > Muscles of the Hand > Hypothenar Eminence > Abductor Digiti Minimi]\n- **Slide 13** (Class): instructions are to clean the hypothenar muscles and identify the opponens digiti minimi, flexor digiti minimi brevis, and abductor digiti minimi [Dissection Guide, Class 10, slide 13]\n- **Palmar Fascia** (Lecture): palmar fascia envelops the hypothenar eminence as loose areolar connective tissue, and the palmaris brevis muscle runs transversely in the fascia over the eminence [Lecture 09 - The Hand > Fascia and Compartments > Palmar Fascia]\n- **Slide 8** (Class): the hypothenar eminence is located on the medial side of the palmar aponeurosis [Dissection Guide, Class 10, slide 8]\n\nAsk about a specific one for more detail.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Hypothenar Compartment",
+      "Dr. Inglis's lecture notes: Lecture 12, Posterior Leg and Plantar Surface of Foot, Compartments",
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Abductor Digiti Minimi",
+      "Dissection Guide, Class 10, slide 13",
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Palmar Fascia",
+      "Dissection Guide, Class 10, slide 8"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 09 - The Hand > Fascia and Compartments > Hypothenar Compartment",
+      "Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments",
+      "Lecture 09 - The Hand > Muscles of the Hand > Hypothenar Eminence > Abductor Digiti Minimi",
+      "Dissection Guide, Class 10, slide 13",
+      "Lecture 09 - The Hand > Fascia and Compartments > Palmar Fascia",
+      "Dissection Guide, Class 10, slide 8"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All claims are supported by the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 3,
+    "group": "keyword",
+    "question": "trochanter",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.5,
+    "status": "answered",
+    "reason": "",
+    "mode": "term",
+    "tier": "term",
+    "search_query": "trochanter",
+    "n_citations": 5,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Trochanter appears in:\n- **Obturator Externus** (Lecture 08): The obturator externus inserts to the trochanteric fossa just medial to the greater trochanter [Lecture 08 - Anterior and Medial Thigh > Muscles of the Medial Compartment > Obturator Externus]\n- **Slide 10** (Class 14): Instructions mention the insertion of the gluteus medius muscle on the greater trochanter [Dissection Guide, Class 14, slide 10]\n- **Slide 16** (Class 17): The iliopsoas muscle is identified by its attachment to the lesser trochanter [Dissection Guide, Class 17, slide 16]\n- **Iliopsoas** (Lecture 08): The iliopsoas muscles insert through a common tendon to the lesser trochanter [Lecture 08 - Anterior and Medial Thigh > Muscles of the Anterior Compartment > Iliopsoas]\n- **Slide 6** (Class 14): Instructions mention reflecting the gluteus maximus laterally toward the greater trochanter [Dissection Guide, Class 14, slide 6]\nAsk about a specific one for more detail.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Obturator Externus",
+      "Dissection Guide, Class 14, slide 10",
+      "Dissection Guide, Class 17, slide 16",
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Iliopsoas",
+      "Dissection Guide, Class 14, slide 6"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 08 - Anterior and Medial Thigh > Muscles of the Medial Compartment > Obturator Externus",
+      "Dissection Guide, Class 14, slide 10",
+      "Dissection Guide, Class 17, slide 16",
+      "Lecture 08 - Anterior and Medial Thigh > Muscles of the Anterior Compartment > Iliopsoas",
+      "Dissection Guide, Class 14, slide 6"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 4,
+    "group": "keyword",
+    "question": "nerve supply",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 10.6,
+    "status": "answered",
+    "reason": "",
+    "mode": "term",
+    "tier": "term",
+    "search_query": "nerve supply",
+    "n_citations": 6,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Nerve supply appears in:\n- **External Ear** (Lecture 16b): sensory afferents are the great auricular nerve (C2-C3) and auriculotemporal nerve (branch of V3) [Lecture 16b - Middle Ear > II. External Ear > 5. Nerve supply (sensory afferents]\n- **Temporal mandibular joint** (Lecture 16): chief nerve supply is from the auriculotemporal nerve (branch of V3) [Lecture 16 - Temporal, Masseteric, and Infratemporal Region > I. Connective Tissue Components of the Temporal and Infratemporal Regions > D. Temporal mandibular joint]\n- **Median Nerve** (Lecture 07): branches off the median nerve supply superficial and intermediate muscles, excluding flexor carpi ulnaris [Lecture 07 - The Antebrachium > Median Nerve > Muscular Branches]\n- **Cutaneous Nerves** (Lecture 08): various nerves supply the thigh, gluteal region, leg, and dorsum of foot [Lecture 08 - Anterior and Medial Thigh > Subcutaneous Structures within the Lower Limb > Cutaneous Nerves]\n- **Submucosa** (ANA407 Class 28): autonomic nerve supply consists of Meissner’s plexus [ANA407 Class 28 - The Posterior Abdominal Wall > General Histology > Submucosa]\n- **Neurovascular Supply to Perineum** (Lecture 15): the pudendal nerve and its branches supply the anal and urogenital triangles [Lecture 15 - The Perineum > Neurovascular Supply to Perineum]\n\nAsk about a specific one for more detail.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 16b, Middle Ear, 5. Nerve supply (sensory afferents",
+      "Dr. Inglis's lecture notes: Lecture 16, Temporal, Masseteric, and Infratemporal Region, D. Temporal mandibular joint",
+      "Dr. Inglis's lecture notes: Lecture 07, The Antebrachium, Muscular Branches",
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Cutaneous Nerves",
+      "Dr. Inglis's lecture notes: ANA407 Class 28, The Posterior Abdominal Wall, Submucosa",
+      "Dr. Inglis's lecture notes: Lecture 15, The Perineum, Neurovascular Supply to Perineum"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 16b - Middle Ear > II. External Ear > 5. Nerve supply (sensory afferents",
+      "Lecture 16 - Temporal, Masseteric, and Infratemporal Region > I. Connective Tissue Components of the Temporal and Infratemporal Regions > D. Temporal mandibular joint",
+      "Lecture 07 - The Antebrachium > Median Nerve > Muscular Branches",
+      "Lecture 08 - Anterior and Medial Thigh > Subcutaneous Structures within the Lower Limb > Cutaneous Nerves",
+      "ANA407 Class 28 - The Posterior Abdominal Wall > General Histology > Submucosa",
+      "Lecture 15 - The Perineum > Neurovascular Supply to Perineum"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All answer statements are directly supported by the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 5,
+    "group": "keyword",
+    "question": "what is a foramen?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 4.4,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "openstax",
+    "search_query": "what is a foramen?",
+    "n_citations": 2,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "A foramen is an opening in the bone.\n\n**Examples and Functions**\n- Nutrient foramina are small openings in the diaphysis that allow blood vessels and nerves to enter and exit the bone [OpenStax A&P 2e §6.3].\n- The vertebral foramen allows for the passage of the spinal cord [OpenStax A&P 2e §7.3].\n- Intervertebral foramina are openings between adjacent vertebrae used for the exit of spinal nerves [OpenStax A&P 2e §7.3].\n\nAsk for more detail if you need it.",
+    "footer": "Based on OpenStax, not Dr. Inglis's notes.",
+    "sources_list": [
+      "OpenStax Anatomy & Physiology 2e, section 6.3 -> https://openstax.org/books/anatomy-and-physiology-2e/pages/6-3-bone-structure",
+      "OpenStax Anatomy & Physiology 2e, section 7.3 -> https://openstax.org/books/anatomy-and-physiology-2e/pages/7-3-the-vertebral-column"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "OpenStax A&P 2e §6.3",
+      "OpenStax A&P 2e §7.3"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the cited OpenStax passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 6,
+    "group": "normal",
+    "question": "What are the walls of the middle ear?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 10.4,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What are the walls of the middle ear?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The middle ear (tympanic cavity) is bounded by five walls.\n\n**Lateral, Medial, and Inferior**\n- Lateral: tympanic membrane, malleus, and chorda tympani nerve [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].\n- Medial: oval window (closed by the stapes footplate) and round window (closed by membrane) [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].\n- Inferior: tympanic canaliculus for the tympanic nerve of CN IX and vascular structures including the internal carotid artery and jugular vein (flagged for review, see fact-check) [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].\n\n**Posterior and Anterior**\n- Posterior: aditus to the mastoid antrum, posterior canaliculus for the chorda tympani nerve, and stapedius muscle [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].\n- Anterior: opening for the auditory (Eustachian) tube and opening for the tensor tympani muscle-tendon [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].\n\nThis list may be incomplete: it is built from the passages found, so check the full lecture notes.\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 16b, Middle Ear, 3. Walls of the Middle Ear"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All claims in the answer are directly supported by the cited passage.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 7,
+    "group": "normal",
+    "question": "What are the boundaries and contents of the femoral triangle?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 11.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What are the boundaries and contents of the femoral triangle?",
+    "n_citations": 3,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The femoral triangle is a triangular landmark used for anatomical and clinical purposes [Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle].\n\n**Boundaries**\n- The apex is inferiorly located where the sartorius crosses the adductor longus [Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle].\n- Dr. Inglis is reviewing this line. Check with him before relying on it. [Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle]\n\n**Contents**\n- From lateral to medial: femoral nerve, femoral artery, femoral vein, and lymph nodes [Dissection Guide, Class 15, slide 7].\n- Other identified structures include the profunda femoris artery and the medial and lateral circumflex femoral arteries [Dissection Guide, Class 15, slides 8-9].\n\nThis list may be incomplete: it is built from the passages found, so check the full lecture notes.\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, The Femoral Triangle",
+      "Dissection Guide, Class 15, slide 7",
+      "Dissection Guide, Class 15, slides 8-9"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle",
+      "Dissection Guide, Class 15, slide 7",
+      "Dissection Guide, Class 15, slides 8-9"
+    ],
+    "judge": {
+      "verdict": "partly",
+      "reason": "One statement about Dr. Inglis reviewing the line is not supported by the cited passages",
+      "unsupported": [
+        "\"Dr. Inglis is reviewing this line. Check with him before relying on it.\""
+      ]
+    }
+  },
+  {
+    "i": 8,
+    "group": "normal",
+    "question": "What does the sartorius do?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.2,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What does the sartorius do?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "\n**Actions**\n\n**Other Roles**\n- It covers the adductor (subsartorial) canal [Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > Adductor (Subsartorial) Canal].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Adductor (Subsartorial) Canal"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > Adductor (Subsartorial) Canal"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "The answer's claim that the sartorius covers the adductor (subsartorial) canal is directly supported by the cited passage.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 9,
+    "group": "normal",
+    "question": "Which muscles make up the rotator cuff?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 2.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "Which muscles make up the rotator cuff?",
+    "n_citations": 3,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The rotator cuff consists of four intrinsic muscles that move the humerus relative to the scapula [Lecture 04 - The Shoulder > Scapular Region > The Rotator Cuff].\n\n**Muscles**\n- The rotator cuff is made up of the supraspinatus, infraspinatus, teres minor, and subscapularis [OpenStax A&P 2e §11.5].\n\n**Clinical Relevance**\n- The supraspinatus is the most frequently affected muscle in rotator cuff tears, potentially due to chronic degeneration or acute trauma [Lecture 04 - The Shoulder > The Rotator Cuff > Supraspinatus].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 04, The Shoulder, The Rotator Cuff",
+      "OpenStax Anatomy & Physiology 2e, section 11.5 -> https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs",
+      "Dr. Inglis's lecture notes: Lecture 04, The Shoulder, Supraspinatus"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 04 - The Shoulder > Scapular Region > The Rotator Cuff",
+      "OpenStax A&P 2e §11.5",
+      "Lecture 04 - The Shoulder > The Rotator Cuff > Supraspinatus"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 10,
+    "group": "normal",
+    "question": "What nerve supplies the muscles of the hypothenar eminence?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 2.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What nerve supplies the muscles of the hypothenar eminence?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The muscles of the hypothenar eminence are supplied by the ulnar nerve [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Ulnar Nerve"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "The citation states the ulnar nerve provides branches to the hypothenar eminence, supporting the answer's claim.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 11,
+    "group": "normal",
+    "question": "What are the contents of the carpal tunnel?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.7,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What are the contents of the carpal tunnel?",
+    "n_citations": 3,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The carpal tunnel contains the median nerve and the tendons of nine muscles from the anterior forearm [OpenStax A&P 2e §8.2].\n\n**Nerve**\n- The median nerve passes through the tunnel [Dissection Guide, Class 10, slide 11].\n\n**Tendons**\n- The tendons of flexor digitorum superficialis, flexor digitorum profundus, and flexor pollicis longus pass through the tunnel [Dissection Guide, Class 10, slide 11].\n- Digital flexor tendons from the flexor digitorum superficialis and flexor digitorum profundus enter the hand through the tunnel encased in the common flexor sheath, also known as the ulnar bursa [Lecture 09 - The Hand > Long Tendons of the Hand > Flexor Digitorum Tendons].\n\nThis list may be incomplete: it is built from the passages found, so check the full lecture notes.\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "OpenStax Anatomy & Physiology 2e, section 8.2 -> https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb",
+      "Dissection Guide, Class 10, slide 11",
+      "Dr. Inglis's lecture notes: Lecture 09, The Hand, Flexor Digitorum Tendons"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "OpenStax A&P 2e §8.2",
+      "Dissection Guide, Class 10, slide 11",
+      "Lecture 09 - The Hand > Long Tendons of the Hand > Flexor Digitorum Tendons"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements in the answer are directly supported by the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 12,
+    "group": "procedural",
+    "question": "How do I reflect the skin over the thigh?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.1,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I reflect the skin over the thigh?",
+    "n_citations": 3,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Steps for reflecting the skin over the thigh are provided in several dissection guides.\n\n1. Reflect the skin flaps in the thigh and leg bilaterally, being careful to preserve the major superficial veins and nerves in the subcutaneous tissue [Dissection Guide, Class 15, slide 2].\n2. Reflect skin and superficial fascia from the gluteal region and posterior thigh and leg, taking caution to identify and preserve previously identified superficial veins and nerves [Dissection Guide, Class 14, slides 4-5].\n3. If not already completed, reflect the skin and superficial fascia from the posterior thigh and popliteal fossa region laterally and medially, taking care to preserve the great saphenous vein along the medial side of the thigh and leg [Dissection Guide, Class 16, slide 2].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 15, slide 2",
+      "Dissection Guide, Class 14, slides 4-5",
+      "Dissection Guide, Class 16, slide 2"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 15, slide 2",
+      "Dissection Guide, Class 14, slides 4-5",
+      "Dissection Guide, Class 16, slide 2"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All three steps are directly supported by the cited dissection guide passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 13,
+    "group": "procedural",
+    "question": "What are the steps to expose the femoral triangle?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 4.2,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What are the steps to expose the femoral triangle?",
+    "n_citations": 3,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The steps to expose the femoral triangle are found in the dissection guide.\n\n1. Carefully clean and identify the sartorius muscle [Dissection Guide, Class 15, slide 6].\n2. Identify the femoral triangle and its boundaries, consisting of the adductor longus muscle, sartorius muscle, and inguinal ligament, removing some fascia lata to see this clearly [Dissection Guide, Class 15, slide 6].\n3. Bluntly dissect the femoral triangle to expose its contents: the femoral nerve, femoral artery, femoral vein, and lymph nodes (from lateral to medial) [Dissection Guide, Class 15, slide 7].\n4. Identify the femoral sheath, noting that the branched femoral nerve is not part of it [Dissection Guide, Class 15, slide 7].\n5. Clean the femoral vein and artery in the femoral triangle and identify the lateral and medial circumflex femoral arteries and the deep (profunda femoris) artery, removing smaller, deeper veins if they obscure vision [Dissection Guide, Class 15, slides 8-9].\n6. Identify the pectineus and iliopsoas muscles in the floor of the femoral triangle [Dissection Guide, Class 15, slides 8-9].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 15, slide 6",
+      "Dissection Guide, Class 15, slide 7",
+      "Dissection Guide, Class 15, slides 8-9"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 15, slide 6",
+      "Dissection Guide, Class 15, slide 7",
+      "Dissection Guide, Class 15, slides 8-9"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All steps mentioned in the answer are directly supported by the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 14,
+    "group": "procedural",
+    "question": "How do I remove the gluteus maximus?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 2.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I remove the gluteus maximus?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The steps to remove the gluteus maximus are provided in the dissection guide.\n\n1. Push your fingers into the space between the gluteus maximus and medius muscles to separate them and then cut the gluteus maximus close to the posterior surfaces of the ilium, sacrum, and coccyx [Dissection Guide, Class 14, slide 6].\n2. Detach it from the sacrotuberous ligament and reflect it laterally toward the greater trochanter [Dissection Guide, Class 14, slide 6].\n3. Cut any gluteal vessels and nerves close to their attachments to the underside of the muscle [Dissection Guide, Class 14, slide 6].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 14, slide 6"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 14, slide 6"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All claims in the answer are directly supported by the cited passage.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 15,
+    "group": "procedural",
+    "question": "How do I identify the piriformis and the sciatic nerve?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I identify the piriformis and the sciatic nerve?",
+    "n_citations": 3,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "These structures are identified using the following steps from the dissection guide:\n\n1. Identify the piriformis muscle as it passes through the greater sciatic foramen [Dissection Guide, Class 14, slides 7-8].\n2. Identify the sciatic nerve inferior to the piriformis [Dissection Guide, Class 14, slides 7-8].\n\n**Additional Context**\n- The piriformis is a pear-shaped muscle that originates on the internal surface of the sacrum and inserts on the greater trochanter [Lecture 11 - Gluteal Region and Posterior Thigh > Deep Muscular Compartment > Piriformis].\n- The sciatic nerve is the most significant systemic nerve from the sacral plexus and consists of the tibial and fibular nerves [OpenStax A&P 2e §13.4].\n- Clinical relevance: a tight piriformis may impinge on the sciatic nerve, known as piriformis syndrome [Lecture 11 - Gluteal Region and Posterior Thigh > Deep Muscular Compartment > Piriformis].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 14, slides 7-8",
+      "Dr. Inglis's lecture notes: Lecture 11, Gluteal Region and Posterior Thigh, Piriformis",
+      "OpenStax Anatomy & Physiology 2e, section 13.4 -> https://openstax.org/books/anatomy-and-physiology-2e/pages/13-4-the-peripheral-nervous-system"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 14, slides 7-8",
+      "Lecture 11 - Gluteal Region and Posterior Thigh > Deep Muscular Compartment > Piriformis",
+      "OpenStax A&P 2e §13.4"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements in the answer are directly supported by the provided citations.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 16,
+    "group": "procedural",
+    "question": "How do I open the adductor canal?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 2.1,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I open the adductor canal?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "These steps are from the dissection guide.\n\n1. At the distal end of the femoral triangle, cut the sartorius muscle transversely [Dissection Guide, Class 15, slide 10].\n2. Reflect the sartorius muscle distally to expose the adductor canal [Dissection Guide, Class 15, slide 10].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 15, slide 10"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 15, slide 10"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All steps are directly stated in the cited passage",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 17,
+    "group": "procedural",
+    "question": "How do I open the carpal tunnel?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 2.8,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I open the carpal tunnel?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The steps to open the carpal tunnel are provided in the dissection guide.\n\n1. Identify the flexor retinaculum located between the hypothenar and thenar eminences [Dissection Guide, Class 10, slide 11].\n2. Insert a probe into the carpal tunnel deep to the flexor retinaculum, moving from proximal to distal [Dissection Guide, Class 10, slide 11].\n3. Carefully cut the retinaculum, using the probe to protect internal structures from being severed [Dissection Guide, Class 10, slide 11].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 10, slide 11"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 10, slide 11"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All steps in the answer are directly stated in the cited dissection guide passage.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 18,
+    "group": "procedural",
+    "question": "How do I remove the brain?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 5.3,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I remove the brain?",
+    "n_citations": 7,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The steps for removing the brain are provided in the dissection guide:\n\n1. Position the cadaver supine with the head hanging over the table edge, make mid-sagittal and coronal incisions, and reflect the flaps [Dissection Guide, Class 31, slide 2].\n2. Detach and reflect the temporalis muscles inferiorly, scrape the skull clean, and use a rubber band to mark a circle around the skull [Dissection Guide, Class 31, slide 3].\n3. Saw along the marked lines into the foramen magnum while preserving vertebral arteries, then remove the bone wedge with a chisel and mallet [Dissection Guide, Class 31, slide 7].\n4. Cut along the line with a Stryker saw, break through the inner bone layer with a hammer and chisel, and remove the calvaria [Dissection Guide, Class 31, slide 5].\n5. Cut and reflect the dura to expose the hemispheres, then pierce the arachnoid mater with a needle and syringe to inject fluid [Dissection Guide, Class 31, slide 9].\n6. Retract a cerebral hemisphere, cut the falx cerebri from the crista galli, and pull the falx superiorly and posteriorly [Dissection Guide, Class 31, slide 10].\n7. Gently lift the posterior brain to cut the tentorium cerebelli near the petrous temporal bone on both sides, then pull the falx cerebri and tentorium cerebelli posteriorly [Dissection Guide, Class 31, slides 11-12].\n\nOpen the next slide for further instructions on removing the brain from the cranial cavity [Dissection Guide, Class 31, slides 11-12].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 31, slide 2",
+      "Dissection Guide, Class 31, slide 3",
+      "Dissection Guide, Class 31, slide 7",
+      "Dissection Guide, Class 31, slide 5",
+      "Dissection Guide, Class 31, slide 9",
+      "Dissection Guide, Class 31, slide 10",
+      "Dissection Guide, Class 31, slides 11-12"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 31, slide 2",
+      "Dissection Guide, Class 31, slide 3",
+      "Dissection Guide, Class 31, slide 7",
+      "Dissection Guide, Class 31, slide 5",
+      "Dissection Guide, Class 31, slide 9",
+      "Dissection Guide, Class 31, slide 10",
+      "Dissection Guide, Class 31, slides 11-12"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All steps described in the answer are directly supported by the cited passage excerpts.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 19,
+    "group": "procedural",
+    "question": "How do I open the pericardium?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 2.6,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "How do I open the pericardium?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "These steps for opening the fibrous pericardium come from the dissection guide.\n\n1. Use forceps to pinch up a fold of the anterior surface of the fibrous pericardium [Dissection Guide, Class 26, slide 2].\n2. Use scissors to nick the fold and make incisions, being careful not to damage the phrenic nerves [Dissection Guide, Class 26, slide 2].\n3. Open the flaps widely to observe the parietal pericardium on the inside surface of the flaps [Dissection Guide, Class 26, slide 2].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 26, slide 2"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 26, slide 2"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All steps in the answer are directly supported by the cited passage.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 20,
+    "group": "web",
+    "question": "What is Broca's area?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.3,
+    "status": "answered",
+    "reason": "",
+    "mode": "web",
+    "tier": "web",
+    "search_query": "What is Broca's area?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "Broca's area is a brain region located in the frontal lobe of the dominant hemisphere, which is typically the left, that supports speech production [Web: Broca's area (Wikipedia)].\n\n**Structure**\n\nAsk for more detail if you need it.",
+    "footer": "Based on Wikipedia, not Dr. Inglis's notes.",
+    "sources_list": [
+      "Wikipedia, “Broca's area” -> https://en.wikipedia.org/wiki/Broca%27s_area"
+    ],
+    "web": true,
+    "web_urls": [
+      "https://en.wikipedia.org/wiki/Broca%27s_area",
+      "https://en.wikipedia.org/wiki/Prefrontal_cortex",
+      "https://en.wikipedia.org/wiki/Brain_asymmetry"
+    ],
+    "cites": [
+      "Web: Broca's area (Wikipedia)"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "The answer's statement about Broca's area being in the frontal lobe of the dominant (typically left) hemisphere and supporting speech production is directly supported by the cited passage.",
+      "unsupported": []
+    },
+    "web_extra_seconds": 3.2
+  },
+  {
+    "i": 21,
+    "group": "web",
+    "question": "What is the thyroglossal duct?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 4.4,
+    "status": "answered",
+    "reason": "",
+    "mode": "web",
+    "tier": "web",
+    "search_query": "What is the thyroglossal duct?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The thyroglossal duct is a structure typically present only during embryonic development [Web: Persistent thyroglossal duct (Wikipedia)].\n\n**Structure**\n- This midline structure forms a connection between the thyroid gland and the back of the tongue [Web: Persistent thyroglossal duct (Wikipedia)].\n- It travels through the neck anterior to the laryngeal cartilage and the developing hyoid bone, remaining close to the neck's medial line [Web: Persistent thyroglossal duct (Wikipedia)].\n\nAsk for more detail if you need it.",
+    "footer": "Based on Wikipedia, not Dr. Inglis's notes.",
+    "sources_list": [
+      "Wikipedia, “Persistent thyroglossal duct” -> https://en.wikipedia.org/wiki/Persistent_thyroglossal_duct"
+    ],
+    "web": true,
+    "web_urls": [
+      "https://en.wikipedia.org/wiki/Persistent_thyroglossal_duct",
+      "https://www.ncbi.nlm.nih.gov/mesh/68013955"
+    ],
+    "cites": [
+      "Web: Persistent thyroglossal duct (Wikipedia)"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the cited passage",
+      "unsupported": []
+    },
+    "web_extra_seconds": 3.9
+  },
+  {
+    "i": 22,
+    "group": "web",
+    "question": "What is the glomus tympanicum?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 3.1,
+    "status": "answered",
+    "reason": "",
+    "mode": "web",
+    "tier": "web",
+    "search_query": "What is the glomus tympanicum?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The glomus tympanicum is a specialized body of chemoreceptive tissue located near the tympanic cavity [Web: MeSH: Glomus Tympanicum (NLM MeSH)].\n\n**Structure**\n- This highly vascular ovoid body originates from neural crest tissue and functions as part of the diffuse neuroendocrine system [Web: MeSH: Glomus Tympanicum (NLM MeSH)].\n\nAsk for more detail if you need it.",
+    "footer": "Based on NLM MeSH, not Dr. Inglis's notes.",
+    "sources_list": [
+      "NLM MeSH, “Glomus Tympanicum” -> https://www.ncbi.nlm.nih.gov/mesh/68043485"
+    ],
+    "web": true,
+    "web_urls": [
+      "https://www.ncbi.nlm.nih.gov/mesh/68043604",
+      "https://www.ncbi.nlm.nih.gov/mesh/68043485"
+    ],
+    "cites": [
+      "Web: MeSH: Glomus Tympanicum (NLM MeSH)"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements in the answer are directly supported by the cited passage.",
+      "unsupported": []
+    },
+    "web_extra_seconds": 3.0
+  },
+  {
+    "i": 23,
+    "group": "refusal",
+    "question": "amoxicillin",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 0.7,
+    "status": "not_found",
+    "reason": "not_anatomy",
+    "mode": "normal",
+    "tier": "none",
+    "search_query": "amoxicillin",
+    "n_citations": 0,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "That doesn't look like a question about anatomy or the lab, so I can't help with it here. Ask about a structure, a region or a step from the lectures.",
+    "footer": "",
+    "sources_list": [],
+    "web": false,
+    "web_urls": [],
+    "cites": []
+  },
+  {
+    "i": 24,
+    "group": "refusal",
+    "question": "Who won the 2022 World Cup?",
+    "followup_of": "",
+    "allowed": null,
+    "seconds": 0.3,
+    "status": "not_found",
+    "reason": "not_anatomy",
+    "mode": "normal",
+    "tier": "none",
+    "search_query": "Who won the 2022 World Cup?",
+    "n_citations": 0,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "That doesn't look like a question about anatomy or the lab, so I can't help with it here. Ask about a structure, a region or a step from the lectures.",
+    "footer": "",
+    "sources_list": [],
+    "web": false,
+    "web_urls": [],
+    "cites": []
+  },
+  {
+    "i": 25,
+    "group": "follow-up",
+    "question": "What is the roof made of?",
+    "followup_of": "What are the walls of the middle ear?",
+    "allowed": null,
+    "seconds": 2.4,
+    "status": "out_of_scope",
+    "reason": "nothing_relevant",
+    "mode": "normal",
+    "tier": "none",
+    "search_query": "What is the roof of the middle ear (tympanic cavity) made of?",
+    "n_citations": 0,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "I couldn't find that in Dr. Inglis's lecture notes or in the OpenStax textbook, so I won't answer it from memory.",
+    "footer": "",
+    "sources_list": [],
+    "web": false,
+    "web_urls": [],
+    "cites": []
+  },
+  {
+    "i": 26,
+    "group": "follow-up",
+    "question": "And which nerve is the most lateral?",
+    "followup_of": "What are the boundaries and contents of the femoral triangle?",
+    "allowed": null,
+    "seconds": 3.5,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "Which nerve is the most lateral content of the femoral triangle?",
+    "n_citations": 2,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The femoral nerve is the most lateral structure in the femoral triangle [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle > Femoral Nerve].\n\nThis is further supported by the dissection guide, which lists the contents from lateral to medial as the femoral nerve, femoral artery, femoral vein, and lymph nodes [Dissection Guide, Class 15, slide 7].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Femoral Nerve",
+      "Dissection Guide, Class 15, slide 7"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle > Femoral Nerve",
+      "Dissection Guide, Class 15, slide 7"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All stated claims are directly supported by the cited passages",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 27,
+    "group": "follow-up",
+    "question": "Where does it insert?",
+    "followup_of": "What does the sartorius do?",
+    "allowed": null,
+    "seconds": 5.5,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "Where does the sartorius muscle insert?",
+    "n_citations": 2,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The sartorius inserts on the anteromedial aspect of the tibia at the pes anserinus (goose’s foot) [Lecture 08 - Anterior and Medial Thigh > Muscles of the Anterior Compartment > Sartorius].\n\n**Associated Structures**\n- It inserts together with the gracilis and semitendinosus muscles on the proximal tibia as the pes anserinus [Dissection Guide, Class 16, slides 4-7].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dr. Inglis's lecture notes: Lecture 08, Anterior and Medial Thigh, Sartorius",
+      "Dissection Guide, Class 16, slides 4-7"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Lecture 08 - Anterior and Medial Thigh > Muscles of the Anterior Compartment > Sartorius",
+      "Dissection Guide, Class 16, slides 4-7"
+    ],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All claims in the answer are directly stated in the cited passages.",
+      "unsupported": []
+    }
+  },
+  {
+    "i": 28,
+    "group": "follow-up",
+    "question": "What do I identify after that?",
+    "followup_of": "How do I remove the gluteus maximus?",
+    "allowed": null,
+    "seconds": 2.6,
+    "status": "answered",
+    "reason": "",
+    "mode": "normal",
+    "tier": "course",
+    "search_query": "What to identify after removing the gluteus maximus muscle during dissection?",
+    "n_citations": 1,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "After reflecting the gluteus maximus, the dissection guide indicates the following identifications:\n\n1. Identify the superior gluteal vessels and nerves superior to the piriformis muscle [Dissection Guide, Class 14, slide 9].\n2. Clean the gluteus medius muscle and separate it from the underlying gluteus minimus muscle [Dissection Guide, Class 14, slide 9].\n\nAsk for more detail if you need it.",
+    "footer": "",
+    "sources_list": [
+      "Dissection Guide, Class 14, slide 9"
+    ],
+    "web": false,
+    "web_urls": [],
+    "cites": [
+      "Dissection Guide, Class 14, slide 9"
+    ],
+    "judge": {
+      "verdict": "partly",
+      "reason": "The answer adds a step about reflecting the gluteus maximus that is not mentioned in the cited passage",
+      "unsupported": [
+        "\"After reflecting the gluteus maximus, the dissection guide indicates the following identifications:\""
+      ]
+    }
+  },
+  {
+    "i": 29,
+    "group": "outside-access",
+    "question": "What are the walls of the middle ear?",
+    "followup_of": "",
+    "allowed": [
+      "Lecture 09 - The Hand"
+    ],
+    "seconds": 3.1,
+    "status": "access_limited",
+    "reason": "outside_access",
+    "mode": "normal",
+    "tier": "none",
+    "search_query": "What are the walls of the middle ear?",
+    "n_citations": 0,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The notes for this are in Lecture 16b - Middle Ear, which you don't have access to. Ask Dr. Inglis to open it for you.",
+    "footer": "",
+    "sources_list": [],
+    "web": false,
+    "web_urls": [],
+    "cites": [],
+    "web_extra_seconds": 2.6,
+    "coverage_seconds": 0.79,
+    "coverage_web_seconds": 0.41,
+    "coverage_missing": [
+      "walls of the middle ear"
+    ]
+  },
+  {
+    "i": 30,
+    "group": "outside-access",
+    "question": "How do I remove the gluteus maximus?",
+    "followup_of": "",
+    "allowed": [
+      "Lecture 09 - The Hand"
+    ],
+    "seconds": 0.4,
+    "status": "access_limited",
+    "reason": "outside_access",
+    "mode": "normal",
+    "tier": "none",
+    "search_query": "How do I remove the gluteus maximus?",
+    "n_citations": 0,
+    "n_unmatched": 0,
+    "leaks": [],
+    "answer": "The notes for this are in Lecture 11 - Gluteal Region and Posterior Thigh or Lecture 13 - The Hip and Knee Joints, which you don't have access to. Ask Dr. Inglis to open it for you.",
+    "footer": "",
+    "sources_list": [],
+    "web": false,
+    "web_urls": [],
+    "cites": []
+  }
+]

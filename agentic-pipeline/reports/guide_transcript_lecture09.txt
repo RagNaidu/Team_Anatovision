@@ -1,0 +1,50 @@
+SAMPLE MODE: built from the lecture's own order, not a dissection procedure.
+
+Stations (* = done): 1 Overview  |  2 Bones of the hand: Carpal bones  |  3 Bones of the hand:
+Metacarpal Bones  |  4 Bones of the hand: Phalanges  |  5 Fascia and Compartments  |  6 Fascia and
+Compartments: Palmar Fascia  |  7 Fascia and Compartments: Dorsal Fascia, Central Compartment  |  8
+Fascia and Compartments: Thenar Compartment  |  9 Fascia and Compartments: Hypothenar Compartment,
+Interosseus Compartment, Adductor Compartment  |  10 Muscles of the Hand: Thenar Muscles  |  11
+Muscles of the Hand: Hypothenar Eminence  |  12 Muscles of the Hand: Adductor Pollicis  |  13
+Muscles of the Hand: Lumbricals  |  14 Muscles of the Hand: Interossei Muscles  |  15 Long Tendons
+of the Hand: Flexor Digitorum Tendons  |  16 Long Tendons of the Hand: Flexor Pollicis Longus Tendon
+|  17 Long Tendons of the Hand: Extensor Digitorum Tendons  |  18 Vasculature of the Hand  |  19
+Vasculature of the Hand: Superficial Palmar Arch  |  20 Vasculature of the Hand: Deep Palmer Arch  |
+21 Nerves of the Hand: Median Nerve  |  22 Nerves of the Hand: Ulnar Nerve, Radial Nerve
+22 stations. Which station are you at? (number or name)
+> I'm at station 4
+Before station 4 you should have identified:
+S1 Overview: Distal-most region of the upper…; Opposable digit; 1st digit; Palmar region; Dorsal region
+S2 Bones of the hand: Carpal bones: Carpal bones; Scaphoid; Lunate; Triquetrium; Pisiform (+5 more)
+S3 Bones of the hand: Metacarpal Bones: Metacarpal bones; Base of metacarpal; Head of metacarpal; Carpal bones; Phalanges (+2 more)
+Have you?
+> not sure
+Go back to station 1 (Overview) first. You can't skip ahead.
+Station 1/22: Overview
+Identify: Distal-most region of the upper a…; Opposable digit; 1st digit; Palmar region; Dorsal region
+You should see: Distal-most region of the upper appendage; Palmar region found anteriorly (+2 more)
+Landmarks: Palmar region found anteriorly, dorsal region found posteriorly (+1 more)
+Describe what you see.
+> This is the distal-most part of the upper limb. The palm is on the anterior side and the dorsum on the posterior side, and the first digit is rotated about 90 degrees, so the thumb can oppose for precise grasping.
+This matches the notes.
+You covered the distal-most region of the upper appendage, the palmar region anteriorly and dorsal region posteriorly, and the opposable 1st digit with its 90⁰ rotation…
+Type next for station 2: Bones of the hand: Carpal bones.
+> next
+Station 2/22: Bones of the hand: Carpal bones
+Identify: Carpal bones; Scaphoid; Lunate; Triquetrium; Pisiform; Trapezium; Trapezoid (+3 more)
+You should see: 8 bones arranged in 2 rows of 4; Row one: scaphoid, lunate, triquetrium, pisiform (+2 more)
+Landmarks: Carpal bones are the bones of the wrist (+1 more)
+One line here is under review. General anatomy knowledge, pending Dr. Inglis: The ulna does not directly articulate with the carpal bones. The wrist (radiocarpal) joint is formed by the distal radi…
+Describe what you see.
+> I see six carpal bones in three rows, and the pisiform is in the distal row.
+Not yet. The notes describe 8 carpal bones in 2 rows of 4, not six bones in three rows. The pisiform is in row one (with scaphoid, lunate, triquetrium), and the distal row is tra…
+The notes say you should see: 8 bones arranged in 2 rows of 4; Row one: scaphoid, lunate, triquetrium, pisiform (+2 more)
+What the notes say can go wrong: Tight, restrictive carpal joints after cast removal for fractured forearm, wrist limit hand movements (grasping, pulp-to-pulp opp…
+Re-check and describe it again, or say 'rechecked'.
+> next
+Not yet: describe it again, or say 'rechecked' once you have looked again.
+> skip to the last station
+You can't skip ahead: station 2 (Bones of the hand: Carpal bones) isn't done yet.
+Finish station 2 first: describe what you see, or say 'rechecked'.
+> quit
+Goodbye. Progress this session: 1/22 stations done.

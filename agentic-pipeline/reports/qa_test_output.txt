@@ -1,0 +1,243 @@
+Loading the search index...
+Body type noted: more fat, less muscle. Notes under review from the fact-check: 90 lines.
+
+====================================================================================================
+Q: What are the walls of the middle ear?
+====================================================================================================
+**Where this fits**
+This is from Lecture 16b - Middle Ear, in the section on the middle ear (tympanic cavity), which lies in the petrous portion of the temporal bone [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 1. Located in the petrous portion of the temporal bone]. The notes list the contents of each wall [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+
+**Key points, in order**
+1. Lateral wall: the tympanic membrane, the chorda tympani nerve and the malleus [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+2. Posterior wall: the aditus, which is the entrance to the mastoid antrum (the largest, most superior cavity in the mastoid region, opening into the mastoid air cells); a posterior canaliculus for the chorda tympani nerve; and the stapedius muscle, which attaches to the stapes and increases tension, dampening vibration of the oval window membrane [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+3. Inferior wall: a tympanic canaliculus for the tympanic nerve of CN IX, and vascular structures (the jugular vein and the internal carotid artery) [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+4. Medial wall: the oval window, closed by the footplate of the stapes, and the round window, closed by a membrane [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+5. Anterior wall: the opening for the auditory (eustachian, pharyngotympanic) tube, a passageway between the nasopharynx and the tympanic cavity, and the opening for the tensor tympani muscle-tendon. The tendon inserts into the handle of the malleus and increases tension, dampening vibration of the tympanic membrane. The muscle originates from the cartilaginous part of the eustachian tube and is innervated by CN V [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+
+**What you should see or identify**
+On the lateral wall, the tympanic membrane is a semi-transparent oval membrane that separates the external and middle ear. The malleus attaches at the umbo, a concavity in the central part of the membrane [Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)]. On the medial wall, you should be able to identify the oval window (with the stapes footplate) and the round window [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear]. The sources do not give further identification tips.
+
+**What goes wrong / clinical relevance**
+Not stated in the sources. One line in the notes in the tympanic membrane section touches on this topic: this line in the course notes is currently under review [Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)]. The line concerned the effect of a damaged tympanic membrane on hearing. General anatomy knowledge, pending Dr. Inglis: a perforated tympanic membrane typically causes partial conductive hearing loss, not complete deafness.
+
+**What to look at next**
+Lecture 16b - Middle Ear > IV. Inner Ear [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear].
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0410 cos 0.73  NOTES   Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear
+  0.0397 cos 0.73  NOTES   Lecture 16b - Middle Ear > I. Basic Subdivisions of the Ear
+  0.0388 cos 0.73  NOTES   Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 1. Located in the petrous portion
+  0.0388 cos 0.75  NOTES   Lecture 16b - Middle Ear > II. External Ear > 7. Tympanic Membrane (ear drum)
+  0.0385 cos 0.83  NOTES   Lecture 16b - Middle Ear > II. External Ear > 2. Ear Lobe
+[flag: under review] Perforation of the tympanic membrane causes deafness in the affected ear -> logged to data/flags.jsonl
+[tokens] in 3,641 / out 1,395 | $0.0212
+
+====================================================================================================
+Q: What nerves supply the muscles of the hand?
+====================================================================================================
+**Where this fits**
+This is the Hand region, Lecture 09, under Nerves of the Hand [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve] [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+
+**Key points, in order**
+1. Median nerve: it enters the hand through the carpal tunnel [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve].
+2. Its recurrent branch supplies the thenar muscles, except the deep head of FPB [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve].
+3. Its digital branches give motor branches to lumbricals 1 and 2 [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve].
+4. Ulnar nerve: it enters the hand through the ulnar canal, between the pisiform and the hook of the hamate and medial to the ulnar artery [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+5. It gives branches to the hypothenar eminence [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+6. Its deep branch runs with the deep palmar arch and supplies the interossei, adductor pollicis and the deep head of FPB [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+7. The ulnar nerve supplies the majority of the hand's muscles [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+
+**What you should see or identify**
+Identify the median nerve passing through the carpal tunnel and giving off its recurrent branch to the thenar eminence [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve]. Identify the ulnar nerve between the pisiform and hook of hamate, with its deep branch accompanying the deep palmar arch [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+
+**What goes wrong / clinical relevance**
+- Carpal tunnel syndrome comes from increased pressure in the carpal tunnel. Pressure causes degeneration of the median nerve and loss of function [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve].
+- Median nerve injury causes loss of the lumbricals to digits 2 and 3 and progresses to a claw deformity of those two digits only ("median nerve claw") [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve].
+- Ulnar nerve injury proximal to the hand causes extensive loss of hand function and "ulnar nerve claw". The claw is more pronounced in digits 4 and 5 (loss of lumbricals and interossei) and less pronounced in digits 2 and 3 (loss of interossei only) [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve].
+- A line in the median nerve notes about thenar loss after injury is currently under review [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve]. General anatomy knowledge, pending Dr. Inglis: only an injury at or proximal to the recurrent branch (for example at the wrist/carpal tunnel or higher) causes thenar loss. A lesion distal to the recurrent branch spares the thenar muscles, and nerve lesions can recover depending on severity.
+- A line in the median nerve notes about the claw/benediction mechanism is currently under review [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve]. General anatomy knowledge, pending Dr. Inglis: the benediction sign with a forearm/elbow-level median lesion is due to loss of FDS/FDP to digits 2 and 3 when making a fist, not lumbrical loss. The median claw is due to lumbrical loss with unopposed MCP extension.
+- A line in the ulnar nerve notes about the superficial branch is currently under review [Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve]. General anatomy knowledge, pending Dr. Inglis: the motor branches to the 3rd and 4th (medial) lumbricals come from the deep branch, not the superficial branch. The superficial branch is mainly sensory plus palmaris brevis.
+
+**What to look at next**
+Next in the lecture is Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve [Lecture 09 - The Hand > Nerves of the Hand > Median Nerve].
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0394 cos 0.77  NOTES   Lecture 09 - The Hand > Nerves of the Hand > Median Nerve
+  0.0391 cos 0.74  NOTES   Lecture 07 - The Antebrachium > Nerves of the Antebrachium > Median Nerve > Muscular Branches
+  0.0388 cos 0.76  NOTES   Lecture 09 - The Hand > Nerves of the Hand > Radial Nerve
+  0.0373 cos 0.75  NOTES   Lecture 07 - The Antebrachium > Nerves of the Antebrachium > Radial Nerve > Superficial Branch
+  0.0365 cos 0.78  NOTES   Lecture 09 - The Hand > Nerves of the Hand > Ulnar Nerve
+[flag: under review] Injury to any part of the median nerve results in loss of function of thenar eminence, pro -> logged to data/flags.jsonl
+[flag: under review] When asked to make fist, loss of function results in incomplete flexion of digits 2 and 3  -> logged to data/flags.jsonl
+[flag: under review] Gives off motor branches to 3rd and 4th lumbricals -> logged to data/flags.jsonl
+[tokens] in 4,082 / out 2,858 | $0.0367
+
+====================================================================================================
+Q: What does the popliteal artery continue from?
+====================================================================================================
+**Where this fits**
+This is the vascular supply of the leg, in Lecture 10, and the popliteal fossa contents in Lectures 16 and 12. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply] [Lecture 16 - Posterior Thigh and Popliteal Fossa > Contents > Popliteal Artery]
+
+**Key points, in order**
+1. The popliteal artery supplies almost the entire lower leg. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply]
+2. It is the continuation of the femoral artery past the adductor hiatus. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply]
+3. It runs posterior to the knee joint, which protects it. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply]
+4. It gives off the superior and inferior (medial and lateral) genicular branches, which anastomose around the knee. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply]
+5. Just distal to the proximal tibiofibular joint, it divides into the anterior and posterior tibial arteries. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply]
+
+A line in the popliteal artery sections of the course notes is currently under review [Lecture 16 - Posterior Thigh and Popliteal Fossa > Contents > Popliteal Artery] [Lecture 12 - Posterior Leg and Plantar Surface of Foot > Contents > Popliteal Artery]. It concerns what the popliteal artery continues from. Standard statement (general anatomy knowledge, pending Dr. Inglis): the popliteal artery is the continuation of the femoral artery (an artery, not a nerve) as it passes through the adductor hiatus.
+
+**What you should see or identify**
+The popliteal artery is the deepest component of the popliteal fossa and lies close to the tibial nerve. [Lecture 16 - Posterior Thigh and Popliteal Fossa > Contents > Popliteal Artery] Its continuation with the femoral artery is at the adductor hiatus. [Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply]
+
+**What goes wrong / clinical relevance**
+Aneurysms of the popliteal artery cause palpable pulsations and referred pain from pressure on the nearby tibial nerve. [Lecture 16 - Posterior Thigh and Popliteal Fossa > Contents > Popliteal Artery] The genicular anastomoses help maintain collateral circulation when the knee is bent and the popliteal artery is occluded. [Lecture 16 - Posterior Thigh and Popliteal Fossa > Contents > Popliteal Artery]
+
+**What to look at next**
+Innervation of the leg. [Lecture 10 - Anterior and Lateral Leg > The Leg > Innervation]
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0410 cos 0.77  NOTES   Lecture 16 - Posterior Thigh and Popliteal Fossa > Popliteal Fossa > Contents > Popliteal Artery
+  0.0397 cos 0.80  NOTES   Lecture 12 - Posterior Leg and Plantar Surface of Foot > Popliteal Fossa > Contents > Popliteal 
+  0.0388 cos 0.74  NOTES   Lecture 16 - Posterior Thigh and Popliteal Fossa > Popliteal Fossa > Contents > Popliteal Vein
+  0.0373 cos 0.80  NOTES   Lecture 12 - Posterior Leg and Plantar Surface of Foot > Popliteal Fossa > Contents > Popliteal 
+  0.0349 cos 0.76  NOTES   Lecture 10 - Anterior and Lateral Leg > The Leg > Vascular Supply
+[flag: under review] Continuation of femoral nerve past the adductor hiatus -> logged to data/flags.jsonl
+[flag: under review] Continuation of femoral nerve past the adductor hiatus -> logged to data/flags.jsonl
+[tokens] in 4,006 / out 1,803 | $0.0260
+
+====================================================================================================
+Q: Where do the plantar interossei originate?
+====================================================================================================
+**Where this fits**
+The plantar interossei are in the 4th plantar layer of the sole of the foot, in Lecture 12 (Posterior Leg and Plantar Surface of Foot). The layer is made up of the interossei muscles [Lecture 12 - Posterior Leg and Plantar Surface of Foot > Muscles > 4th Plantar Layer]. They lie in the interosseous compartment of the forefoot, between the metatarsal bones [Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments].
+
+**Key points, in order**
+1. The line in the course notes that touches this topic (the plantar interossei entry) is currently under review [Lecture 12 - Posterior Leg and Plantar Surface of Foot > 4th Plantar Layer > Plantar interossei]. The notes do not otherwise state an origin for these muscles.
+2. Standard statement (general anatomy knowledge, pending Dr. Inglis): the plantar interossei are in the foot and arise from the metatarsals, not the metacarpals (hand bones). The 3rd to 5th metatarsals is correct.
+3. They insert on the medial shaft of the 3rd through 5th proximal phalanges [Lecture 12 - Posterior Leg and Plantar Surface of Foot > 4th Plantar Layer > Plantar interossei].
+4. They are adductors of the digits, comparable to the palmar interossei (3 PAD) [Lecture 12 - Posterior Leg and Plantar Surface of Foot > 4th Plantar Layer > Plantar interossei].
+
+**What you should see or identify**
+The sources say these muscles sit in the interosseous compartment between the metatarsals [Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments]. They insert on the medial shaft of the proximal phalanges of digits 3-5 [Lecture 12 - Posterior Leg and Plantar Surface of Foot > 4th Plantar Layer > Plantar interossei]. The sources say nothing more about what to point to.
+
+**What goes wrong / clinical relevance**
+Not stated in the sources.
+
+**What to look at next**
+Dorsal Interossei [Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Muscles > 4th Plantar Layer > Dorsal Interossei].
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0410 cos 0.72  NOTES   Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Muscles > 4th Plantar Layer 
+  0.0403 cos 0.67  NOTES   Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Muscles > 4th Plantar Layer
+  0.0394 cos 0.72  NOTES   Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Muscles > 4th Plantar Layer 
+  0.0372 cos 0.78  NOTES   Lecture 09 - The Hand > Muscles of the Hand > Interossei Muscles > Palmar Interossei
+  0.0360 cos 0.72  NOTES   Lecture 12 - Posterior Leg and Plantar Surface of Foot > The Foot > Compartments
+[flag: under review] originating off the medial shaft of 3rd through 5th metacarpals -> logged to data/flags.jsonl
+[tokens] in 3,447 / out 1,561 | $0.0225
+
+====================================================================================================
+Q: What is the superior border of the femoral triangle?
+====================================================================================================
+**Where this fits**
+This is the femoral triangle in the anterior and medial thigh, from Lecture 08 [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle].
+
+**Key points, in order**
+1. The notes list the triangle's borders (superior, medial, lateral). The line that gives the superior border in the course notes is currently under review [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle]. This line in the course notes is currently under review, so I can't state it as fact. General anatomy knowledge, pending Dr. Inglis: the superior border of the femoral triangle is the inguinal ligament, not the inguinal canal. The inguinal canal is a separate passage in the anterior abdominal wall above the ligament.
+2. The medial border is adductor longus [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle].
+3. The lateral border is sartorius [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle].
+4. The apex lies inferiorly, where sartorius crosses adductor longus [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle].
+
+**What you should see or identify**
+The notes say the floor is formed by pectineus and iliopsoas, and that the triangle is covered by fascia lata and cruciform fascia over the saphenous opening [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle]. The sources do not give further identification detail for the superior border.
+
+**What goes wrong / clinical relevance**
+Not stated in the sources.
+
+**What to look at next**
+Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle > Contents [Lecture 08 - Anterior and Medial Thigh > The Femoral Triangle].
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0397 cos 0.73  NOTES   Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle > Femo
+  0.0394 cos 0.73  NOTES   Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle
+  0.0389 cos 0.72  NOTES   Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle > Femo
+  0.0385 cos 0.70  NOTES   Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle > Femo
+  0.0378 cos 0.70  NOTES   Lecture 08 - Anterior and Medial Thigh > Anterior and Medial Thigh > The Femoral Triangle > Cont
+[flag: under review] Superior – inguinal canal -> logged to data/flags.jsonl
+[tokens] in 3,730 / out 705 | $0.0145
+
+====================================================================================================
+Q: What does the stapedius muscle do?
+====================================================================================================
+**Where this fits**
+The stapedius is a middle ear (tympanic cavity) structure, covered in Lecture 16b - Middle Ear. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include]
+
+**Key points, in order**
+1. The stapedius muscle attaches to the stapes bone, the smallest ossicle. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include]
+2. It is one of two small middle ear muscles (the other is the tensor tympani). The stapedius is innervated by CN VII. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include]
+3. Both muscles dampen vibration (sound), the tensor especially, and stabilize the ossicles. They help control the amplitude of sound waves and protect the inner ear from excessive sound. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include]
+4. It is the smallest skeletal muscle in the human body. It arises from the pyramidal eminence and inserts on the stapes. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include]
+5. On the posterior wall of the middle ear, it attaches to the stapes, increases tension and dampens vibration of the oval window membrane. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear]
+
+**What you should see or identify**
+The stapedius muscle on the posterior wall of the middle ear, arising from the pyramidal eminence and attaching to the stapes. The footplate of the stapes closes the oval window on the medial wall. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear]
+
+**What goes wrong / clinical relevance**
+Not stated in the sources.
+
+**What to look at next**
+Walls of the Middle Ear. [Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear]
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0410 cos 0.71  NOTES   Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 2. Major structures include
+  0.0380 cos 0.70  NOTES   Lecture 16b - Middle Ear > III. Middle Ear (Tympanic Cavity) > 3. Walls of the Middle Ear
+  0.0257 cos 0.74  OpenStax OpenStax A&P 2e > The Muscular System > Axial Muscles of the Head, Neck, and Back > Key Terms
+  0.0192 cos 0.70  NOTES   Lecture 02 - Muscles of the Back > Suboccipital Muscles
+  0.0189 cos 0.69  NOTES   Lecture 14 - Anterior Triangle of the Neck > I. ANTERIOR TRIANGLE OF THE NECK > B. SUPRAHYOID RE
+[tokens] in 5,312 / out 855 | $0.0192
+
+====================================================================================================
+Q: What is the normal dose of amoxicillin?
+====================================================================================================
+Not covered: I could not find anything relevant in Dr. Inglis's course notes or the OpenStax reference text, so I won't answer from memory. (There is no web search yet.)
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0261 cos 0.60  OpenStax OpenStax A&P 2e > Fluid, Electrolyte, and Acid-Base Balance > Disorders of Acid-Base Balance > C
+  0.0253 cos 0.56  OpenStax OpenStax A&P 2e > Fluid, Electrolyte, and Acid-Base Balance > Water Balance > Regulation of Wate
+  0.0164 cos 0.59  OpenStax OpenStax A&P 2e > The Cardiovascular System: The Heart > Cardiac Physiology > Heart Rates
+  0.0164 cos 0.54  OpenStax OpenStax A&P 2e > The Reproductive System > Anatomy and Physiology of the Ovarian Reproductive S
+  0.0161 cos 0.44  OpenStax OpenStax A&P 2e > Fluid, Electrolyte, and Acid-Base Balance > Electrolyte Balance > Roles of Ele
+  -> treated as NOT FOUND (best cosine 0.60 < 0.68)
+[note] no model call made (best cosine 0.60 < 0.68)
+
+====================================================================================================
+Q: What is the superficial fascia of the anterior abdominal wall like?
+====================================================================================================
+**Where this fits**
+This is the superficial fascia of the anterolateral abdominal wall, covered in Lecture 16 [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 05]. The lecture works through the wall layer by layer, from superficial to deep [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06]. Lecture 15 also notes that these layers continue into the urogenital triangle [Lecture 15 - The Perineum > Urogenital Triangle > Subcutaneous Perineal Fascia].
+
+**Key points, in order**
+1. The superficial fascial component has a loose layer and a dense layer [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 05].
+2. Camper's fascia lies just beneath the skin. It is adipose connective tissue, typically yellow, and highly variable in thickness [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06].
+3. Camper's fascia is nearly absent in frail elderly individuals and can be very thick in obese individuals. This contributes to android obesity ("beer belly") [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06].
+4. Camper's fascia insulates against heat loss and cushions the internal organs against mechanical trauma [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06].
+5. Scarpa's fascia lies just deep to Camper's. It is dense irregular connective tissue, so its thickness is more consistent. It anchors Camper's fascia to the underlying musculature, like "elastic wallpaper paste" [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06].
+6. Below the abdomen, Camper's fascia continues into the urogenital triangle as subcutaneous fatty tissue, and Scarpa's fascia continues as the perineal (Colle's) fascia [Lecture 15 - The Perineum > Urogenital Triangle > Subcutaneous Perineal Fascia].
+
+**What you should see or identify**
+Identify a yellow, fatty Camper's layer just under the skin, then a deeper, more consistent, dense Scarpa's layer [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06]. Because your cadaver has more fat and less muscle, expect Camper's fascia to be on the thicker side, since the notes say its thickness varies and can be remarkably thick in obese individuals [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06]. Scarpa's fascia should stay fairly consistent in thickness [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06].
+
+**What goes wrong / clinical relevance**
+The notes link a thick Camper's fascia to android obesity ("beer belly") [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06]. No other clinical consequences are stated in the sources.
+
+**What to look at next**
+Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 07 [Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06].
+
+--- retrieved (hybrid search; score = boosted RRF) ---
+  0.0407 cos 0.69  NOTES   Lecture 15 - The Perineum > Urogenital Triangle > Subcutaneous Perineal Fascia
+  0.0403 cos 0.76  NOTES   Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 05
+  0.0400 cos 0.77  NOTES   Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 06
+  0.0388 cos 0.74  NOTES   Lecture 16 - Anterolateral Thoracoabdominal Wall > Slide 09
+  0.0358 cos 0.72  NOTES   Lecture 14 - The Pelvic Cavity > Pelvic Fascia
+[tokens] in 4,465 / out 1,211 | $0.0210
+

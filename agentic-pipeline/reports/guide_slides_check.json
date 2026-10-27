@@ -1,0 +1,369 @@
+[
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 12,
+    "slides": [
+      17
+    ],
+    "kind": "correct",
+    "description": "I found the iliofemoral ligament and checked its distal end attaches to the intertrochanteric line of the femur, with the proximal end on the anterior inferior iliac spine.",
+    "seconds": 1.4,
+    "verdict": "partial",
+    "feedback": "You correctly identified the ligament and its attachments. You missed the proximal attachment to the margin of the acetabulum and the task to flex and extend the femur to observe tension changes.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 17",
+    "station_text": "Identify the iliofemoral ligament.\nVerify that the distal end of the iliofemoral ligament is attached to the intertrochanteric line of the femur.\nThe proximal end is attached to the anterior inferior iliac spine and the margin of the acetabulum.\nFlex and extend the femur.\nObserve that the iliofemoral ligament becomes lax in flexion and taut in extension.\nIliofemoral Ligament",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements are directly based on the slide content",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 12,
+    "slides": [
+      17
+    ],
+    "kind": "wrong",
+    "description": "The iliofemoral ligament attaches to the pubic ramus and the ischial spine.",
+    "seconds": 0.8,
+    "verdict": "no",
+    "feedback": "Your description of the attachments is wrong. According to the guide, it attaches to the intertrochanteric line, the anterior inferior iliac spine, and the margin of the acetabulum.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 17",
+    "station_text": "Identify the iliofemoral ligament.\nVerify that the distal end of the iliofemoral ligament is attached to the intertrochanteric line of the femur.\nThe proximal end is attached to the anterior inferior iliac spine and the margin of the acetabulum.\nFlex and extend the femur.\nObserve that the iliofemoral ligament becomes lax in flexion and taut in extension.\nIliofemoral Ligament",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All factual claims in the feedback are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 12,
+    "slides": [
+      17
+    ],
+    "kind": "vague",
+    "description": "I can see a ligament.",
+    "seconds": 0.9,
+    "verdict": "partial",
+    "feedback": "You identified a ligament, but you did not specify it is the iliofemoral ligament. The guide also asks you to verify its attachments and observe its tension during flexion and extension of the femur.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 17",
+    "station_text": "Identify the iliofemoral ligament.\nVerify that the distal end of the iliofemoral ligament is attached to the intertrochanteric line of the femur.\nThe proximal end is attached to the anterior inferior iliac spine and the margin of the acetabulum.\nFlex and extend the femur.\nObserve that the iliofemoral ligament becomes lax in flexion and taut in extension.\nIliofemoral Ligament",
+    "judge": {
+      "verdict": "partly",
+      "reason": "Feedback contains a critique not found in slide text",
+      "unsupported": [
+        "You identified a ligament, but you did not specify it is the iliofemoral ligament."
+      ]
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 6,
+    "slides": [
+      10
+    ],
+    "kind": "correct",
+    "description": "I opened and removed the posterior wall of the joint capsule, found the posterior cruciate ligament, and saw the cruciate ligaments lie outside the synovial cavity but inside the capsule.",
+    "seconds": 0.8,
+    "verdict": "yes",
+    "feedback": "You correctly followed the steps and identified the structures as described in the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 10",
+    "station_text": "Open and remove the posterior wall of the joint capsule to expose the joint cavity\nIdentify the posterior cruciate ligament.\nVerify that the cruciate ligaments are located outside of the synovial cavity but are inside the joint capsule\nPCL\nPCL\nACL\nJoint Capsul\nSynovial Membrane",
+    "judge": {
+      "verdict": "partly",
+      "reason": "Feedback contains evaluative statements not directly present in slide text",
+      "unsupported": [
+        "You correctly followed the steps",
+        "identified the structures as described in the guide"
+      ]
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 6,
+    "slides": [
+      10
+    ],
+    "kind": "wrong",
+    "description": "I cut the anterior wall and saw the cruciate ligaments floating inside the synovial cavity.",
+    "seconds": 0.8,
+    "verdict": "no",
+    "feedback": "You cut the anterior wall instead of the posterior wall. Per the guide, cruciate ligaments are outside of the synovial cavity.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 10",
+    "station_text": "Open and remove the posterior wall of the joint capsule to expose the joint cavity\nIdentify the posterior cruciate ligament.\nVerify that the cruciate ligaments are located outside of the synovial cavity but are inside the joint capsule\nPCL\nPCL\nACL\nJoint Capsul\nSynovial Membrane",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 6,
+    "slides": [
+      10
+    ],
+    "kind": "vague",
+    "description": "I opened it up.",
+    "seconds": 0.8,
+    "verdict": "partial",
+    "feedback": "You opened the joint, but the guide also asks you to identify the PCL, ACL, joint capsule, and synovial membrane.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 10",
+    "station_text": "Open and remove the posterior wall of the joint capsule to expose the joint cavity\nIdentify the posterior cruciate ligament.\nVerify that the cruciate ligaments are located outside of the synovial cavity but are inside the joint capsule\nPCL\nPCL\nACL\nJoint Capsul\nSynovial Membrane",
+    "judge": {
+      "verdict": "yes",
+      "reason": "Both statements in the feedback are directly reflected in the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 10,
+    "slides": [
+      14
+    ],
+    "kind": "correct",
+    "description": "The medial meniscus is firmly attached to the tibial collateral ligament, while the lateral meniscus is not attached to the fibular collateral ligament.",
+    "seconds": 0.7,
+    "verdict": "yes",
+    "feedback": "You correctly identified the attachments of both the medial and lateral menisci as described in the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 14",
+    "station_text": "Observe the menisci.\nNote that the medial meniscus is firmly attached to the tibial collateral ligament.\nIn contrast, the lateral meniscus is not attached to the fibular collateral ligament.\nMedial Meniscus\nLateral Meniscus",
+    "judge": {
+      "verdict": "yes",
+      "reason": "Feedback only restates slide information and confirms correctness",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 10,
+    "slides": [
+      14
+    ],
+    "kind": "wrong",
+    "description": "The lateral meniscus is firmly attached to the fibular collateral ligament and the medial meniscus is free.",
+    "seconds": 0.7,
+    "verdict": "no",
+    "feedback": "You have the attachments reversed. According to the guide, the medial meniscus is firmly attached to the tibial collateral ligament, while the lateral meniscus is not attached to the fibular collateral ligament.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 14",
+    "station_text": "Observe the menisci.\nNote that the medial meniscus is firmly attached to the tibial collateral ligament.\nIn contrast, the lateral meniscus is not attached to the fibular collateral ligament.\nMedial Meniscus\nLateral Meniscus",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback claims are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 17: The Hip and Knee Joints",
+    "station": 10,
+    "slides": [
+      14
+    ],
+    "kind": "vague",
+    "description": "I looked at the menisci.",
+    "seconds": 0.7,
+    "verdict": "partial",
+    "feedback": "You observed the menisci. You missed noting that the medial meniscus is firmly attached to the tibial collateral ligament, while the lateral meniscus is not attached to the fibular collateral ligament.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 17, slide 14",
+    "station_text": "Observe the menisci.\nNote that the medial meniscus is firmly attached to the tibial collateral ligament.\nIn contrast, the lateral meniscus is not attached to the fibular collateral ligament.\nMedial Meniscus\nLateral Meniscus",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All factual statements in the feedback are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 5,
+    "slides": [
+      6
+    ],
+    "kind": "correct",
+    "description": "I pushed my fingers between gluteus maximus and medius, cut the maximus close to the ilium, sacrum and coccyx, detached it from the sacrotuberous ligament and reflected it laterally.",
+    "seconds": 0.8,
+    "verdict": "partial",
+    "feedback": "You correctly separated the muscles, cut the gluteus maximus, and reflected it. You missed cutting any gluteal vessels and nerves close to their attachments to the underside of the muscle per the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 6",
+    "station_text": "Push your fingers into the space between the gluteus maximus and medius muscles to separate them and then cut the gluteus maximus close to the posterior surfaces of the ilium, sacrum, and coccyx.\nDetach it from the sacrotuberous ligament and reflect it laterally toward the greater trochanter.\nCut any gluteal vessels and nerves close to their attachments to the underside of the muscle.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 5,
+    "slides": [
+      6
+    ],
+    "kind": "wrong",
+    "description": "I cut the gluteus medius off the greater trochanter and reflected it upward.",
+    "seconds": 0.8,
+    "verdict": "no",
+    "feedback": "You reflected the wrong muscle. The guide asks you to cut and reflect the gluteus maximus toward the greater trochanter.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 6",
+    "station_text": "Push your fingers into the space between the gluteus maximus and medius muscles to separate them and then cut the gluteus maximus close to the posterior surfaces of the ilium, sacrum, and coccyx.\nDetach it from the sacrotuberous ligament and reflect it laterally toward the greater trochanter.\nCut any gluteal vessels and nerves close to their attachments to the underside of the muscle.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "Both feedback statements are directly supported by the slide instructions",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 5,
+    "slides": [
+      6
+    ],
+    "kind": "vague",
+    "description": "I removed the big muscle.",
+    "seconds": 0.7,
+    "verdict": "partial",
+    "feedback": "You identified removing the muscle, but you didn't mention separating the gluteus maximus and medius or reflecting it laterally toward the greater trochanter as per the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 6",
+    "station_text": "Push your fingers into the space between the gluteus maximus and medius muscles to separate them and then cut the gluteus maximus close to the posterior surfaces of the ilium, sacrum, and coccyx.\nDetach it from the sacrotuberous ligament and reflect it laterally toward the greater trochanter.\nCut any gluteal vessels and nerves close to their attachments to the underside of the muscle.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements refer to steps that are explicitly mentioned in the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 6,
+    "slides": [
+      7
+    ],
+    "kind": "correct",
+    "description": "I identified the piriformis passing through the greater sciatic foramen and the sciatic nerve below it.",
+    "seconds": 0.9,
+    "verdict": "partial",
+    "feedback": "You correctly identified the piriformis and sciatic nerve. You missed the inferior gluteal vessels and nerves, posterior femoral cutaneous nerve, pudendal nerve, internal pudendal vessels, and the path of the pudendal neurovascular bundle as described in the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 7",
+    "station_text": "Identify the piriformis muscle as it passes through the greater sciatic foramen.\nInferior to piriformis identify the sciatic nerve, inferior gluteal vessels and nerves, posterior femoral cutaneous nerve, pudendal nerve, and internal pudendal vessels.\nNote that the pudendal neurovascular bundle passes around the sacrospinous ligament and enters the lesser sciatic foramen to travel to the perineum.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements are directly reflected in the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 6,
+    "slides": [
+      7
+    ],
+    "kind": "wrong",
+    "description": "The sciatic nerve runs above the piriformis and the superior gluteal vessels run below it.",
+    "seconds": 0.7,
+    "verdict": "no",
+    "feedback": "You incorrectly stated the sciatic nerve is above the piriformis; the guide says it is inferior. You also mentioned superior gluteal vessels, which are not in the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 7",
+    "station_text": "Identify the piriformis muscle as it passes through the greater sciatic foramen.\nInferior to piriformis identify the sciatic nerve, inferior gluteal vessels and nerves, posterior femoral cutaneous nerve, pudendal nerve, and internal pudendal vessels.\nNote that the pudendal neurovascular bundle passes around the sacrospinous ligament and enters the lesser sciatic foramen to travel to the perineum.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "Both feedback statements are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 6,
+    "slides": [
+      7
+    ],
+    "kind": "vague",
+    "description": "I see some muscle and nerves.",
+    "seconds": 0.7,
+    "verdict": "no",
+    "feedback": "Your description is too vague. The guide asks you to identify the piriformis muscle, sciatic nerve, inferior gluteal vessels/nerves, posterior femoral cutaneous nerve, and the pudendal neurovascular bundle.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 7",
+    "station_text": "Identify the piriformis muscle as it passes through the greater sciatic foramen.\nInferior to piriformis identify the sciatic nerve, inferior gluteal vessels and nerves, posterior femoral cutaneous nerve, pudendal nerve, and internal pudendal vessels.\nNote that the pudendal neurovascular bundle passes around the sacrospinous ligament and enters the lesser sciatic foramen to travel to the perineum.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All factual claims in the feedback are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 8,
+    "slides": [
+      9
+    ],
+    "kind": "correct",
+    "description": "I identified the superior gluteal vessels and nerves above the piriformis, covered by gluteus medius, and separated the medius from the gluteus minimus.",
+    "seconds": 0.8,
+    "verdict": "yes",
+    "feedback": "You correctly identified the structures and performed the separation as described in the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 9",
+    "station_text": "Superior to the piriformis muscle Identify the superior gluteal vessels and nerves, which are largely covered by the gluteus medius muscle.\nClean the gluteus medius muscle and separate it from the underlying gluteus minimus muscle, with which it is frequently fused.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements are directly supported by the slide text",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 8,
+    "slides": [
+      9
+    ],
+    "kind": "wrong",
+    "description": "I found the pudendal nerve running above the piriformis next to the superior gluteal artery below it.",
+    "seconds": 0.9,
+    "verdict": "no",
+    "feedback": "The guide does not mention the pudendal nerve. You failed to identify the superior gluteal nerves and separate the gluteus medius from the gluteus minimus.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 9",
+    "station_text": "Superior to the piriformis muscle Identify the superior gluteal vessels and nerves, which are largely covered by the gluteus medius muscle.\nClean the gluteus medius muscle and separate it from the underlying gluteus minimus muscle, with which it is frequently fused.",
+    "judge": {
+      "verdict": "yes",
+      "reason": "All feedback statements are consistent with the slide content",
+      "unsupported": []
+    }
+  },
+  {
+    "guide": "Class 14: Gluteal Region",
+    "station": 8,
+    "slides": [
+      9
+    ],
+    "kind": "vague",
+    "description": "I cleaned the area.",
+    "seconds": 0.7,
+    "verdict": "partial",
+    "feedback": "You cleaned the area, but you did not identify the superior gluteal vessels and nerves. You also need to separate the gluteus medius from the gluteus minimus per the guide.",
+    "station_ok": true,
+    "cite": "Dissection Guide, Class 14, slide 9",
+    "station_text": "Superior to the piriformis muscle Identify the superior gluteal vessels and nerves, which are largely covered by the gluteus medius muscle.\nClean the gluteus medius muscle and separate it from the underlying gluteus minimus muscle, with which it is frequently fused.",
+    "judge": {
+      "verdict": "partly",
+      "reason": "One claim judges the student's failure to identify vessels/nerves, which isn’t directly stated in the slide text",
+      "unsupported": [
+        "you did not identify the superior gluteal vessels and nerves"
+      ]
+    }
+  }
+]

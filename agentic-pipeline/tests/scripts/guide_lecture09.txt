@@ -1,0 +1,13 @@
+# Scripted check for Lecture 09 (no human input). Body type is passed with --body-type.
+# 1. start at station 4 without having done 1-3: must be sent back
+I'm at station 4
+not sure
+# 2. a correct description of the station they are sent back to (station 1)
+This is the distal-most part of the upper limb. The palm is on the anterior side and the dorsum on the posterior side, and the first digit is rotated about 90 degrees, so the thumb can oppose for precise grasping.
+next
+# 3. a wrong description (station 2, carpal bones)
+I see six carpal bones in three rows, and the pisiform is in the distal row.
+# 4. trying to move on without a match, then trying to skip to the last station
+next
+skip to the last station
+quit

@@ -1,0 +1,907 @@
+[
+ {
+  "guide": "Class 14",
+  "student": "@start",
+  "expect": "Introduce ONLY the first instruction slide; ask one focused question; no later steps.",
+  "ok": true,
+  "seconds": 1.0,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": null
+  },
+  "reply": "Let's begin with slide 2. With the body supine, the guide asks you to study the surface anatomy of the thigh and leg to approximate the locations of important superficial structures. This is intended to help you avoid cutting through them during dissection. You may optionally use a Sharpie to draw these approximate locations.\n\nAre you ready to begin?",
+  "kind": "begin",
+  "cites": [
+   "s2"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s2",
+   "done": [],
+   "missing": [],
+   "pending": null
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All claims are directly supported by the source slide."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Introduced only first slide, asked a single appropriate question, no extra steps."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "I've reflected gluteus maximus",
+  "expect": "Join midway: find the matching slide, briefly check earlier work from the guide, point to what comes next. Not claim the dissection is correct.",
+  "ok": true,
+  "seconds": 0.9,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": null
+  },
+  "reply": "I can't tell which of these you mean:\n- slide 5: \"Clean and identify the gluteus maximus muscle and define its borders.\"\n- slide 6: \"Push your fingers into the space between the gluteus maximus and medius muscles…\"\nTell me the slide number, or which one it is.",
+  "kind": "clarify",
+  "cites": [
+   "s5",
+   "s6"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": {
+    "type": "clarify",
+    "options": [
+     "s5",
+     "s6"
+    ]
+   }
+  },
+  "fact": {
+   "verdict": "n/a (standard wording)",
+   "unsupported": [],
+   "note": "template reply"
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant correctly asked clarification to identify the matching slide without claiming correctness or advancing prematurely."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "I didn't do the skin incision",
+  "expect": "Treat an earlier step as not done: offer to go back to the incision step; do not advance.",
+  "ok": true,
+  "seconds": 0.9,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": {
+    "type": "clarify",
+    "options": [
+     "s5",
+     "s6"
+    ]
+   }
+  },
+  "reply": "Thanks for telling me. That is slide 3 (part 1): \"Place the body in the prone position (if not already done) Make a vertical…\". Do you want to go back to it now? You can also say no and stay where you are.",
+  "kind": "return_offer",
+  "cites": [
+   "s3.1"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": null,
+   "done": [],
+   "missing": [
+    "s3.1",
+    "s3.2"
+   ],
+   "pending": {
+    "type": "return",
+    "id": "s3.1",
+    "came_from": null
+   }
+  },
+  "fact": {
+   "verdict": "n/a (standard wording)",
+   "unsupported": [],
+   "note": "template reply"
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant offered to return to the incision step, did not advance, asked a single clarifying question."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "yes",
+  "expect": "Go back to that earlier step and present it.",
+  "ok": true,
+  "seconds": 1.5,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [
+    "s3.1",
+    "s3.2"
+   ],
+   "pending": {
+    "type": "return",
+    "id": "s3.1",
+    "came_from": null
+   }
+  },
+  "reply": "For slide 3, first ensure the body is in the prone position. Then, perform these incisions:\n\n* A vertical incision from the midline of the previous incision across the inferior back (point A) to point B at the base of the buttocks, slightly posterior to the anus.\n* Bilateral skin incisions (not too deep) from B to C. Be aware there may be significant adipose tissue in the inferomedial gluteal region.\n* A vertical incision from D to E down the midpoint of the thigh, starting from midway along the transverse cut.\n\nAre you ready to begin?",
+  "kind": "show",
+  "cites": [
+   "s3.1"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s3.1",
+   "done": [],
+   "missing": [
+    "s3.1",
+    "s3.2"
+   ],
+   "pending": null
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All procedural steps match the source text."
+  },
+  "conv": {
+   "verdict": "partly",
+   "note": "Returned to step s3.1 but introduced extra detail and a question beyond simply presenting the earlier step."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "ok I finished that, ready for the next one",
+  "expect": "Self-reported completion plus a request to continue: move forward one step.",
+  "ok": true,
+  "seconds": 1.7,
+  "before": {
+   "pos": "s3.1",
+   "done": [],
+   "missing": [
+    "s3.1",
+    "s3.2"
+   ],
+   "pending": null
+  },
+  "reply": "The guide has that step on slide 3. Please confirm you studied the surface anatomy of the thigh and leg as described on slide 2. The next step is on slide 3.",
+  "kind": "report_done_recap",
+  "cites": [
+   "s3.1",
+   "s2",
+   "s3.2"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s3.2",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s2"
+    ],
+    "target": "s3.2"
+   }
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All statements reference slides mentioned in source."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant correctly advanced one step and asked a single focused recap question without overreaching."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "slide 5",
+  "expect": "Navigate to slide 5.",
+  "ok": true,
+  "seconds": 0.9,
+  "before": {
+   "pos": "s3.2",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s2"
+    ],
+    "target": "s3.2"
+   }
+  },
+  "reply": "You're at slide 5.\n\nEarlier in the guide, did you make the incisions from C to D and around the ankle, and reflect the skin and superficial fascia from the gluteal region, posterior thigh, and leg?",
+  "kind": "join",
+  "cites": [
+   "s3.2",
+   "s4"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s5",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s3.2",
+     "s4"
+    ],
+    "target": "s5"
+   }
+  },
+  "fact": {
+   "verdict": "minor_unsupported",
+   "unsupported": [
+    "You're at slide 5."
+   ],
+   "note": "The claim about being on slide 5 is not mentioned in the source; the rest is a question about steps that are supported."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant correctly moved to slide 5, acknowledged position, asked a single relevant question without claiming correctness."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "Which muscle is visible superior to gluteus maximus?",
+  "expect": "Answer from the guide without moving.",
+  "ok": true,
+  "seconds": 1.6,
+  "before": {
+   "pos": "s5",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s3.2",
+     "s4"
+    ],
+    "target": "s5"
+   }
+  },
+  "reply": "Some of the gluteus medius muscle is visible superior to the gluteus maximus. You are still on slide 5.",
+  "kind": "question",
+  "cites": [
+   "s5"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s5",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s3.2",
+     "s4"
+    ],
+    "target": "s5"
+   }
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All statements match the source slide."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Provided correct answer, no position change, no extra question or claim."
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "I see a big yellow thing and I think it's the liver",
+  "expect": "Vague or wrong observation: do not confirm it; say it does not match the guide; restate what the guide asks them to find; do not invent.",
+  "ok": true,
+  "seconds": 0.8,
+  "before": {
+   "pos": "s5",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s3.2",
+     "s4"
+    ],
+    "target": "s5"
+   }
+  },
+  "reply": "I can't tell from here whether that is expected: the guide doesn't say, and I can't see your dissection. Please ask your instructor to look before you do anything further.",
+  "kind": "unexpected",
+  "cites": [],
+  "fallback": false,
+  "after": {
+   "pos": "s5",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s3.2",
+     "s4"
+    ],
+    "target": "s5"
+   }
+  },
+  "fact": {
+   "verdict": "n/a (standard wording)",
+   "unsupported": [],
+   "note": "template reply"
+  },
+  "conv": {
+   "verdict": "partly",
+   "note": "Did not confirm, but failed to restate guide's request"
+  }
+ },
+ {
+  "guide": "Class 14",
+  "student": "Actually I meant slide 9",
+  "expect": "Correct the location to slide 9.",
+  "ok": true,
+  "seconds": 0.9,
+  "before": {
+   "pos": "s5",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s3.2",
+     "s4"
+    ],
+    "target": "s5"
+   }
+  },
+  "reply": "You're at slide 9.\n\nEarlier in the guide, did you reflect the gluteus maximus, identify the piriformis and structures inferior to it, and identify the obturator internus, gemelli, and quadratus femoris?",
+  "kind": "join",
+  "cites": [
+   "s6",
+   "s7",
+   "s8"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s9",
+   "done": [
+    "s3.1"
+   ],
+   "missing": [
+    "s3.2"
+   ],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s6",
+     "s7",
+     "s8"
+    ],
+    "target": "s9"
+   }
+  },
+  "fact": {
+   "verdict": "minor_unsupported",
+   "unsupported": [
+    "You're at slide 9."
+   ],
+   "note": "The claim about being on slide 9 is not found in the source; the rest of the question references steps described in slides 6‑8, which are supported."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Corrected position and asked one focused question without advancing or claiming correctness."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "@start",
+  "expect": "Introduce ONLY the first instruction slide; ask one focused question.",
+  "ok": true,
+  "seconds": 1.0,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": null
+  },
+  "reply": "Let's begin with slide 2. The guide asks you to coordinate with your group to decide who will work on the knee joint and who will work on the hip joint, as these dissections happen concurrently. You should also arrange to spend the final 30 minutes of the lab sharing your work.\n\nAre you ready to begin?",
+  "kind": "begin",
+  "cites": [
+   "s2"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s2",
+   "done": [],
+   "missing": [],
+   "pending": null
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All claims match the source slide."
+  },
+  "conv": {
+   "verdict": "partly",
+   "note": "Correct position change, but the assistant added extra instruction details and asked a generic readiness question rather than a single focused question about the slide."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "I'm at the knee joint",
+  "expect": "Either resolve to a slide about the knee joint or ask a short clarifying question listing the candidate slides.",
+  "ok": true,
+  "seconds": 0.8,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": null
+  },
+  "reply": "I can't tell which of these you mean:\n- slide 2: \"The dissection of the knee and hip joints will take place concurrently, with 2…\"\n- slide 4: \"To assist with the dissections, the leg which will be used for the joint…\"\n- slide 6: \"Review the bony architecture and ligament of the knee on an articulated…\"\n- slide 7: \"On the lateral side of the knee, use sharp scalpel dissection to transect the…\"\nTell me the slide number, or which one it is.",
+  "kind": "clarify",
+  "cites": [
+   "s2",
+   "s4",
+   "s6",
+   "s7"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": {
+    "type": "clarify",
+    "options": [
+     "s2",
+     "s4",
+     "s6",
+     "s7"
+    ]
+   }
+  },
+  "fact": {
+   "verdict": "n/a (standard wording)",
+   "unsupported": [],
+   "note": "template reply"
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Provided a concise clarifying question with the listed slide options, matching the required behavior."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "slide 12",
+  "expect": "Join at slide 12; recap earlier slides from the guide as a check question.",
+  "ok": true,
+  "seconds": 1.0,
+  "before": {
+   "pos": null,
+   "done": [],
+   "missing": [],
+   "pending": {
+    "type": "clarify",
+    "options": [
+     "s2",
+     "s4",
+     "s6",
+     "s7"
+    ]
+   }
+  },
+  "reply": "You're at slide 12.\n\nEarlier in the guide, did you free the plantaris and gastrocnemius muscles and remove the popliteus, open the posterior joint capsule to identify the PCL, and identify the quadriceps tendon and patellar ligament on the anterior surface?",
+  "kind": "join",
+  "cites": [
+   "s9",
+   "s10",
+   "s11"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s12",
+   "done": [],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s9",
+     "s10",
+     "s11"
+    ],
+    "target": "s12"
+   }
+  },
+  "fact": {
+   "verdict": "minor_unsupported",
+   "unsupported": [
+    "You're at slide 12."
+   ],
+   "note": "Slide 12 is not mentioned in the source; other statements are derived from slides 9-11."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant correctly joined slide 12, asked a single recap question without advancing or claiming correctness."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "I haven't removed the posterior wall of the joint capsule",
+  "expect": "Earlier step not done: offer to go back to that step.",
+  "ok": true,
+  "seconds": 1.1,
+  "before": {
+   "pos": "s12",
+   "done": [],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s9",
+     "s10",
+     "s11"
+    ],
+    "target": "s12"
+   }
+  },
+  "reply": "Thanks for telling me. That is slide 10: \"Open and remove the posterior wall of the joint capsule to expose the joint…\". Do you want to go back to it now? You can also say no and stay where you are.",
+  "kind": "return_offer",
+  "cites": [
+   "s10"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s12",
+   "done": [],
+   "missing": [
+    "s10"
+   ],
+   "pending": {
+    "type": "return",
+    "id": "s10",
+    "came_from": "s12"
+   }
+  },
+  "fact": {
+   "verdict": "n/a (standard wording)",
+   "unsupported": [],
+   "note": "template reply"
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Offered to return to the missing step as required, with a single clear question and no extra claims."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "yes",
+  "expect": "Go back to that step and present it.",
+  "ok": true,
+  "seconds": 1.2,
+  "before": {
+   "pos": "s12",
+   "done": [],
+   "missing": [
+    "s10"
+   ],
+   "pending": {
+    "type": "return",
+    "id": "s10",
+    "came_from": "s12"
+   }
+  },
+  "reply": "For slide 10, open and remove the posterior wall of the joint capsule to expose the joint cavity. Then, identify the posterior cruciate ligament.\n\nVerify that the cruciate ligaments are located inside the joint capsule, but outside of the synovial cavity.",
+  "kind": "show",
+  "cites": [
+   "s10"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s10",
+   "done": [],
+   "missing": [
+    "s10"
+   ],
+   "pending": null
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All claims match the source slide text"
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant presented step s10 as requested, no extra advancement or correctness claim"
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "done, next",
+  "expect": "Self-reported completion plus continue: move forward one step.",
+  "ok": true,
+  "seconds": 1.7,
+  "before": {
+   "pos": "s10",
+   "done": [],
+   "missing": [
+    "s10"
+   ],
+   "pending": null
+  },
+  "reply": "For slide 11, identify the tendon of the quadriceps femoris muscle on the anterior surface of the knee. Observe the patellar retinacula that help keep the patella centered. Then, identify the patellar ligament inferior to the patella.",
+  "kind": "show",
+  "cites": [
+   "s11"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s11",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": null
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All claims are directly supported by the source slide."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant advanced exactly one step to s11 with appropriate instructions and no extraneous claims."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "slide 13",
+  "expect": "Navigate to slide 13 (first part).",
+  "ok": true,
+  "seconds": 0.8,
+  "before": {
+   "pos": "s11",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": null
+  },
+  "reply": "You're at slide 13.\n\nEarlier in the guide, did you make a transverse incision superior to the patella, reflect the patella and patellar ligament inferiorly, and confirm the femur and tibia are attached by the collateral and cruciate ligaments?",
+  "kind": "join",
+  "cites": [
+   "s12"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s13.1",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s12"
+    ],
+    "target": "s13.1"
+   }
+  },
+  "fact": {
+   "verdict": "minor_unsupported",
+   "unsupported": [
+    "You're at slide 13."
+   ],
+   "note": "The procedural details are supported, but the statement about being on slide 13 is not present in the source."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Assistant correctly confirmed slide 13 and asked a single focused check question without over‑advancing or asserting correctness."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "What is the anterior drawer sign?",
+  "expect": "Answer from the guide text only, without moving.",
+  "ok": true,
+  "seconds": 1.6,
+  "before": {
+   "pos": "s13.1",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s12"
+    ],
+    "target": "s13.1"
+   }
+  },
+  "reply": "The anterior drawer sign is the greater forward motion of the tibia observed in an ACL deficient knee when the leg is flexed and the tibia is pulled anteriorly, compared to a leg with an intact ACL. \n\nYou are still on slide 13.",
+  "kind": "question",
+  "cites": [
+   "s13.2"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s13.1",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s12"
+    ],
+    "target": "s13.1"
+   }
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All statements match slide 13 content."
+  },
+  "conv": {
+   "verdict": "good",
+   "note": "Provided guide-based answer, stayed on same slide, no extra question or claim."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "the knee moves a bit I guess",
+  "expect": "Vague observation: do not confirm; restate what the guide asks them to find.",
+  "ok": true,
+  "seconds": 2.1,
+  "before": {
+   "pos": "s13.1",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s12"
+    ],
+    "target": "s13.1"
+   }
+  },
+  "reply": "Your description partly matches slide 13. You mentioned the knee moves, which matches the guide's mention that some rotation occurs in the knee joint when flexed. However, the guide also asks you to observe the contact between the articular surfaces of the femur and tibia during extension and flexion, and to pull the tibia anteriorly while the knee is flexed to note the tightness of the joint.\n\nCould you look again and describe those observations?",
+  "kind": "describe",
+  "cites": [
+   "s13.1"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s13.1",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s12"
+    ],
+    "target": "s13.1"
+   }
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All factual statements in the assistant's reply are directly supported by the slide text."
+  },
+  "conv": {
+   "verdict": "partly",
+   "note": "Includes a confirming statement ('Your description partly matches') which violates the instruction to avoid confirming; otherwise restates guide and asks a focused question."
+  }
+ },
+ {
+  "guide": "Class 17",
+  "student": "Actually I'm at slide 17",
+  "expect": "Correct the location to slide 17.",
+  "ok": true,
+  "seconds": 1.0,
+  "before": {
+   "pos": "s13.1",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s12"
+    ],
+    "target": "s13.1"
+   }
+  },
+  "reply": "You're at slide 17.\n\nEarlier in the guide, did you feel the forward movement of the tibia in ACL deficient knees, observe the menisci attachments, and reflect the sartorius, rectus femoris, pectineus, and iliopsoas muscles?",
+  "kind": "join",
+  "cites": [
+   "s13.2",
+   "s14",
+   "s16"
+  ],
+  "fallback": false,
+  "after": {
+   "pos": "s17",
+   "done": [
+    "s10"
+   ],
+   "missing": [],
+   "pending": {
+    "type": "recap",
+    "ids": [
+     "s13.2",
+     "s14",
+     "s16"
+    ],
+    "target": "s17"
+   }
+  },
+  "fact": {
+   "verdict": "supported",
+   "unsupported": [],
+   "note": "All claims either restate or query steps described in slides 13, 14, and 16."
+  },
+  "conv": {
+   "verdict": "partly",
+   "note": "Location corrected correctly, but the follow‑up asks a multi‑part, unfocused question, exceeding the one‑question limit."
+  }
+ }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "q": "What is Broca's area?",
+    "sec": 4.9,
+    "status": "answered",
+    "mode": "web",
+    "reason": "",
+    "answer": "Broca's area is a region in the dominant hemisphere's frontal lobe, typically the left, that functions in speech production [Web: Broca's area (Wikipedia)]. It is located in the posterior inferior frontal gyrus (pars triangularis) [Web: Broca's area (Wikipedia)]. This region is also associated with speech formation and is part of the prefrontal cortex [Web: Prefrontal cortex (Wikipedia)]. Ask for more detail if you need it.",
+    "label": "From Wikipedia, not in Dr. Inglis's notes or OpenStax. Check with your instructor.",
+    "pages": [
+      [
+        "Broca's area",
+        "https://en.wikipedia.org/wiki/Broca%27s_area",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ],
+      [
+        "Prefrontal cortex",
+        "https://en.wikipedia.org/wiki/Prefrontal_cortex",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ],
+      [
+        "Brain asymmetry",
+        "https://en.wikipedia.org/wiki/Brain_asymmetry",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ]
+    ],
+    "searched": true,
+    "leaks": [],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All answer statements are supported by the provided Wikipedia excerpts.",
+      "unsupported": []
+    }
+  },
+  {
+    "q": "What is the thyroglossal duct?",
+    "sec": 6.4,
+    "status": "answered",
+    "mode": "web",
+    "reason": "",
+    "answer": "The thyroglossal duct is a structure typically present only during embryonic growth [Web: Persistent thyroglossal duct (Wikipedia)]. It forms a midline connection between the thyroid gland and the back of the tongue [Web: Persistent thyroglossal duct (Wikipedia)]. This duct runs anterior to the sternohyoid muscle, sternothyroid muscle, and thyrohyoid membrane [Web: Persistent thyroglossal duct (Wikipedia)]. It also stays close to the neck's medial line and anterior to the laryngeal cartilage [Web: Persistent thyroglossal duct (Wikipedia)].\nAsk for more detail if you need it.",
+    "label": "From Wikipedia, not in Dr. Inglis's notes or OpenStax. Check with your instructor.",
+    "pages": [
+      [
+        "Persistent thyroglossal duct",
+        "https://en.wikipedia.org/wiki/Persistent_thyroglossal_duct",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ],
+      [
+        "MeSH: Thyroglossal Cyst",
+        "https://www.ncbi.nlm.nih.gov/mesh/68013955",
+        "2026-10-19",
+        ""
+      ]
+    ],
+    "searched": true,
+    "leaks": [],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements in the answer are directly supported by the fetched text.",
+      "unsupported": []
+    }
+  },
+  {
+    "q": "What is the glomus tympanicum?",
+    "sec": 4.9,
+    "status": "answered",
+    "mode": "web",
+    "reason": "",
+    "answer": "The glomus tympanicum is an ovoid body of highly vascular chemoreceptive tissue located next to the tympanic cavity [Web: MeSH: Glomus Tympanicum (NLM MeSH)]. It originates from neural crest tissue and is part of the diffuse neuroendocrine system [Web: MeSH: Glomus Tympanicum (NLM MeSH)]. This area is the location for a rare neoplasm known as a glomus tympanicum tumor [Web: MeSH: Glomus Tympanicum Tumor (NLM MeSH)].\n\nAsk for more detail if you need it.",
+    "label": "From the web, not in Dr. Inglis's notes or OpenStax. Check with your instructor.",
+    "pages": [
+      [
+        "MeSH: Glomus Tympanicum Tumor",
+        "https://www.ncbi.nlm.nih.gov/mesh/68043604",
+        "2026-10-19",
+        ""
+      ],
+      [
+        "MeSH: Glomus Tympanicum",
+        "https://www.ncbi.nlm.nih.gov/mesh/68043485",
+        "2026-10-19",
+        ""
+      ]
+    ],
+    "searched": true,
+    "leaks": [],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements are directly supported by the fetched text",
+      "unsupported": []
+    }
+  },
+  {
+    "q": "What is Waldeyer's ring?",
+    "sec": 2.7,
+    "status": "answered",
+    "mode": "web",
+    "reason": "",
+    "answer": "Waldeyer's tonsillar ring is a collection of lymphoid organs that face into the aerodigestive tract [Web: Tonsil (Wikipedia)]. This ring includes the lingual tonsils, two palatine tonsils, two tubal tonsils, and the pharyngeal (adenoid) tonsil [Web: Tonsil (Wikipedia)]. These organs serve a significant role within the immune system [Web: Tonsil (Wikipedia)].\nAsk for more detail if you need it.",
+    "label": "From Wikipedia, not in Dr. Inglis's notes or OpenStax. Check with your instructor.",
+    "pages": [
+      [
+        "Tonsil",
+        "https://en.wikipedia.org/wiki/Tonsil",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ]
+    ],
+    "searched": true,
+    "leaks": [],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements in the answer are directly supported by the fetched text.",
+      "unsupported": []
+    }
+  },
+  {
+    "q": "What is Calot's triangle?",
+    "sec": 4.7,
+    "status": "answered",
+    "mode": "web",
+    "reason": "",
+    "answer": "Calot's triangle, also called the cystohepatic or hepatobiliary triangle, is an anatomic space [Web: Cystohepatic triangle (Wikipedia)]. It is bordered by the common hepatic duct medially, the cystic duct laterally, and the liver's inferior surface superiorly [Web: Cystohepatic triangle (Wikipedia)]. The cystic artery and cystic node are located within this triangle [Web: Cystohepatic triangle (Wikipedia)] [Web: Cystic node (Wikipedia)]. Ask for more detail if you need it.",
+    "label": "From Wikipedia, not in Dr. Inglis's notes or OpenStax. Check with your instructor.",
+    "pages": [
+      [
+        "Cystohepatic triangle",
+        "https://en.wikipedia.org/wiki/Cystohepatic_triangle",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ],
+      [
+        "Cystic node",
+        "https://en.wikipedia.org/wiki/Cystic_node",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ]
+    ],
+    "searched": true,
+    "leaks": [],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All statements in the answer are directly supported by the fetched text.",
+      "unsupported": []
+    }
+  },
+  {
+    "q": "What is the sphincter of Oddi?",
+    "sec": 5.4,
+    "status": "answered",
+    "mode": "web",
+    "reason": "",
+    "answer": "The sphincter of Oddi is a circular muscle band that surrounds the major duodenal papilla [Web: Sphincter of Oddi (Wikipedia)]. This muscular valve regulates the flow of pancreatic juice and bile through the ampulla of Vater into the duodenum [Web: Sphincter of Oddi (Wikipedia)]. The main pancreatic duct and common bile duct travel through this sphincter [Web: MeSH: Sphincter of Oddi (NLM MeSH)]. It is also known as Glisson's sphincter or the hepatopancreatic sphincter [Web: Sphincter of Oddi (Wikipedia)].\nAsk for more detail if you need it.",
+    "label": "From Wikipedia, not in Dr. Inglis's notes or OpenStax. Check with your instructor.",
+    "pages": [
+      [
+        "Sphincter of Oddi",
+        "https://en.wikipedia.org/wiki/Sphincter_of_Oddi",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ],
+      [
+        "Biliary endoscopic sphincterotomy",
+        "https://en.wikipedia.org/wiki/Biliary_endoscopic_sphincterotomy",
+        "2026-10-19",
+        "Wikipedia, CC BY-SA 4.0"
+      ],
+      [
+        "MeSH: Sphincter of Oddi",
+        "https://www.ncbi.nlm.nih.gov/mesh/68009803",
+        "2026-10-19",
+        ""
+      ]
+    ],
+    "searched": true,
+    "leaks": [],
+    "judge": {
+      "verdict": "yes",
+      "reason": "All claims are directly supported by the fetched text",
+      "unsupported": []
+    }
+  },
+  {
+    "q": "amoxicillin dose",
+    "sec": 0.5,
+    "status": "not_found",
+    "mode": "normal",
+    "reason": "clinical_advice",
+    "answer": "This tool covers structure and function from the course material, not clinical advice such as treatment, medication or diagnosis, so it can't answer that here.",
+    "label": "",
+    "pages": [],
+    "searched": false,
+    "leaks": []
+  },
+  {
+    "q": "who won the world cup",
+    "sec": 0.4,
+    "status": "not_found",
+    "mode": "normal",
+    "reason": "not_anatomy",
+    "answer": "That doesn't look like a question about anatomy or the lab, so I can't help with it here. Ask about a structure, a region or a step from the lectures.",
+    "label": "",
+    "pages": [],
+    "searched": false,
+    "leaks": []
+  }
+]

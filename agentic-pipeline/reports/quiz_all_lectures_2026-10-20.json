@@ -1,0 +1,3234 @@
+{
+  "updated_utc": "2026-10-21T03:13:23.837362+00:00",
+  "lectures": [
+    {
+      "title": "ANA407 Class 28 - The Posterior Abdominal Wall",
+      "chunks": 20,
+      "usable_passages": 16,
+      "usable_words": 2235,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 37,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 37,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 64.6,
+          "calls": 49,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "audit": 1,
+            "structure": 2,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-017-00"
+              ],
+              "stage": "audit",
+              "reason": "The gall bladder stores bile; it does not contain the pancreas."
+            },
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-007-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 2: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead; alternative 3: the reason rests on the passages not m"
+            },
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-014-01"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: clang clue: the word(s) central appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-011-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Pyloric sphincter"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 63.2,
+          "calls": 47,
+          "drafts": 8,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "duplicate": 1,
+            "solver_verifier": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-014-02"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-003-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'D' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-ANA407-C28-the-posterior-abdominal-wall-004-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Meissner\u2019s plexus"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 01 - The Vertebral Column",
+      "chunks": 23,
+      "usable_passages": 23,
+      "usable_words": 2910,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 54,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 54,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 59.6,
+          "calls": 46,
+          "drafts": 8,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 1,
+            "audit": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-003-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'B' (also ['D'])"
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-021-00"
+              ],
+              "stage": "audit",
+              "reason": "Flexion and extension are specifically limited in the thoracic region, not the lumbar region.; Flexion and extension are specifically limited in the thoracic region, not the lumbar region."
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-002-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Exit point for spinal nerves, C: Encase spinal cord, D: Support weight of skull"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 96.6,
+          "calls": 57,
+          "drafts": 11,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 3,
+            "audit": 2,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-010-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 2: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead; alternative 3: the reason rests on the passages not m"
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-001-00"
+              ],
+              "stage": "audit",
+              "reason": "Intervertebral foramina are formed by the vertebral notches of the pedicles."
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-007-00"
+              ],
+              "stage": "audit",
+              "reason": "C1 is a cervical vertebra; L5 is a lumbar vertebra where spondylolisthesis is most common"
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-017-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Articular cartilage, C: Vertebral body"
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-014-02"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L01-the-vertebral-column-011-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 2: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead; alternative 3: the reason rests on the passages not m"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 02 - Muscles of the Back",
+      "chunks": 14,
+      "usable_passages": 12,
+      "usable_words": 1796,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 30,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 30,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 37.2,
+          "calls": 25,
+          "drafts": 6,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L02-muscles-of-the-back-003-01"
+              ],
+              "stage": "structure",
+              "reason": "explanation: span not found in note-L02-muscles-of-the-back-003-01"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 50.3,
+          "calls": 33,
+          "drafts": 6,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "duplicate": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L02-muscles-of-the-back-010-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 03 - Nerves Spinal Cord and Meninges",
+      "chunks": 12,
+      "usable_passages": 12,
+      "usable_words": 1783,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 29,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 29,
+          "capacity_heuristic": 29,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 74.6,
+          "calls": 52,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 1,
+            "structure": 1,
+            "audit": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-009-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'D' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-006-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: absolute or vague term in option: Motor axons only; absolute or vague term in option: Sensory neurons only; absolute or vague term in option: Cerebrospinal fluid only"
+            },
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-005-00"
+              ],
+              "stage": "audit",
+              "reason": "The hollow central canal contains cerebrospinal fluid rather than cell bodies."
+            },
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-009-01"
+              ],
+              "stage": "mixed_options",
+              "reason": "D: Cerebrospinal fluid"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 66.3,
+          "calls": 45,
+          "drafts": 9,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "audit": 3,
+            "solver_gemma": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-007-00"
+              ],
+              "stage": "audit",
+              "reason": "are not the site where the signal to trigger muscle contraction originates in the stretch reflex"
+            },
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-009-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'A' (also ['D'])"
+            },
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-005-00"
+              ],
+              "stage": "audit",
+              "reason": "White matter consists of myelinated neural tissue and axons extending to/from the PNS, not cell bodies.; The hollow central canal contains cerebrospinal fluid rather than cell bodies."
+            },
+            {
+              "anchor": [
+                "note-L03-nerves-spinal-cord-and-meninges-002-00"
+              ],
+              "stage": "audit",
+              "reason": "not a structural class like bipolar neurons; general sensory neurons"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 04 - The Shoulder",
+      "chunks": 23,
+      "usable_passages": 17,
+      "usable_words": 1651,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 33,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 33,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 100.9,
+          "calls": 70,
+          "drafts": 10,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "audit": 1,
+            "mixed_options": 2,
+            "structure": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L04-the-shoulder-017-00"
+              ],
+              "stage": "audit",
+              "reason": "The passages provided do not describe the trapezius as a muscle that initiates shoulder abduction."
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-007-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Acromioclavicular joint, C: Costocoracoid membrane"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-011-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 2: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-018-00"
+              ],
+              "stage": "structure",
+              "reason": "vague term in the stem or lead-in"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-016-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: Supraspinatus tendon"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 103.3,
+          "calls": 68,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 4,
+            "mixed_options": 1,
+            "duplicate": 3,
+            "audit": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L04-the-shoulder-023-00"
+              ],
+              "stage": "structure",
+              "reason": "vague term in the stem or lead-in"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-016-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Supraspinatus tendon"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-003-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-001-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-007-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 3: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-018-00"
+              ],
+              "stage": "structure",
+              "reason": "vague term in the stem or lead-in"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-004-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-011-00"
+              ],
+              "stage": "audit",
+              "reason": "The teres minor is a muscle that the teres major is similar in appearance to, but it is not the muscle that initiates abduction."
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-008-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L04-the-shoulder-001-00"
+            },
+            {
+              "anchor": [
+                "note-L04-the-shoulder-015-00"
+              ],
+              "stage": "audit",
+              "reason": "The glenoid fossa is part of the articulation of the shoulder joint, not an insertion point for the teres major."
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 05 - The Axilla",
+      "chunks": 17,
+      "usable_passages": 12,
+      "usable_words": 1837,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 28,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 25,
+          "capacity_heuristic": 28,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 82.5,
+          "calls": 49,
+          "drafts": 10,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 1,
+            "audit": 3,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L05-the-axilla-010-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'B' (also ['C'])"
+            },
+            {
+              "anchor": [
+                "note-L05-the-axilla-012-00"
+              ],
+              "stage": "audit",
+              "reason": "not C6, C7, and C8.; not C7, C8, and T1."
+            },
+            {
+              "anchor": [
+                "note-L05-the-axilla-012-01"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Subclavian nodes"
+            },
+            {
+              "anchor": [
+                "note-L05-the-axilla-006-00"
+              ],
+              "stage": "audit",
+              "reason": "The thoracodorsal nerve is not the innervation for serratus anterior; The brachial plexus (which includes the axillary nerve) emerges from lower cervical and upper thoracic spinal nerves to supply the"
+            },
+            {
+              "anchor": [
+                "note-L05-the-axilla-013-00"
+              ],
+              "stage": "audit",
+              "reason": "but not the lower subscapular nerve"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 51.5,
+          "calls": 35,
+          "drafts": 8,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "duplicate": 1,
+            "audit": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L05-the-axilla-013-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L05-the-axilla-008-00"
+              ],
+              "stage": "audit",
+              "reason": "The olecranon fossa accommodates the olecranon during extension rather than articulating with the radius.; The coronoid fossa accommodates the coronoid process during flexion rather than articulating "
+            },
+            {
+              "anchor": [
+                "note-L05-the-axilla-014-00"
+              ],
+              "stage": "audit",
+              "reason": "The median nerve is a continuation that receives branches from both the medial and lateral cords."
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 06 - The Brachium",
+      "chunks": 23,
+      "usable_passages": 12,
+      "usable_words": 873,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 21,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 17,
+          "capacity_heuristic": 21,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 66.0,
+          "calls": 42,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 1,
+          "rejected_by_stage": {
+            "audit": 2,
+            "mixed_options": 1,
+            "model_error": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L06-the-brachium-001-00"
+              ],
+              "stage": "audit",
+              "reason": "The anterior aspect of the elbow contains the cubital fossa, not the neurovascular compartment of the brachium."
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-007-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Short head"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-021-00"
+              ],
+              "stage": "audit",
+              "reason": "The ulnar nerve, not the radial nerve, passes posterior to the medial epicondyle to enter the antebrachium.; The radial nerve can be viewed in the triangular interval, but it emerges to the forearm at"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-009-00"
+              ],
+              "stage": "model_error",
+              "reason": "LLMError"
+            }
+          ]
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 7,
+          "seconds": 120.2,
+          "calls": 86,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 2,
+          "gateway_errors": 1,
+          "rejected_by_stage": {
+            "audit": 3,
+            "structure": 2,
+            "mixed_options": 4,
+            "solver_verifier": 1,
+            "model_error": 1,
+            "solver_gemma": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L06-the-brachium-001-00"
+              ],
+              "stage": "audit",
+              "reason": "The anterior aspect of the elbow contains the cubital fossa, not the neurovascular compartment of the brachium."
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-010-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-007-00"
+              ],
+              "stage": "audit",
+              "reason": "The lateral head is the strongest extensor of the elbow, not the most active."
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-011-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Axillary artery, D: Brachial artery"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-023-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'C' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-001-00"
+              ],
+              "stage": "audit",
+              "reason": "not the humerus; not the muscular septa"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-009-00"
+              ],
+              "stage": "model_error",
+              "reason": "LLMError"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-009-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) cubital appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-021-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Spiral groove"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-007-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'B' (also ['D'])"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-011-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Recurrent interosseus artery, C: Recurrent radial artery"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-023-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'none' (also ['A', 'B'])"
+            },
+            {
+              "anchor": [
+                "note-L06-the-brachium-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Provide cutaneous branches to the back of the arm, C: Supply the posterior compartment of the arm, D: Innervate the anterior compartment of the forearm"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 07 - The Antebrachium",
+      "chunks": 52,
+      "usable_passages": 33,
+      "usable_words": 2166,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 44,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 44,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 45.9,
+          "calls": 37,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 1,
+            "solver_gemma": 1,
+            "audit": 1,
+            "solver_verifier": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-037-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) posterior appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-001-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'B' (also ['C'])"
+            },
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-043-00"
+              ],
+              "stage": "audit",
+              "reason": "The ulnar nerve, not the median nerve, enters the forearm posterior to the medial epicondyle."
+            },
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-032-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'C' (also ['D'])"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 53.5,
+          "calls": 48,
+          "drafts": 9,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 2,
+            "audit": 1,
+            "solver_gemma": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-037-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?; clang clue: the word(s) posterior appear in the stem and in the correct option only; reword the lead-in so it does "
+            },
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-035-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-003-00"
+              ],
+              "stage": "audit",
+              "reason": "The scaphoid is a carpal bone around which the radial artery wraps."
+            },
+            {
+              "anchor": [
+                "note-L07-the-antebrachium-001-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'D' (also ['B'])"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 08 - Anterior and Medial Thigh",
+      "chunks": 36,
+      "usable_passages": 28,
+      "usable_words": 2357,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 49,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 49,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 32.3,
+          "calls": 27,
+          "drafts": 7,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 1,
+            "audit": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-017-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) femoris appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-015-00"
+              ],
+              "stage": "audit",
+              "reason": "patella is not the longest bone; tibia is not the longest bone"
+            }
+          ]
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 8,
+          "seconds": 102.1,
+          "calls": 77,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 3,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 4,
+            "solver_verifier": 1,
+            "mixed_options": 4,
+            "audit": 3
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-017-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) femoris appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-001-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'A' (also ['D'])"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-008-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) superficial appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-012-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: Femur"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-004-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Deep lymphatic vessels, D: Femoral sheath"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-006-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "D: Sartorius muscle"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-020-00"
+              ],
+              "stage": "audit",
+              "reason": "The sciatic nerve innervates the posterior compartment of the thigh, not the pectineus."
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-027-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L08-anterior-and-medial-thigh-027-00"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-018-00"
+              ],
+              "stage": "audit",
+              "reason": "The posterior superior iliac spine (PSIS) is a muscle attachment site, but it is not the origin of the sartorius.; The anteromedial aspect of the tibia at the pes anserinus is the insertion point of t"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-019-00"
+              ],
+              "stage": "audit",
+              "reason": "The provided text describes the iliopsoas as a flexor, not an extensor.; The provided text describes the iliopsoas as a flexor, not an abductor.; The provided text describes the iliopsoas as a flexor,"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-036-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) obturator appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L08-anterior-and-medial-thigh-028-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Supplies the anterior thigh, C: Allows passage of femoral vessels, D: Covers vessels inferiorly"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 09 - The Hand",
+      "chunks": 35,
+      "usable_passages": 25,
+      "usable_words": 1975,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 38,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 38,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 49.6,
+          "calls": 25,
+          "drafts": 5,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 1,
+          "rejected_by_stage": {},
+          "rejections": []
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 45.8,
+          "calls": 39,
+          "drafts": 6,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L09-the-hand-031-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'C' (also ['D'])"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 10 - Anterior and Lateral Leg",
+      "chunks": 14,
+      "usable_passages": 11,
+      "usable_words": 1068,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 21,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 21,
+          "capacity_heuristic": 21,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 57.8,
+          "calls": 40,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 2,
+            "audit": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-005-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) anterior appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-014-00"
+              ],
+              "stage": "audit",
+              "reason": "runs anteriorly from the lateral malleolus"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-008-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Lateral surface of proximal fibular shaft, C: Deep plantar compartment of foot"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-011-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 2: span not found in note-L10-anterior-and-lateral-leg-005-00"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 72.4,
+          "calls": 59,
+          "drafts": 12,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "duplicate": 5,
+            "audit": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-010-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-014-00"
+              ],
+              "stage": "audit",
+              "reason": "The fibularis brevis originates off the lateral surface of the distal fibular shaft, but it does not insert there."
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-003-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-009-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-001-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-011-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Posterior intermuscular septum, C: Anterior intermuscular septum"
+            },
+            {
+              "anchor": [
+                "note-L10-anterior-and-lateral-leg-002-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 11 - Gluteal Region and Posterior Thigh",
+      "chunks": 19,
+      "usable_passages": 13,
+      "usable_words": 818,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 18,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 16,
+          "capacity_heuristic": 18,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 42.5,
+          "calls": 27,
+          "drafts": 5,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {},
+          "rejections": []
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 9,
+          "seconds": 82.3,
+          "calls": 59,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 4,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 1,
+            "solver_gemma": 1,
+            "audit": 2,
+            "duplicate": 4,
+            "mixed_options": 1,
+            "structure": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-002-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'C' (also ['A', 'B', 'D'])"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-013-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'A' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-003-00"
+              ],
+              "stage": "audit",
+              "reason": "Anterior rotation of the proximal sacrum is prevented by the sacrotuberous and sacrospinous ligaments, not produced by the superficial muscle layer."
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-009-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-001-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-015-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-007-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Perforating arteries from profunda femoris, D: Sciatic nerve"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-006-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-002-00"
+              ],
+              "stage": "audit",
+              "reason": "The passages do not describe the sacrotuberous and sacrospinous ligaments as preventing lateral displacement of the sacrum.; Medial rotation is a movement of the hip joint performed by muscles like th"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-009-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L11-gluteal-region-and-posterior-thigh-001-00"
+              ],
+              "stage": "structure",
+              "reason": "explanation: span not found in note-L11-gluteal-region-and-posterior-thigh-001-00"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+      "chunks": 45,
+      "usable_passages": 27,
+      "usable_words": 2029,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 43,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 43,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 88.1,
+          "calls": 70,
+          "drafts": 12,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 3,
+            "audit": 2,
+            "mixed_options": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-006-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-002-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L12-posterior-leg-and-plantar-surface-of-foot-002-00; explanation: span not found in note-L12-posterior-leg-and-plantar-surface-of-foot-002-00; alternative 0: span not foun"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-014-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-022-00"
+              ],
+              "stage": "audit",
+              "reason": "The tibia and fibula are located in the posterior leg, where the tibialis posterior muscle originates."
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-023-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "D: Generates plantar flexion force"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Soleal arch"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-011-00"
+              ],
+              "stage": "audit",
+              "reason": "The popliteus is a muscle that crosses only the knee joint."
+            }
+          ]
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 8,
+          "seconds": 89.6,
+          "calls": 65,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 3,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 4,
+            "solver_verifier": 1,
+            "solver_gemma": 2,
+            "mixed_options": 2,
+            "duplicate": 1,
+            "audit": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-006-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-023-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'C' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-002-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L12-posterior-leg-and-plantar-surface-of-foot-002-00; alternative 0: span not found in note-L12-posterior-leg-and-plantar-surface-of-foot-002-00"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-028-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw); the key shares the most words with the other options (convergence)"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-013-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'D' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-043-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) lateral appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-014-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: Fibular vessels"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-008-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'B' (also ['C'])"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Flexor hallucis longus, C: Tibialis posterior, D: Flexor digitorum longus"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-024-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-012-00"
+              ],
+              "stage": "audit",
+              "reason": "The posterior leg contains muscles for digital flexion, such as the flexor hallucis longus."
+            },
+            {
+              "anchor": [
+                "note-L12-posterior-leg-and-plantar-surface-of-foot-004-00"
+              ],
+              "stage": "audit",
+              "reason": "The tibialis posterior is a muscle of the deep posterior compartment, and branches to deep muscles emerge in the posterior compartment, not the popliteal fossa.; The flexor digitorum longus is a muscl"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 13 - The Hip and Knee Joints",
+      "chunks": 15,
+      "usable_passages": 13,
+      "usable_words": 1549,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 30,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 29,
+          "capacity_heuristic": 30,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 66.3,
+          "calls": 41,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 2,
+            "mixed_options": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-015-00"
+              ],
+              "stage": "structure",
+              "reason": "vague term in the stem or lead-in"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-012-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) anterior appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-013-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "D: Lateral meniscus"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-014-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "see the options"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 97.7,
+          "calls": 68,
+          "drafts": 13,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "audit": 2,
+            "mixed_options": 3,
+            "duplicate": 2,
+            "structure": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-003-00"
+              ],
+              "stage": "audit",
+              "reason": "The obturator foramen is an opening whose lower border is formed by the ischial ramus."
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: Popliteus tendon"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-013-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "D: Menisci"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-005-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-011-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-012-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) anterior appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-007-00"
+              ],
+              "stage": "audit",
+              "reason": "The sacrum articulates with the auricular surface of the ileum, not the femur."
+            },
+            {
+              "anchor": [
+                "note-L13-the-hip-and-knee-joints-002-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Obturator crest, C: Lunate surface, D: Iliac crest"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 14 - Anterior Triangle of the Neck",
+      "chunks": 13,
+      "usable_passages": 7,
+      "usable_words": 821,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 14,
+          "capacity_heuristic": 14,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 14,
+          "capacity_heuristic": 14,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 69.1,
+          "calls": 46,
+          "drafts": 13,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 5,
+            "duplicate": 3
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-005-00"
+              ],
+              "stage": "structure",
+              "reason": "explanation: span not found in note-L14-anterior-triangle-of-the-neck-005-00"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-007-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: span not found in note-L14-anterior-triangle-of-the-neck-007-00"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-004-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 0: span not found in note-L14-anterior-triangle-of-the-neck-010-00; alternative 2: span not found in note-L14-anterior-triangle-of-the-neck-010-00; alternative 3: span not found in note-L1"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-011-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) mylohyoid appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-005-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-004-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L14-anterior-triangle-of-the-neck-010-00; alternative 2: span not found in note-L14-anterior-triangle-of-the-neck-010-00; alternative 3: span not found in note-L1"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-010-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-003-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            }
+          ]
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 8,
+          "seconds": 85.6,
+          "calls": 53,
+          "drafts": 13,
+          "reused": 5,
+          "generated": 3,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 6,
+            "duplicate": 3,
+            "audit": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-007-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: span not found in note-L14-anterior-triangle-of-the-neck-007-00"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-005-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-004-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L14-anterior-triangle-of-the-neck-010-00; alternative 2: span not found in note-L14-anterior-triangle-of-the-neck-010-00; alternative 3: span not found in note-L1"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-013-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-003-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-010-00"
+              ],
+              "stage": "audit",
+              "reason": "The geniohyoid muscle's function is described as being similar to the anterior belly of the digastric, but it is not credited with depressing the mandible."
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-005-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L14-anterior-triangle-of-the-neck-005-00"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-007-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-010-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) mylohyoid appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L14-anterior-triangle-of-the-neck-003-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: the key is noticeably longer than the other options (NBME flaw)"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 14 - The Pelvic Cavity",
+      "chunks": 34,
+      "usable_passages": 27,
+      "usable_words": 3189,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 56,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 56,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 65.4,
+          "calls": 51,
+          "drafts": 10,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 2,
+            "audit": 2,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L14-the-pelvic-cavity-002-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L14-the-pelvic-cavity-029-00"
+              ],
+              "stage": "audit",
+              "reason": "The uterine artery, a branch of the internal iliac artery in women, passes anterior to the ureter on its way to the uterus."
+            },
+            {
+              "anchor": [
+                "note-L14-the-pelvic-cavity-022-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Uterine horns"
+            },
+            {
+              "anchor": [
+                "note-L14-the-pelvic-cavity-030-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L14-the-pelvic-cavity-016-00"
+              ],
+              "stage": "audit",
+              "reason": "The obturator internus is a muscle located lateral to the pudendal canal, rather than a muscle that creates a bend in the rectum."
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 56.0,
+          "calls": 40,
+          "drafts": 6,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "audit": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L14-the-pelvic-cavity-016-00"
+              ],
+              "stage": "audit",
+              "reason": "The obturator internus is a muscle that the pudendal canal passes medial to, rather than a muscle that prevents defecation."
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 15 - Face and Parotid Region",
+      "chunks": 22,
+      "usable_passages": 14,
+      "usable_words": 1216,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 25,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 23,
+          "capacity_heuristic": 25,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 66.6,
+          "calls": 50,
+          "drafts": 11,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_gemma": 1,
+            "structure": 4,
+            "audit": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-022-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'A' (also ['D'])"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-003-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) temporal appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-021-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 2: span not found in note-L15-face-and-parotid-region-004-00; alternative 3: span not found in note-L15-face-and-parotid-region-003-00"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-002-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: span not found in note-L15-face-and-parotid-region-001-00"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-020-00"
+              ],
+              "stage": "audit",
+              "reason": "The submandibular structure mentioned is a lymph node, not a salivary gland.; The submental structure mentioned is a lymph node, not a salivary gland."
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-004-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead; alternative 3: span not found in note-L15-face-and-parotid-region-004-00"
+            }
+          ]
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 9,
+          "seconds": 103.7,
+          "calls": 70,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 4,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 6,
+            "audit": 1,
+            "duplicate": 3,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-003-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L15-face-and-parotid-region-003-00; alternative 2: span not found in note-L15-face-and-parotid-region-003-00; alternative 3: span not found in note-L15-face-and-p"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-004-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: span not found in note-L15-face-and-parotid-region-004-00"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-021-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 2: span not found in note-L15-face-and-parotid-region-004-00; alternative 3: span not found in note-L15-face-and-parotid-region-003-00"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-020-00"
+              ],
+              "stage": "audit",
+              "reason": "The auricular muscles are muscles of facial expression, not a structure the parotid duct passes through.; The platysma is a muscle of facial expression, not a structure the parotid duct passes through"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-002-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: clang clue: the word(s) facial appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-005-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-014-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-022-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-012-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Proceeds upward into a thin aponeurosis"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-018-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L15-face-and-parotid-region-003-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L15-face-and-parotid-region-003-00; alternative 2: span not found in note-L15-face-and-parotid-region-003-00; alternative 3: span not found in note-L15-face-and-p"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 15 - The Perineum",
+      "chunks": 13,
+      "usable_passages": 13,
+      "usable_words": 1711,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 27,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 26,
+          "capacity_heuristic": 27,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 33.7,
+          "calls": 27,
+          "drafts": 6,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L15-the-perineum-003-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) perineal appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            }
+          ]
+        },
+        "10": {
+          "status": "offer",
+          "reason": "rejected",
+          "have": 7,
+          "seconds": 94.0,
+          "calls": 73,
+          "drafts": 15,
+          "reused": 5,
+          "generated": 2,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 3,
+            "structure": 2,
+            "audit": 1,
+            "duplicate": 3,
+            "mixed_options": 4
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L15-the-perineum-005-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'D' (also ['A'])"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-003-00"
+              ],
+              "stage": "structure",
+              "reason": "clang clue: the word(s) perineal appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word)"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-009-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-001-00"
+              ],
+              "stage": "audit",
+              "reason": "The inferior rectal nerve is the principal supply to the anal triangle, not the urogenital triangle."
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-013-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-002-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: Pelvic diaphragm"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "B: Anal canal, C: Perineal body"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-003-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'A' (also ['B'])"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-011-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-006-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: It forms the posterior boundary of the urogenital triangle, D: It divides the superficial perineal pouch into left and right sides"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-008-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'B' (also ['C'])"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-001-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L15-the-perineum-005-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Ischiopubic ramus"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+      "chunks": 66,
+      "usable_passages": 65,
+      "usable_words": 9147,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 144,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 30,
+          "capacity_heuristic": 144,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 90.4,
+          "calls": 63,
+          "drafts": 11,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 1,
+            "structure": 2,
+            "mixed_options": 2,
+            "solver_gemma": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-011-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'B' (also ['D'])"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-041-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L16-anterolateral-thoracoabdominal-wall-041-00; explanation: span not found in note-L16-anterolateral-thoracoabdominal-wall-041-00; alternative 1: span not found in note-L1"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-043-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw); alternative 2: span not found in note-L16-anterolateral-thoracoabdominal-wall-043-00"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-017-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Run in an oblique fashion to insert upon the iliac crest"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-010-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'none' (also ['A', 'B'])"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-012-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Contraction of the ribs"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 72.5,
+          "calls": 54,
+          "drafts": 11,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 5,
+            "audit": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-043-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-012-00"
+              ],
+              "stage": "audit",
+              "reason": "Protection of the abdominal region is provided by the fascial and myotendinous soft tissue layers, although it is decreased compared to the thoracic region."
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-025-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-010-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 2: the reason rests on the passages not mentioning something; cite a span that STATES the true fact instead"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-055-01"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 3: span not found in note-L16-anterolateral-thoracoabdominal-wall-034-00"
+            },
+            {
+              "anchor": [
+                "note-L16-anterolateral-thoracoabdominal-wall-005-00"
+              ],
+              "stage": "structure",
+              "reason": "the key shares the most words with the other options (convergence)"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 16 - Posterior Thigh and Popliteal Fossa",
+      "chunks": 15,
+      "usable_passages": 11,
+      "usable_words": 626,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 10,
+          "capacity_heuristic": 13,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 10,
+          "capacity_heuristic": 13,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "partial",
+          "reason": "rejected",
+          "have": 2,
+          "seconds": 54.6,
+          "calls": 39,
+          "drafts": 10,
+          "reused": 0,
+          "generated": 2,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 7,
+            "solver_gemma": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-012-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L16-posterior-thigh-and-popliteal-fossa-012-00; explanation: span not found in note-L16-posterior-thigh-and-popliteal-fossa-012-00; alternative 1: span not found in note-L1"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; alternative 0: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-003-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 3: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-013-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: clang clue: the word(s) popliteal appear in the stem and in the correct option only; reword the lead-in so it does not use them (or give the other options the same word); alt"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-011-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 3: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-001-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'C' (also ['A'])"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-013-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; explanation: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; alternative 0: span not found in note-L1"
+            }
+          ]
+        },
+        "10": {
+          "status": "partial",
+          "reason": "rejected",
+          "have": 2,
+          "seconds": 52.6,
+          "calls": 35,
+          "drafts": 10,
+          "reused": 2,
+          "generated": 0,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "solver_verifier": 2,
+            "structure": 5,
+            "audit": 1,
+            "solver_gemma": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-011-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'none' (also ['B', 'C'])"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-012-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 1: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+              ],
+              "stage": "structure",
+              "reason": "key: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; explanation: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; alternative 0: span not found in note-L1"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-013-00"
+              ],
+              "stage": "audit",
+              "reason": "The popliteal artery passes through the tendinous arch of the soleus to enter the posterior compartment of the leg, rather than bifurcating there."
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-007-00"
+              ],
+              "stage": "solver_verifier",
+              "reason": "picked 'B' (also ['C'])"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-001-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'C' (also ['A'])"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-013-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 0: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; alternative 2: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-003-00"
+              ],
+              "stage": "structure",
+              "reason": "after the options repair: alternative 2: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00; alternative 3: span not found in note-L16-posterior-thigh-and-popliteal-fossa-009-00"
+            },
+            {
+              "anchor": [
+                "note-L16-posterior-thigh-and-popliteal-fossa-015-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "C: Popliteal fascia, D: Knee joint capsule"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 16 - Temporal, Masseteric, and Infratemporal Region",
+      "chunks": 10,
+      "usable_passages": 9,
+      "usable_words": 1061,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 20,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 20,
+          "capacity_heuristic": 20,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 34.8,
+          "calls": 24,
+          "drafts": 6,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-006-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 72.2,
+          "calls": 50,
+          "drafts": 11,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 3,
+            "duplicate": 1,
+            "mixed_options": 1,
+            "audit": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-006-00"
+              ],
+              "stage": "structure",
+              "reason": "the key is noticeably longer than the other options (NBME flaw)"
+            },
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-001-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 2: span not found in note-L16-temporal-masseteric-and-infratemporal-region-005-00"
+            },
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-009-00"
+              ],
+              "stage": "structure",
+              "reason": "lead-in must be one closed question starting Which/What/Where/How and ending with ?"
+            },
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-004-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-003-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Articular capsule"
+            },
+            {
+              "anchor": [
+                "note-L16-temporal-masseteric-and-infratemporal-region-003-00"
+              ],
+              "stage": "audit",
+              "reason": "The coronoid process is a distinct feature of the mandible, separate from the lingula of the ramus."
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 16b - Middle Ear",
+      "chunks": 12,
+      "usable_passages": 7,
+      "usable_words": 818,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 12,
+          "capacity_heuristic": 13,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 12,
+          "capacity_heuristic": 13,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "ready",
+          "reason": "",
+          "have": 5,
+          "seconds": 58.5,
+          "calls": 52,
+          "drafts": 9,
+          "reused": 0,
+          "generated": 5,
+          "gateway_errors": 0,
+          "rejected_by_stage": {
+            "structure": 1,
+            "audit": 1,
+            "solver_gemma": 1,
+            "mixed_options": 1
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16b-middle-ear-008-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 2: span not found in note-L16b-middle-ear-011-00"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-007-00"
+              ],
+              "stage": "audit",
+              "reason": "The lateral wall of the middle ear contains the tympanic membrane, not the external acoustic meatus."
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-012-00"
+              ],
+              "stage": "solver_gemma",
+              "reason": "picked 'D' (also ['A'])"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Cochlea"
+            }
+          ]
+        },
+        "10": {
+          "status": "ready",
+          "reason": "",
+          "have": 10,
+          "seconds": 79.6,
+          "calls": 54,
+          "drafts": 11,
+          "reused": 5,
+          "generated": 5,
+          "gateway_errors": 2,
+          "rejected_by_stage": {
+            "duplicate": 1,
+            "structure": 2,
+            "mixed_options": 1,
+            "model_error": 2
+          },
+          "rejections": [
+            {
+              "anchor": [
+                "note-L16b-middle-ear-001-00"
+              ],
+              "stage": "duplicate",
+              "reason": "too similar to another question in this quiz"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-007-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 3: span not found in note-L16b-middle-ear-011-00"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-010-00"
+              ],
+              "stage": "mixed_options",
+              "reason": "A: Transmit vibrations to the cochlea, B: Partition between external and middle ear, C: Passage between nasopharynx and tympanic cavity"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-011-00"
+              ],
+              "stage": "structure",
+              "reason": "alternative 2: span not found in note-L16b-middle-ear-011-00"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-010-00"
+              ],
+              "stage": "model_error",
+              "reason": "LLMError"
+            },
+            {
+              "anchor": [
+                "note-L16b-middle-ear-008-00"
+              ],
+              "stage": "model_error",
+              "reason": "LLMError"
+            }
+          ]
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 17 - Cranial Fossa, Dura, Sinuses and Meninges",
+      "chunks": 13,
+      "usable_passages": 10,
+      "usable_words": 1027,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 20,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 20,
+          "capacity_heuristic": 20,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        },
+        "10": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 20 - Larynx",
+      "chunks": 17,
+      "usable_passages": 14,
+      "usable_words": 1093,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 22,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 20,
+          "capacity_heuristic": 22,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        },
+        "10": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 21 - Nasal Cavity",
+      "chunks": 9,
+      "usable_passages": 7,
+      "usable_words": 830,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 14,
+          "capacity_heuristic": 15,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 14,
+          "capacity_heuristic": 15,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        },
+        "10": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        }
+      },
+      "eligible_cached": 0
+    },
+    {
+      "title": "Lecture 22 - Oral Cavity",
+      "chunks": 13,
+      "usable_passages": 11,
+      "usable_words": 992,
+      "local": {
+        "5": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 15,
+          "capacity_heuristic": 20,
+          "selected_scope_only": true
+        },
+        "10": {
+          "ok": true,
+          "error": "",
+          "candidate_count": 19,
+          "capacity_heuristic": 20,
+          "selected_scope_only": true
+        }
+      },
+      "live": {
+        "5": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        },
+        "10": {
+          "status": "blocked",
+          "reason": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+        }
+      },
+      "eligible_cached": 0
+    }
+  ],
+  "gateway": [
+    {
+      "model": "google/gemma-4-31B-it",
+      "reachable": true,
+      "has_text": true,
+      "seconds": 0.5
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "reachable": true,
+      "has_text": true,
+      "seconds": 0.6
+    }
+  ],
+  "quiz_version": 4,
+  "protected_before": {
+    "flags.jsonl": "5108a6cc652612451ff6ad9e30f950592bb78eacf357ce8e2a4e16259bf09de4",
+    "question_log.jsonl": "d5837e99d6453e44fe9084c06c65093d6e9e47ea323e25b988fa8ab312bd577a",
+    "chats.db": "88464d3492a4ef7af46ab6a12698c727a050e19ccb2722d086226ef6894a26b4",
+    "users.json": "c5afa623c8810cd7bd7053ef805b9c9ec983f7fcca2386599aa4b6fa8f2b7139",
+    "guide_sessions.db": "af2c14b456e7ad5100f7dc891af4a1d7e4511c806c145a407f7d62f036e8e7b4",
+    "verified_fixes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "quizzes.db": "7638e1d9645e14ffe37269ebe9cffbf2a088f2412f093f851a7e78d2d8d1b30e"
+  },
+  "scratch": "/var/folders/p5/r_tvln592hgbct33sdy574fc0000gp/T/anatovision_all_lectures_tw5mylcf",
+  "blocked_reason": "Live checks stopped part-way: the shared BullsAI gateway answered google/gemma-4-31B-it: HTTP 429 the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded); openai/gpt-oss-120b: HTTP 429 the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded). Cases marked Blocked were NOT run and are not content failures.",
+  "protected_unchanged": {
+    "flags.jsonl": true,
+    "question_log.jsonl": true,
+    "chats.db": true,
+    "users.json": true,
+    "guide_sessions.db": true,
+    "verified_fixes.jsonl": true,
+    "quizzes.db": true
+  },
+  "gateway_after": [
+    {
+      "model": "google/gemma-4-31B-it",
+      "reachable": false,
+      "seconds": 0.2,
+      "error_type": "RateLimitError",
+      "http_status": 429,
+      "detail": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "reachable": false,
+      "seconds": 0.1,
+      "error_type": "RateLimitError",
+      "http_status": 429,
+      "detail": "the budget of the course's BullsAI key is used up (HTTP 429: budget exceeded)"
+    }
+  ]
+}

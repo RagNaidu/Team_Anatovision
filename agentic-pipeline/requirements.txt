@@ -1,0 +1,13 @@
+python-dotenv
+anthropic
+chromadb
+rank_bm25
+sentence-transformers
+python-docx
+requests
+beautifulsoup4
+pytest
+streamlit
+pandas
+openai
+python-pptx

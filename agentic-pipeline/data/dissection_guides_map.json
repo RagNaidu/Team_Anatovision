@@ -1,0 +1,1160 @@
+{
+  "generated": "2026-10-19",
+  "zip": "Dissection Guide (For Review).zip",
+  "guides": [
+    {
+      "class_number": 2,
+      "title": "The Superficial Back",
+      "display_name": "Class 2: The Superficial Back",
+      "class_label": "Class 2",
+      "file": "Class 02 Dissection Guide - The Superficial Back.pptx",
+      "n_slides": 12,
+      "matched_lecture_id": "L02-muscles-of-the-back",
+      "matched_lecture": "Lecture 02 - Muscles of the Back",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "trapezius",
+        "thoracolumbar fascia",
+        "nuchal ligament",
+        "spinous processes",
+        "extrinsic back muscles",
+        "subcutaneous tissue",
+        "latissimus dorsi",
+        "subcutaneous fascia",
+        "skin"
+      ],
+      "reason": "The guide details back skin and muscle dissection (trapezius, latissimus dorsi, thoracolumbar fascia) which aligns with Candidate B’s coverage of extrinsic back muscles, trapezius origins, and thoracolumbar fascia.; Guide details a posterior trunk skin incision and exposure of trapezius, latissimus dorsi and thoracolumbar fascia, which are covered extensively in lecture A's back muscle overview.",
+      "score": 0.68,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.681
+        },
+        {
+          "lecture": "Lecture 02 - Muscles of the Back",
+          "embedding_score": 0.663
+        },
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.645
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 3,
+      "title": "The Back Muscles",
+      "display_name": "Class 3: The Back Muscles",
+      "class_label": "Class 3",
+      "file": "Class 03 Dissection Guide - The Back Muscles.pptx",
+      "n_slides": 21,
+      "matched_lecture_id": "L02-muscles-of-the-back",
+      "matched_lecture": "Lecture 02 - Muscles of the Back",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "trapezius",
+        "latissimus dorsi",
+        "rhomboid major",
+        "serratus posterior superior",
+        "erector spinae",
+        "semispinalis capitis",
+        "splenius capitis",
+        "greater occipital nerve",
+        "transversospinalis",
+        "semispinalis",
+        "multifidus",
+        "splenius"
+      ],
+      "reason": "Candidate B covers the extrinsic and intrinsic back muscles, their groups, and deep neck muscles described step‑by‑step in the dissection guide.; Candidate A covers the posterior back muscles and fascia detailed in the guide.",
+      "score": 0.72,
+      "candidates": [
+        {
+          "lecture": "Lecture 02 - Muscles of the Back",
+          "embedding_score": 0.725
+        },
+        {
+          "lecture": "Lecture 04 - The Shoulder",
+          "embedding_score": 0.695
+        },
+        {
+          "lecture": "Lecture 05 - The Axilla",
+          "embedding_score": 0.695
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 4,
+      "title": "Laminectomy and Suboccipital Region",
+      "display_name": "Class 4: Laminectomy and Suboccipital Region",
+      "class_label": "Class 4",
+      "file": "Class 04 Dissection Guide - Laminectomy and Suboccipital Region.pptx",
+      "n_slides": 26,
+      "matched_lecture_id": "L03-nerves-spinal-cord-and-meninges",
+      "matched_lecture": "Lecture 03 - Nerves Spinal Cord and Meninges",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "medium",
+      "evidence": [
+        "spinal cord",
+        "dura mater",
+        "arachnoid mater",
+        "spinal nerves",
+        "meninges",
+        "epidural space",
+        "cauda equina",
+        "conus medullaris",
+        "filum terminale"
+      ],
+      "reason": "Candidate A covers the spinal cord, its meninges, and spinal nerves, which are the main structures dissected in the guide; Candidate C covers spinal cord, meninges, and nerve roots, matching the guide's focus on laminectomy and spinal canal structures.",
+      "score": 0.67,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.668
+        },
+        {
+          "lecture": "Lecture 03 - Nerves Spinal Cord and Meninges",
+          "embedding_score": 0.653
+        },
+        {
+          "lecture": "Lecture 02 - Muscles of the Back",
+          "embedding_score": 0.651
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 5,
+      "title": "Scapular and Deltoid Regions",
+      "display_name": "Class 5: Scapular and Deltoid Regions",
+      "class_label": "Class 5",
+      "file": "Class 05 Dissection Guide - Scapular and Deltoid Regions.pptx",
+      "n_slides": 19,
+      "matched_lecture_id": "L04-the-shoulder",
+      "matched_lecture": "Lecture 04 - The Shoulder",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "deltoid",
+        "supraspinatus",
+        "infraspinatus",
+        "teres minor",
+        "axillary nerve",
+        "posterior circumflex humeral artery",
+        "quadrangular space",
+        "triangular interval",
+        "deltoid muscle",
+        "teres major",
+        "triangular space"
+      ],
+      "reason": "Candidate B covers the posterior shoulder muscles, nerves, arteries, and spaces detailed in the guide; Candidate A covers the posterior shoulder structures, rotator cuff muscles, and surrounding axillary spaces described in the dissection guide.",
+      "score": 0.75,
+      "candidates": [
+        {
+          "lecture": "Lecture 04 - The Shoulder",
+          "embedding_score": 0.747
+        },
+        {
+          "lecture": "Lecture 06 - The Brachium",
+          "embedding_score": 0.722
+        },
+        {
+          "lecture": "Lecture 07 - The Antebrachium",
+          "embedding_score": 0.715
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 6,
+      "title": "Pectoral Region and Axilla",
+      "display_name": "Class 6: Pectoral Region and Axilla",
+      "class_label": "Class 6",
+      "file": "Class 06 Dissection Guide - Pectoral Region and Axilla.pptx",
+      "n_slides": 20,
+      "matched_lecture_id": "L05-the-axilla",
+      "matched_lecture": "Lecture 05 - The Axilla",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "pectoralis major",
+        "pectoralis minor",
+        "subclavius muscle",
+        "clavipectoral fascia",
+        "axillary artery",
+        "axillary vein",
+        "brachial plexus cords",
+        "serratus anterior",
+        "brachial plexus",
+        "subclavius",
+        "latissimus dorsi"
+      ],
+      "reason": "Candidate C comprehensively covers the axillary/present region, vessels, nerves and muscles described in the dissection guide.; Candidate B focuses on the axillary region, covering the artery, vein, brachial plexus divisions, pectoral muscles, clavipectoral fascia and related walls, matching the guide’s dissection steps.",
+      "score": 0.75,
+      "candidates": [
+        {
+          "lecture": "Lecture 05 - The Axilla",
+          "embedding_score": 0.752
+        },
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.734
+        },
+        {
+          "lecture": "Lecture 04 - The Shoulder",
+          "embedding_score": 0.723
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 7,
+      "title": "Anterior Arm and Forearm",
+      "display_name": "Class 7: Anterior Arm and Forearm",
+      "class_label": "Class 7",
+      "file": "Class 07 Dissection Guide - Anterior Arm and Forearm.pptx",
+      "n_slides": 19,
+      "matched_lecture_id": "L06-the-brachium",
+      "matched_lecture": "Lecture 06 - The Brachium",
+      "also_lecture_id": "L07-the-antebrachium",
+      "also_lecture": "Lecture 07 - The Antebrachium",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "medium",
+      "evidence": [
+        "basilic vein",
+        "cephalic vein",
+        "brachial artery",
+        "median nerve",
+        "ulnar nerve",
+        "pronator teres",
+        "flexor carpi radialis",
+        "brachioradialis",
+        "musculocutaneous nerve"
+      ],
+      "reason": "The guide spans arm structures covered by Lecture A and forearm structures covered by Lecture C; The guide spans both arm and forearm anatomy, requiring the arm‑focused lecture (C) and the forearm‑focused lecture (B) to cover its content.",
+      "score": 0.78,
+      "candidates": [
+        {
+          "lecture": "Lecture 07 - The Antebrachium",
+          "embedding_score": 0.779
+        },
+        {
+          "lecture": "Lecture 06 - The Brachium",
+          "embedding_score": 0.764
+        },
+        {
+          "lecture": "Lecture 09 - The Hand",
+          "embedding_score": 0.727
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 8,
+      "title": "Posterior Arm and Forearm",
+      "display_name": "Class 8: Posterior Arm and Forearm",
+      "class_label": "Class 8",
+      "file": "Class 08 Dissection Guide - Posterior Arm and Forearm.pptx",
+      "n_slides": 17,
+      "matched_lecture_id": "L07-the-antebrachium",
+      "matched_lecture": "Lecture 07 - The Antebrachium",
+      "also_lecture_id": "L06-the-brachium",
+      "also_lecture": "Lecture 06 - The Brachium",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "triceps brachii",
+        "anconeus",
+        "radial nerve",
+        "cubital fossa",
+        "extensor digitorum",
+        "supinator",
+        "extensor carpi radialis longus",
+        "extensor indicis",
+        "abductor pollicis longus",
+        "radial collateral ligament"
+      ],
+      "reason": "The guide spans arm structures (triceps, anconeus, cubital fossa, radial nerve) covered by lecture B and forearm posterior compartment structures (extensor muscles, supinator, extensor retinaculum) covered by lecture A.; The guide dissects both arm structures (triceps, anconeus, radial nerve, elbow ligaments) covered in Lecture A and forearm extensor and snuffbox structures (supinator, extensor digitorum, ECRL, abductor pollicis longus) covered in Lecture C.",
+      "score": 0.77,
+      "candidates": [
+        {
+          "lecture": "Lecture 07 - The Antebrachium",
+          "embedding_score": 0.767
+        },
+        {
+          "lecture": "Lecture 06 - The Brachium",
+          "embedding_score": 0.74
+        },
+        {
+          "lecture": "Lecture 05 - The Axilla",
+          "embedding_score": 0.715
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 10,
+      "title": "The Hand",
+      "display_name": "Class 10: The Hand",
+      "class_label": "Class 10",
+      "file": "Class 10 Dissection Guide - The Hand.pptx",
+      "n_slides": 32,
+      "matched_lecture_id": "L09-the-hand",
+      "matched_lecture": "Lecture 09 - The Hand",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "palmar aponeurosis",
+        "superficial palmar arch",
+        "flexor retinaculum",
+        "abductor pollicis brevis",
+        "flexor pollicis brevis",
+        "abductor digiti minimi",
+        "flexor digiti minimi brevis",
+        "adductor pollicis",
+        "flexor digitorum superficialis",
+        "lumbricals"
+      ],
+      "reason": "Candidate B covers hand compartments, the palmar fascia, thenar and hypothenar muscles, lumbricals, adductor pollicis and the superficial palmar arch described in the guide.; Candidate A details the hand structures and compartments described in the dissection guide.",
+      "score": 0.78,
+      "candidates": [
+        {
+          "lecture": "Lecture 09 - The Hand",
+          "embedding_score": 0.781
+        },
+        {
+          "lecture": "Lecture 07 - The Antebrachium",
+          "embedding_score": 0.754
+        },
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.719
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 14,
+      "title": "Gluteal Region",
+      "display_name": "Class 14: Gluteal Region",
+      "class_label": "Class 14",
+      "file": "Class 14 Dissection Guide - Gluteal Region.pptx",
+      "n_slides": 11,
+      "matched_lecture_id": "L11-gluteal-region-and-posterior-thigh",
+      "matched_lecture": "Lecture 11 - Gluteal Region and Posterior Thigh",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "gluteus maximus",
+        "gluteus medius",
+        "gluteus minimus",
+        "piriformis",
+        "obturator internus",
+        "superior gemellus",
+        "inferior gemellus",
+        "quadratus femoris",
+        "superior gluteal vessels",
+        "inferior gluteal vessels"
+      ],
+      "reason": "Candidate C covers the gluteal muscles and associated neurovascular structures detailed in the guide; Candidate B covers the gluteal muscles, piriformis, obturator internus, gemelli and associated gluteal neurovascular structures described in the guide",
+      "score": 0.77,
+      "candidates": [
+        {
+          "lecture": "Lecture 11 - Gluteal Region and Posterior Thigh",
+          "embedding_score": 0.766
+        },
+        {
+          "lecture": "Lecture 08 - Anterior and Medial Thigh",
+          "embedding_score": 0.726
+        },
+        {
+          "lecture": "Lecture 16 - Posterior Thigh and Popliteal Fossa",
+          "embedding_score": 0.715
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 15,
+      "title": "The Anteromedial Thigh",
+      "display_name": "Class 15: The Anteromedial Thigh",
+      "class_label": "Class 15",
+      "file": "Class 15 Dissection Guide - The Anteromedial Thigh.pptx",
+      "n_slides": 16,
+      "matched_lecture_id": "L08-anterior-and-medial-thigh",
+      "matched_lecture": "Lecture 08 - Anterior and Medial Thigh",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "great saphenous vein",
+        "fascia lata",
+        "quadriceps femoris",
+        "sartorius",
+        "femoral triangle",
+        "femoral nerve",
+        "femoral artery",
+        "profunda femoris",
+        "iliopsoas",
+        "pectineus",
+        "adductor longus",
+        "profunda femoris artery"
+      ],
+      "reason": "Candidate B covers the anterior and medial thigh structures, fascia, vessels, and femoral triangle described in the guide.; Candidate A covers the anteromedial thigh structures and compartments detailed in the guide.",
+      "score": 0.81,
+      "candidates": [
+        {
+          "lecture": "Lecture 08 - Anterior and Medial Thigh",
+          "embedding_score": 0.811
+        },
+        {
+          "lecture": "Lecture 11 - Gluteal Region and Posterior Thigh",
+          "embedding_score": 0.732
+        },
+        {
+          "lecture": "Lecture 16 - Posterior Thigh and Popliteal Fossa",
+          "embedding_score": 0.731
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 16,
+      "title": "Posterior Thigh and Popliteal Fossa",
+      "display_name": "Class 16: Posterior Thigh and Popliteal Fossa",
+      "class_label": "Class 16",
+      "file": "Class 16 Dissection Guide - Posterior Thigh and Popliteal Fossa.pptx",
+      "n_slides": 10,
+      "matched_lecture_id": "L16-posterior-thigh-and-popliteal-fossa",
+      "matched_lecture": "Lecture 16 - Posterior Thigh and Popliteal Fossa",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "semimembranosus",
+        "semitendinosus",
+        "biceps femoris long head",
+        "popliteal fossa",
+        "sciatic nerve division",
+        "tibial nerve",
+        "common fibular nerve",
+        "popliteal artery",
+        "biceps femoris",
+        "sciatic nerve"
+      ],
+      "reason": "; Candidate A covers both the posterior thigh hamstring muscles and the detailed anatomy of the popliteal fossa described in the guide",
+      "score": 0.8,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Posterior Thigh and Popliteal Fossa",
+          "embedding_score": 0.796
+        },
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.786
+        },
+        {
+          "lecture": "Lecture 08 - Anterior and Medial Thigh",
+          "embedding_score": 0.78
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 17,
+      "title": "The Hip and Knee Joints",
+      "display_name": "Class 17: The Hip and Knee Joints",
+      "class_label": "Class 17",
+      "file": "Class 17 Dissection Guide - The Hip and Knee Joints.pptx",
+      "n_slides": 25,
+      "matched_lecture_id": "L13-the-hip-and-knee-joints",
+      "matched_lecture": "Lecture 13 - The Hip and Knee Joints",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "femoral head",
+        "acetabulum",
+        "lunate surface",
+        "transverse acetabular ligament",
+        "menisci",
+        "cruciate ligaments",
+        "tibial collateral ligament",
+        "iliofemoral ligament",
+        "ischiofemoral ligament",
+        "quadriceps femoris tendon",
+        "medial meniscus",
+        "posterior cruciate ligament"
+      ],
+      "reason": "Lecture B includes detailed sections on both knee and hip joint anatomy matching the guide's dissection scope; Candidate A covers both knee and hip anatomy detailed in the guide",
+      "score": 0.75,
+      "candidates": [
+        {
+          "lecture": "Lecture 13 - The Hip and Knee Joints",
+          "embedding_score": 0.75
+        },
+        {
+          "lecture": "Lecture 08 - Anterior and Medial Thigh",
+          "embedding_score": 0.725
+        },
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.699
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 18,
+      "title": "The Posterior Leg",
+      "display_name": "Class 18: The Posterior Leg",
+      "class_label": "Class 18",
+      "file": "Class 18 Dissection Guide - The Posterior Leg.pptx",
+      "n_slides": 9,
+      "matched_lecture_id": "L12-posterior-leg-and-plantar-surface-of-foot",
+      "matched_lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "gastrocnemius",
+        "soleus",
+        "plantaris",
+        "popliteus",
+        "tibialis posterior",
+        "flexor digitorum longus",
+        "flexor hallucis longus",
+        "posterior tibial artery",
+        "tibial nerve"
+      ],
+      "reason": "Candidate A covers the posterior leg compartments, popliteal fossa, and all the muscles and neurovascular structures described in the guide; Candidate C covers the posterior leg compartments, popliteal fossa muscles, and the posterior ankle structures described in the guide.",
+      "score": 0.78,
+      "candidates": [
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.779
+        },
+        {
+          "lecture": "Lecture 10 - Anterior and Lateral Leg",
+          "embedding_score": 0.737
+        },
+        {
+          "lecture": "Lecture 08 - Anterior and Medial Thigh",
+          "embedding_score": 0.723
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 19,
+      "title": "The Anterolateral Leg and Ankle",
+      "display_name": "Class 19: The Anterolateral Leg and Ankle",
+      "class_label": "Class 19",
+      "file": "Class 19 Dissection Guide - The Anterolateral Leg and Ankle.pptx",
+      "n_slides": 15,
+      "matched_lecture_id": "L10-anterior-and-lateral-leg",
+      "matched_lecture": "Lecture 10 - Anterior and Lateral Leg",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "tibialis anterior",
+        "extensor digitorum longus",
+        "extensor hallucis longus",
+        "fibularis tertius",
+        "deep fibular nerve",
+        "superficial fibular nerve",
+        "fibularis longus",
+        "fibularis brevis",
+        "superior fibular retinaculum",
+        "ankle joint"
+      ],
+      "reason": "Candidate A covers the anterior and lateral leg compartments, tendons, nerves and retinacula described in the guide.; Candidate C covers the anterior compartment muscles, nerves, retinacula, and ankle joint described in the guide",
+      "score": 0.78,
+      "candidates": [
+        {
+          "lecture": "Lecture 10 - Anterior and Lateral Leg",
+          "embedding_score": 0.778
+        },
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.775
+        },
+        {
+          "lecture": "Lecture 08 - Anterior and Medial Thigh",
+          "embedding_score": 0.741
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 20,
+      "title": "The Foot",
+      "display_name": "Class 20: The Foot",
+      "class_label": "Class 20",
+      "file": "Class 20 Dissection Guide - The Foot.pptx",
+      "n_slides": 9,
+      "matched_lecture_id": "L12-posterior-leg-and-plantar-surface-of-foot",
+      "matched_lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "plantar aponeurosis",
+        "flexor digitorum brevis",
+        "abductor hallucis",
+        "abductor digiti minimi",
+        "quadratus plantae",
+        "lumbrical muscles",
+        "flexor hallucis brevis",
+        "adductor hallucis"
+      ],
+      "reason": "Candidate A includes detailed plantar foot anatomy covering the same muscles and structures described in the guide.; Candidate C covers the plantar foot layers and muscles described in the guide",
+      "score": 0.77,
+      "candidates": [
+        {
+          "lecture": "Lecture 12 - Posterior Leg and Plantar Surface of Foot",
+          "embedding_score": 0.77
+        },
+        {
+          "lecture": "Lecture 09 - The Hand",
+          "embedding_score": 0.731
+        },
+        {
+          "lecture": "Lecture 07 - The Antebrachium",
+          "embedding_score": 0.715
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 24,
+      "title": "The Anterolateral Thoracoabdominal Wall",
+      "display_name": "Class 24: The Anterolateral Thoracoabdominal Wall",
+      "class_label": "Class 24",
+      "file": "Class 24 Dissection Guide - The Anterolateral Thoracoabdominal Wall.pptx",
+      "n_slides": 17,
+      "matched_lecture_id": "L16-anterolateral-thoracoabdominal-wall",
+      "matched_lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "external oblique",
+        "rectus sheath",
+        "rectus abdominis",
+        "linea alba",
+        "inferior epigastric vessels",
+        "arcuate line",
+        "intercostal muscles",
+        "Scarpa's fascia",
+        "external oblique muscle",
+        "superior epigastric vessels",
+        "ribs"
+      ],
+      "reason": "Candidate A covers both the anterolateral thoracic and abdominal wall structures described in the guide; Candidate C includes detailed coverage of the anterolateral abdominal wall and thoracic structures matching the guide's dissection steps.",
+      "score": 0.78,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.777
+        },
+        {
+          "lecture": "Lecture 05 - The Axilla",
+          "embedding_score": 0.7
+        },
+        {
+          "lecture": "Lecture 14 - The Pelvic Cavity",
+          "embedding_score": 0.699
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 25,
+      "title": "The Pleural Cavities and Lungs",
+      "display_name": "Class 25: The Pleural Cavities and Lungs",
+      "class_label": "Class 25",
+      "file": "Class 25 Dissection Guide - The Pleural Cavities and Lungs.pptx",
+      "n_slides": 11,
+      "matched_lecture_id": "",
+      "matched_lecture": "",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "unmatched",
+      "evidence": [],
+      "reason": "No candidate lecture covers pleural cavities, lungs, bronchi, or related thoracic visceral anatomy described in the guide.; None of the candidate lectures cover lung, pleura, or bronchial anatomy, focusing instead on pelvis, GI tract, or thoracic wall structures.",
+      "score": 0.72,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.721
+        },
+        {
+          "lecture": "Lecture 14 - The Pelvic Cavity",
+          "embedding_score": 0.664
+        },
+        {
+          "lecture": "ANA407 Class 28 - The Posterior Abdominal Wall",
+          "embedding_score": 0.661
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 26,
+      "title": "The Mediastinum and Heart",
+      "display_name": "Class 26: The Mediastinum and Heart",
+      "class_label": "Class 26",
+      "file": "Class 26 Dissection Guide - The Mediastinum and Heart.pptx",
+      "n_slides": 25,
+      "matched_lecture_id": "",
+      "matched_lecture": "",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "unmatched",
+      "evidence": [],
+      "reason": "The guide details mediastinal and cardiac structures, which are not covered by any of the candidate lectures.; None of the candidate lectures cover the mediastinum, heart, pericardium, or great vessels described in the guide",
+      "score": 0.73,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.729
+        },
+        {
+          "lecture": "Lecture 07 - The Antebrachium",
+          "embedding_score": 0.685
+        },
+        {
+          "lecture": "Lecture 05 - The Axilla",
+          "embedding_score": 0.682
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 27,
+      "title": "The Digestive Tract",
+      "display_name": "Class 27: The Digestive Tract",
+      "class_label": "Class 27",
+      "file": "Class 27 Dissection Guide - The Digestive Tract.pptx",
+      "n_slides": 31,
+      "matched_lecture_id": "ANA407-C28-the-posterior-abdominal-wall",
+      "matched_lecture": "ANA407 Class 28 - The Posterior Abdominal Wall",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "liver",
+        "gallbladder",
+        "stomach",
+        "duodenum",
+        "common bile duct",
+        "portal vein",
+        "superior mesenteric artery",
+        "greater omentum",
+        "jejunum",
+        "ileum",
+        "large intestine",
+        "pancreas"
+      ],
+      "reason": "Lecture A covers the gastrointestinal tract and its accessory organs, matching the guide’s focus on liver, gallbladder, stomach, duodenum, vessels and peritoneal structures.; Candidate C covers the gastrointestinal organs and accessory digestive structures dissected in the guide.",
+      "score": 0.75,
+      "candidates": [
+        {
+          "lecture": "ANA407 Class 28 - The Posterior Abdominal Wall",
+          "embedding_score": 0.751
+        },
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.713
+        },
+        {
+          "lecture": "Lecture 14 - The Pelvic Cavity",
+          "embedding_score": 0.699
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 28,
+      "title": "The Posterior Abdominal Wall",
+      "display_name": "Class 28: The Posterior Abdominal Wall",
+      "class_label": "Class 28",
+      "file": "Class 28 Dissection Guide - The Posterior Abdominal Wall.pptx",
+      "n_slides": 30,
+      "matched_lecture_id": "",
+      "matched_lecture": "",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "unmatched",
+      "evidence": [],
+      "reason": "No candidate lecture covers the posterior abdominal wall structures and dissection steps outlined in the guide.; None of the candidate lectures address the posterior abdominal wall, kidneys, adrenal glands, diaphragm, or major abdominal vasculature described in the guide.",
+      "score": 0.72,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.719
+        },
+        {
+          "lecture": "Lecture 14 - The Pelvic Cavity",
+          "embedding_score": 0.704
+        },
+        {
+          "lecture": "ANA407 Class 28 - The Posterior Abdominal Wall",
+          "embedding_score": 0.675
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 29,
+      "title": "The Triangles of the Neck",
+      "display_name": "Class 29: The Triangles of the Neck",
+      "class_label": "Class 29",
+      "file": "Class 29 Dissection Guide - The Triangles of the Neck.pptx",
+      "n_slides": 22,
+      "matched_lecture_id": "L14-anterior-triangle-of-the-neck",
+      "matched_lecture": "Lecture 14 - Anterior Triangle of the Neck",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "muscular triangle",
+        "carotid triangle",
+        "omohyoid muscle",
+        "infrahyoid muscles",
+        "hypoglossal nerve",
+        "external carotid artery",
+        "carotid sheath",
+        "sternocleidomastoid",
+        "platysma",
+        "external jugular vein",
+        "accessory nerve (CN XI)",
+        "subclavian artery",
+        "common carotid artery",
+        "vagus nerve (CN X)",
+        "infrahyoid muscles (omohyoid)"
+      ],
+      "reason": "Candidate B covers the neck triangles, strap muscles, carotid sheath and associated nerves and vessels described in the guide; Candidate A covers neck triangles, muscles, nerves and vessels described in the guide, matching the region and structures dissected.",
+      "score": 0.78,
+      "candidates": [
+        {
+          "lecture": "Lecture 14 - Anterior Triangle of the Neck",
+          "embedding_score": 0.781
+        },
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.724
+        },
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.721
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 30,
+      "title": "The Skull, Scalp, and Face",
+      "display_name": "Class 30: The Skull, Scalp, and Face",
+      "class_label": "Class 30",
+      "file": "Class 30 Dissection Guide - The Skull, Scalp, and Face.pptx",
+      "n_slides": 12,
+      "matched_lecture_id": "L15-face-and-parotid-region",
+      "matched_lecture": "Lecture 15 - Face and Parotid Region",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "facial nerve",
+        "facial artery",
+        "facial vein",
+        "parotid gland",
+        "orbicularis oculi",
+        "zygomaticus major",
+        "platysma",
+        "supraorbital nerve",
+        "orbicularis oris",
+        "levator labii superioris",
+        "depressor anguli oris"
+      ],
+      "reason": "Candidate A covers facial muscles, facial nerve branches, facial artery/vein, parotid gland and trigeminal sensory branches matching the guide's dissection region.; Candidate C covers the facial muscles, facial nerve branches, facial artery/vein, parotid gland, and trigeminal sensory branches described in the guide",
+      "score": 0.76,
+      "candidates": [
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.764
+        },
+        {
+          "lecture": "Lecture 14 - Anterior Triangle of the Neck",
+          "embedding_score": 0.717
+        },
+        {
+          "lecture": "Lecture 16 - Temporal, Masseteric, and Infratemporal Region",
+          "embedding_score": 0.715
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 31,
+      "title": "Craniectomy and Brain Removal",
+      "display_name": "Class 31: Craniectomy and Brain Removal",
+      "class_label": "Class 31",
+      "file": "Class 31 Dissection Guide - Craniectomy and Brain Removal.pptx",
+      "n_slides": 18,
+      "matched_lecture_id": "L17-cranial-fossa-dura-sinuses-and-meninges",
+      "matched_lecture": "Lecture 17 - Cranial Fossa, Dura, Sinuses and Meninges",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "middle meningeal artery",
+        "superior sagittal sinus",
+        "falx cerebri",
+        "tentorium cerebelli",
+        "cranial fossae",
+        "cranial nerves",
+        "dura mater",
+        "arachnoid mater",
+        "anterior cranial fossa",
+        "middle cranial fossa",
+        "posterior cranial fossa",
+        "cranial nerves (CN I‑XII)"
+      ],
+      "reason": "Candidate B covers the cranial fossae, meninges, dural folds, venous sinuses and meningeal arteries that are central to the craniectomy and brain removal guide.; Candidate A includes detailed coverage of cranial fossae, meninges, dural folds, venous sinuses, meningeal arteries and cranial nerves that align with the craniectomy and brain removal guide",
+      "score": 0.69,
+      "candidates": [
+        {
+          "lecture": "Lecture 17 - Cranial Fossa, Dura, Sinuses and Meninges",
+          "embedding_score": 0.69
+        },
+        {
+          "lecture": "Lecture 02 - Muscles of the Back",
+          "embedding_score": 0.664
+        },
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.662
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 32,
+      "title": "Temporal and Infratemporal Regions",
+      "display_name": "Class 32: Temporal and Infratemporal Regions",
+      "class_label": "Class 32",
+      "file": "Class 32 Dissection Guide - Temporal and Infratemporal Regions.pptx",
+      "n_slides": 14,
+      "matched_lecture_id": "L16-temporal-masseteric-and-infratemporal-region",
+      "matched_lecture": "Lecture 16 - Temporal, Masseteric, and Infratemporal Region",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "masseter muscle",
+        "temporalis muscle",
+        "lateral pterygoid muscle",
+        "medial pterygoid muscle",
+        "temporomandibular joint",
+        "inferior alveolar nerve",
+        "lingual nerve",
+        "chorda tympani nerve",
+        "mandibular nerve (V3)",
+        "middle meningeal artery"
+      ],
+      "reason": "Candidate C covers the temporal/infratemporal anatomy, muscles, nerves, arteries, and TMJ described in the guide.; Candidate B comprehensively covers the temporal and infratemporal anatomy detailed in the dissection guide",
+      "score": 0.74,
+      "candidates": [
+        {
+          "lecture": "Lecture 16 - Temporal, Masseteric, and Infratemporal Region",
+          "embedding_score": 0.736
+        },
+        {
+          "lecture": "Lecture 14 - Anterior Triangle of the Neck",
+          "embedding_score": 0.715
+        },
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.699
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 33,
+      "title": "The Orbit",
+      "display_name": "Class 33: The Orbit",
+      "class_label": "Class 33 (The Orbit)",
+      "file": "Class 33 Dissection Guide - The Orbit.pptx",
+      "n_slides": 14,
+      "matched_lecture_id": "",
+      "matched_lecture": "",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "unmatched",
+      "evidence": [],
+      "reason": "None of the candidate lectures cover the detailed orbital anatomy required by the dissection guide; they focus on facial nerves, thorax, or neck regions.; None of the lecture candidates cover the orbit region and its detailed structures such as extraocular muscles, optic nerve, ophthalmic artery, and periorbita.",
+      "score": 0.71,
+      "candidates": [
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.714
+        },
+        {
+          "lecture": "Lecture 16 - Anterolateral Thoracoabdominal Wall",
+          "embedding_score": 0.705
+        },
+        {
+          "lecture": "Lecture 14 - Anterior Triangle of the Neck",
+          "embedding_score": 0.694
+        }
+      ],
+      "note": "",
+      "locked": false
+    },
+    {
+      "class_number": 33,
+      "title": "The Oronasal Cavities",
+      "display_name": "Class 33: The Oronasal Cavities",
+      "class_label": "Class 33 (The Oronasal Cavities)",
+      "file": "Class 33 Dissection Guide - The Oronasal Cavities.pptx",
+      "n_slides": 32,
+      "matched_lecture_id": "L22-oral-cavity",
+      "matched_lecture": "Lecture 22 - Oral Cavity",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "medium",
+      "evidence": [
+        "hard palate",
+        "soft palate",
+        "levator veli palatini",
+        "uvula",
+        "tongue",
+        "hypoglossal nerve",
+        "vagus nerve",
+        "sublingual gland",
+        "submandibular duct"
+      ],
+      "reason": "Candidate A covers most oral cavity structures detailed in the guide, including palate, tongue, related nerves and glands.; The guide spans both neck structures (vagus, hypoglossal, submandibular duct) and oral/nasal cavity structures (palate, uvula, tongue) best matched by lectures B and C",
+      "score": 0.71,
+      "candidates": [
+        {
+          "lecture": "Lecture 14 - Anterior Triangle of the Neck",
+          "embedding_score": 0.708
+        },
+        {
+          "lecture": "Lecture 22 - Oral Cavity",
+          "embedding_score": 0.696
+        },
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.696
+        }
+      ],
+      "note": "the two judge runs differed on a second lecture",
+      "locked": false
+    },
+    {
+      "class_number": 34,
+      "title": "The Pharynx and Oronasal Cavities",
+      "display_name": "Class 34: The Pharynx and Oronasal Cavities",
+      "class_label": "Class 34",
+      "file": "Class 34 Dissection Guide - The Pharynx and Oronasal Cavities.pptx",
+      "n_slides": 31,
+      "matched_lecture_id": "L22-oral-cavity",
+      "matched_lecture": "Lecture 22 - Oral Cavity",
+      "also_lecture_id": "",
+      "also_lecture": "",
+      "method": "content only: embeddings (top 3) + gpt-oss-120b judge",
+      "confidence": "high",
+      "evidence": [
+        "hard palate",
+        "soft palate",
+        "uvula",
+        "levator veli palatini",
+        "vagus nerve (CN X)",
+        "tongue",
+        "hypoglossal nerve (CN XII)",
+        "sublingual gland"
+      ],
+      "reason": "Candidate A covers the palate, tongue, associated muscles and nerves that constitute the bulk of the guide's oral cavity dissection; Lecture C covers the majority of oral cavity structures (palate, tongue, associated nerves and glands) described in the guide",
+      "score": 0.71,
+      "candidates": [
+        {
+          "lecture": "Lecture 14 - Anterior Triangle of the Neck",
+          "embedding_score": 0.707
+        },
+        {
+          "lecture": "Lecture 22 - Oral Cavity",
+          "embedding_score": 0.697
+        },
+        {
+          "lecture": "Lecture 15 - Face and Parotid Region",
+          "embedding_score": 0.695
+        }
+      ],
+      "note": "",
+      "locked": false
+    }
+  ]
+}

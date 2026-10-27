@@ -1,0 +1,8 @@
+# Demo script for Lecture 09 (no human input). Body type is passed with --body-type.
+I'm at station 4
+not sure
+skip to the last station
+rechecked
+next
+I see six carpal bones in three rows, and the pisiform is in the distal row.
+quit
