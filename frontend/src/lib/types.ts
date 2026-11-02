@@ -59,6 +59,9 @@ export const FLAG_REASONS = [
 ] as const;
 
 // ---- Guide
+export type GuideBodyType = "lean" | "average" | "more_fat" | "more_muscular" | "not_sure";
+export interface BodyTipLine { text: string; general: boolean }
+export interface BodyTip { body_type: string; lines: BodyTipLine[] }
 export interface GuideSummary { id: string; class_number: number; title: string; region: string; station_count: number; granted: boolean }
 export interface Station { index: number; title: string; steps: string[]; slides: number[]; image_only: boolean }
 export type Verdict = "correct" | "partly" | "not_matching";
@@ -115,7 +118,7 @@ export interface ResultQuestion {
 }
 export interface QuizResults { quiz_id: string; score: number; length: number; submitted: string; questions: ResultQuestion[] }
 export interface QuizHistoryItem { id: string; score: number; length: number; submitted: string; title: string; web: boolean }
-export interface GuideHistoryItem { id: string; kind: "guide" | "lecture"; ref: string; title: string; station: number; count: number; updated_at: string }
+export interface GuideHistoryItem { id: string; kind: "guide" | "lecture"; ref: string; title: string; station: number; count: number; updated_at: string; body_type: GuideBodyType | null }
 export interface WebQuizItem {
   id: string; student: string; title: string; status: string; score: number | null; length: number; web_questions: number;
   sources: { title: string; url: string | null; license: string }[]; created_at: string;

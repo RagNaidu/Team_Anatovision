@@ -39,6 +39,7 @@ export default {
         warn: "rgb(var(--warn) / <alpha-value>)",
         "warn-soft": "rgb(var(--warn-soft) / <alpha-value>)",
       },
+      borderColor: { DEFAULT: "rgb(var(--line) / <alpha-value>)" },      // a border with no colour class uses the token, never Tailwind's grey fallback
       borderRadius: { md: "10px", lg: "14px", xl: "18px" },
       boxShadow: {
         float: "0 1px 2px rgba(30,26,23,.06), 0 6px 18px rgba(30,26,23,.07)",

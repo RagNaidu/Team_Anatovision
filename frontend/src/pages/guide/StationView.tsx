@@ -3,7 +3,9 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ImageIcon } from "lucide-react";
 import { api, ApiError, errorMessage } from "@/lib/api";
-import type { GuideSummary, Station, StationCheck, Verdict } from "@/lib/types";
+import type { BodyTip, GuideBodyType, GuideSummary, Station, StationCheck, Verdict } from "@/lib/types";
+import { bodyAdapts, bodyLabel } from "@/lib/bodyType";
+import { BodyTypeAsk, BodyTypeChip } from "@/components/BodyTypeChoice";
 import { useData } from "@/state/data";
 import { SidebarPortal } from "@/components/SidebarSlot";
 import { SpineBar } from "@/components/Vertebrae";
@@ -41,8 +43,12 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   const [panel, setPanel] = useState<number | null>(null);
   const [furthest, setFurthest] = useState(0);
   const sizeRef = useRef(0);
+  // the cadaver's body type for THIS guide: undefined = not known yet, null = not chosen (ask first)
+  const [bodyType, setBodyType] = useState<GuideBodyType | null | undefined>(undefined);
+  const [tip, setTip] = useState<BodyTip | null>(null);
 
   const key = `${kind}:${id}`;
+  const btKey = `av_guide_bt:${id}`;
   const index = Math.max(0, Number.parseInt(indexParam ?? "0", 10) || 0);
 
   useEffect(() => {
@@ -66,6 +72,33 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   const st = stations && stations[Math.min(index, stations.length - 1)];
   const cur = st ? st.index : 0;
   const count = stations?.length ?? 0;
+
+  // the saved body type of this guide (the server first, then this browser); none yet = ask before the first station
+  useEffect(() => {
+    if (kind !== "guide") { setBodyType(null); return; }
+    let live = true;
+    setBodyType(undefined);
+    const local = store.get<GuideBodyType | null>(btKey, null);
+    api.guideHistory().then((h) => live && setBodyType(h.find((x) => x.id === key)?.body_type ?? local)).catch(() => live && setBodyType(local));
+    return () => { live = false; };
+  }, [kind, key, btKey]);
+
+  // the note for this station and body type (a line from the guide, and labelled general tips)
+  useEffect(() => {
+    setTip(null);
+    if (kind !== "guide" || !stations || !bodyAdapts(bodyType)) return;
+    const s0 = stations[Math.min(index, stations.length - 1)];
+    if (!s0 || s0.image_only) return;
+    let live = true;
+    api.guideBodyTip(id, s0.index, bodyType as GuideBodyType).then((t) => live && setTip(t)).catch(() => undefined);
+    return () => { live = false; };
+  }, [kind, id, stations, index, bodyType]);
+
+  function chooseBodyType(v: GuideBodyType) {
+    setBodyType(v);
+    store.set(btKey, v);
+    api.saveGuideHistory("guide", id, Math.min(index, Math.max(0, (stations?.length ?? 1) - 1)), v).then(() => refreshGuideHistory()).catch(() => undefined);
+  }
 
   // remember where the student is (the sidebar's "Continue guide" card) and how far they got
   useEffect(() => {
@@ -95,7 +128,7 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
     if (!text) return;
     setCheck({ phase: "loading", error: undefined });
     try {
-      const r = await api.checkStation(id, st.index, text);
+      const r = await api.checkStation(id, st.index, text, kind === "guide" ? bodyType : null);
       setChecks((c) => ({ ...c, [st.index]: { text, phase: "done", result: r } }));
       setPanel(null);
     } catch (e) {
@@ -148,6 +181,10 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
             <div className="mt-8 space-y-4" aria-label="Loading stations"><Skeleton className="h-3 w-full" /><Skeleton className="h-8 w-2/3" /><Skeleton className="h-4" /><Skeleton className="h-4 w-5/6" /><Skeleton className="h-28 !rounded-xl" /></div>
           ) : !st ? (
             <Notice className="mt-6">This guide has no stations yet.</Notice>
+          ) : kind === "guide" && bodyType === undefined ? (
+            <div className="mt-8 space-y-4" aria-label="Loading"><Skeleton className="h-6 w-1/3" /><Skeleton className="h-28 !rounded-xl" /></div>
+          ) : kind === "guide" && bodyType === null ? (
+            <BodyTypeAsk onChoose={chooseBodyType} />
           ) : (
             <AnimatePresence mode="wait" initial={false}>
               <motion.div key={st.index} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.18 }}>
@@ -156,7 +193,10 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
                   <p className="mt-2 text-[13px] text-muted">Station {cur + 1} of {count}</p>
                 </div>
 
-                <p className="serif-label mt-6 !text-[16px]">Station {roman(cur + 1)}</p>
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+                  <p className="serif-label !text-[16px]">Station {roman(cur + 1)}</p>
+                  {kind === "guide" && <BodyTypeChip value={bodyType ?? null} onChange={chooseBodyType} />}
+                </div>
                 <h1 className="mt-1 font-serif text-[32px] font-semibold leading-tight max-sm:text-[26px]">{st.title}</h1>
 
                 {st.image_only ? (
@@ -178,6 +218,18 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
                   <ul className="mt-4 flex flex-wrap gap-2" aria-label="Slides">
                     {st.slides.map((n) => <li key={n} className="rounded-full border border-line-strong bg-surface px-2.5 py-0.5 text-[12px] text-body-2">Slide {n}</li>)}
                   </ul>
+                )}
+
+                {tip && tip.lines.length > 0 && (
+                  <aside aria-label={`Tip for a ${bodyLabel(bodyType).toLowerCase()} cadaver`} className="mt-5 rounded-xl border border-line bg-surface-2 px-4 py-3.5">
+                    <p className="serif-label !text-[14px]">For a {bodyLabel(bodyType).toLowerCase()} cadaver</p>
+                    <ul className="mt-1.5 space-y-1.5 text-[14px] leading-relaxed text-body-2">
+                      {tip.lines.map((l, i) => {
+                        const [label, ...rest] = l.general ? l.text.split(/:\s(.+)/s) : [null, l.text];
+                        return <li key={i}>{l.general && rest.length ? <><span className="font-medium text-ink">{label}:</span> <span>{rest.join(" ")}</span></> : l.text}</li>;
+                      })}
+                    </ul>
+                  </aside>
                 )}
 
                 {kind === "guide" && !st.image_only ? (

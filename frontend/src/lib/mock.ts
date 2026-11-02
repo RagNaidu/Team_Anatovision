@@ -2,7 +2,7 @@
 // so a page reload keeps you signed in, like the real httpOnly cookie). Any password works. Users: "inglis" (instructor), "student1".
 import { ApiError } from "./api";
 import type {
-  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, GuideHistoryItem, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuestionRow, QuizBuildBody,
+  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, BodyTip, GuideBodyType, GuideHistoryItem, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuestionRow, QuizBuildBody,
   QuizHistoryItem, QuizJob, QuizLatest, QuizResults, ResultQuestion, ReviewItem, ReviewPage, Scope, Source, Station, StationCheck, Student, User, WebQuizPage,
 } from "./types";
 
@@ -320,7 +320,24 @@ export async function lectureStations(id: string): Promise<Station[]> {
   if (!l.granted) throw new ApiError("That lecture isn't open to you yet. Ask your instructor.", 403);
   return clone(LECTURE_STATIONS);
 }
-export async function checkStation(id: string, index: number, description: string): Promise<StationCheck> {
+export async function guideBodyTip(id: string, index: number, bodyType: GuideBodyType): Promise<BodyTip> {
+  await delay();
+  studentSession();
+  const st = STATIONS[id]?.[index];
+  if (!st) throw new ApiError("That station was not found.", 404);
+  if (st.image_only || bodyType === "average" || bodyType === "not_sure") return { body_type: bodyType, lines: [] };
+  const general: Record<string, string> = {
+    more_fat: "General tip, not from your notes: expect more fat and thicker superficial fascia to clear before structures appear, and they may lie deeper.",
+    more_muscular: "General tip, not from your notes: muscles may be bulkier, so structures may lie deeper between them.",
+    lean: "General tip, not from your notes: there is less fat to clear, so structures may lie nearer the surface.",
+  };
+  return { body_type: bodyType, lines: [
+    ...(bodyType === "more_fat" && /fascia|skin/i.test(st.steps.join(" ")) ? [{ text: "The guide has you work through skin and fascia here, so expect more fat to clear first.", general: false }] : []),
+    { text: general[bodyType], general: true },
+  ] };
+}
+
+export async function checkStation(id: string, index: number, description: string, bodyType?: GuideBodyType | null): Promise<StationCheck> {
   await delay();
   studentSession();
   const st = STATIONS[id]?.[index];
@@ -330,7 +347,8 @@ export async function checkStation(id: string, index: number, description: strin
   const t = description.toLowerCase();
   if (/error|fail/.test(t)) throw new ApiError("The AI service couldn't check that. Please try again.", 502);
   if (t.length < 25) return { verdict: "not_matching", feedback_markdown: "That doesn't match this station yet. The guide asks for the following: " + st.steps[0] + " [1]", sources: [src] };
-  if (/sartorius|saphenous|piriformis|median|vein|artery|nerve/.test(t)) return { verdict: "correct", feedback_markdown: "That matches the guide. " + st.steps[st.steps.length - 1] + " [1]", sources: [src] };
+  const tip = bodyType === "more_fat" ? " General tip, not from your notes: with more body fat, expect more fat to clear before the vein appears." : "";
+  if (/sartorius|saphenous|piriformis|median|vein|artery|nerve/.test(t)) return { verdict: "correct", feedback_markdown: "That matches the guide. " + st.steps[st.steps.length - 1] + " [1]" + tip, sources: [src] };
   return { verdict: "partly", feedback_markdown: "Part of that matches. You described the region, but the guide also asks you to do this: " + st.steps[0] + " [1]", sources: [src] };
 }
 
@@ -499,9 +517,9 @@ export async function deleteQuizHistory(id: string): Promise<{ ok: true }> {
 
 // guide history (sidebar)
 const GUIDE_HISTORY: GuideHistoryItem[] = [
-  { id: "guide:class-17", kind: "guide", ref: "class-17", title: "Class 17 · The Hip and Knee Joints", station: 2, count: 4, updated_at: iso(0, 7) },
-  { id: "guide:class-14", kind: "guide", ref: "class-14", title: "Class 14 · Gluteal Region", station: 1, count: 4, updated_at: iso(2, 15) },
-  { id: "lecture:L08", kind: "lecture", ref: "L08", title: "Lecture 08 · Anterior and Medial Thigh", station: 1, count: 3, updated_at: iso(9, 11) },
+  { id: "guide:class-17", kind: "guide", ref: "class-17", title: "Class 17 · The Hip and Knee Joints", station: 2, count: 4, updated_at: iso(0, 7), body_type: "more_fat" },
+  { id: "guide:class-14", kind: "guide", ref: "class-14", title: "Class 14 · Gluteal Region", station: 1, count: 4, updated_at: iso(2, 15), body_type: null },
+  { id: "lecture:L08", kind: "lecture", ref: "L08", title: "Lecture 08 · Anterior and Medial Thigh", station: 1, count: 3, updated_at: iso(9, 11), body_type: null },
 ];
 export async function guideHistory(): Promise<GuideHistoryItem[]> {
   await sleep(350);
@@ -509,7 +527,7 @@ export async function guideHistory(): Promise<GuideHistoryItem[]> {
   if (readSession()?.preview) return [];
   return clone(GUIDE_HISTORY).sort((a, b) => b.updated_at.localeCompare(a.updated_at));
 }
-export async function saveGuideHistory(kind: "guide" | "lecture", ref: string, station: number): Promise<{ ok: true }> {
+export async function saveGuideHistory(kind: "guide" | "lecture", ref: string, station: number, bodyType?: GuideBodyType): Promise<{ ok: true }> {
   await sleep(100);
   studentSession();
   if (readSession()?.preview) return { ok: true };
@@ -519,8 +537,8 @@ export async function saveGuideHistory(kind: "guide" | "lecture", ref: string, s
   const l = LECTURES.find((x) => x.id === ref);
   const title = kind === "guide" ? `Class ${g?.class_number} · ${g?.title}` : (l?.title ?? ref).replace(/\s+-\s+/, " · ");
   const count = kind === "guide" ? (STATIONS[ref]?.length ?? 1) : LECTURE_STATIONS.length;
-  if (found) { found.station = Math.max(found.station, station); found.updated_at = new Date().toISOString(); }
-  else GUIDE_HISTORY.push({ id, kind, ref, title, station, count, updated_at: new Date().toISOString() });
+  if (found) { found.station = Math.max(found.station, station); found.updated_at = new Date().toISOString(); if (bodyType) found.body_type = bodyType; }
+  else GUIDE_HISTORY.push({ id, kind, ref, title, station, count, updated_at: new Date().toISOString(), body_type: bodyType ?? null });
   return { ok: true };
 }
 export async function deleteGuideHistory(id: string): Promise<{ ok: true }> {

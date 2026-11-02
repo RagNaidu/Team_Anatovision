@@ -2,7 +2,7 @@
 // VITE_USE_MOCK !== "false" (the default) -> realistic mock data from ./mock with a 600 to 1,200 ms delay.
 // VITE_USE_MOCK === "false"               -> fetch(`${VITE_API_URL ?? ""}/api/...`, { credentials: "include" }).
 import type {
-  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, GuideHistoryItem, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuizBuildBody, QuizHistoryItem,
+  AdminStats, AskBody, AskStatus, BodyTip, GuideBodyType, ChatDetail, ChatSummary, GuideHistoryItem, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuizBuildBody, QuizHistoryItem,
   QuizJob, QuizLatest, QuizResults, ReviewPage, Scope, Station, StationCheck, Student, User, WebQuizPage,
 } from "./types";
 
@@ -122,12 +122,14 @@ export const api = {
     USE_MOCK ? mock().then((m) => m.guideStations(id)) : http("GET", `/guides/${encodeURIComponent(id)}/stations`),
   lectureStations: (id: string): Promise<Station[]> =>
     USE_MOCK ? mock().then((m) => m.lectureStations(id)) : http("GET", `/lectures/${encodeURIComponent(id)}/stations`),
-  checkStation: (id: string, index: number, description: string): Promise<StationCheck> =>
-    USE_MOCK ? mock().then((m) => m.checkStation(id, index, description)) : http("POST", `/guides/${encodeURIComponent(id)}/stations/${index}/check`, { description }),
+  checkStation: (id: string, index: number, description: string, bodyType?: GuideBodyType | null): Promise<StationCheck> =>
+    USE_MOCK ? mock().then((m) => m.checkStation(id, index, description, bodyType)) : http("POST", `/guides/${encodeURIComponent(id)}/stations/${index}/check`, { description, ...(bodyType ? { body_type: bodyType } : {}) }),
+  guideBodyTip: (id: string, index: number, bodyType: GuideBodyType): Promise<BodyTip> =>
+    USE_MOCK ? mock().then((m) => m.guideBodyTip(id, index, bodyType)) : http("GET", `/guides/${encodeURIComponent(id)}/stations/${index}/body-tip${qs({ body_type: bodyType })}`),
 
   guideHistory: (): Promise<GuideHistoryItem[]> => (USE_MOCK ? mock().then((m) => m.guideHistory()) : http("GET", "/guide-history")),
-  saveGuideHistory: (kind: "guide" | "lecture", ref: string, station: number): Promise<{ ok: true }> =>
-    USE_MOCK ? mock().then((m) => m.saveGuideHistory(kind, ref, station)) : http("PUT", "/guide-history", { kind, ref, station }),
+  saveGuideHistory: (kind: "guide" | "lecture", ref: string, station: number, bodyType?: GuideBodyType): Promise<{ ok: true }> =>
+    USE_MOCK ? mock().then((m) => m.saveGuideHistory(kind, ref, station, bodyType)) : http("PUT", "/guide-history", { kind, ref, station, ...(bodyType ? { body_type: bodyType } : {}) }),
   deleteGuideHistory: (id: string): Promise<{ ok: true }> =>
     USE_MOCK ? mock().then((m) => m.deleteGuideHistory(id)) : http("DELETE", `/guide-history/${encodeURIComponent(id)}`),
 
