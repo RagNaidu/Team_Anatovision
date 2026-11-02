@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Navigate } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
 import { Wordmark } from "@/components/Wordmark";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/state/auth";
@@ -9,6 +10,7 @@ export default function Login() {
   const { status, user, preview, signIn, notice } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [show, setShow] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -34,8 +36,14 @@ export default function Login() {
           </div>
           <div>
             <label htmlFor="password" className="mb-1 block text-[14px] text-body-2">Password</label>
-            <input id="password" name="password" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)}
-              className="h-11 w-full rounded-lg border border-line-strong bg-bone px-3 text-[15px]" />
+            <div className="relative">
+              <input id="password" name="password" type={show ? "text" : "password"} autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)}
+                className="h-11 w-full rounded-lg border border-line-strong bg-bone py-0 pl-3 pr-11 text-[15px]" />
+              <button type="button" onClick={() => setShow((v) => !v)} aria-label={show ? "Hide password" : "Show password"} aria-pressed={show}
+                className="absolute right-1.5 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-md text-muted transition-colors duration-150 hover:bg-surface-2 hover:text-ink">
+                {show ? <EyeOff size={17} strokeWidth={1.5} aria-hidden /> : <Eye size={17} strokeWidth={1.5} aria-hidden />}
+              </button>
+            </div>
           </div>
           <div aria-live="polite" className="min-h-[20px] text-[14px]">
             {error ? <p role="alert" className="text-accent">{error}</p> : notice ? <p className="text-muted">{notice}</p> : null}

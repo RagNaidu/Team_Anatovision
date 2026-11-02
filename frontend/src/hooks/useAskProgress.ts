@@ -3,9 +3,9 @@ import { api, askStatusAvailable } from "@/lib/api";
 
 export const STAGE_LABELS: Record<string, string> = {
   searching: "Searching your notes",
-  reading: "Reading the sources",
-  writing: "Writing the answer",
-  checking: "Checking the answer",
+  reading: "Checking sources",
+  writing: "Writing answer",
+  checking: "Checking answer",
 };
 const ORDER = ["searching", "reading", "writing", "checking"];
 

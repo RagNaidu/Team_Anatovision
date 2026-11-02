@@ -80,7 +80,13 @@ export interface BuildResult { status: BuildStatus; reason: string; quiz_id: str
 export interface QuizJob { done: boolean; have: number; requested: number; note: string; result: BuildResult | null }
 export interface QuizLatest { id: string; status: "open" | "offer"; length: number; answered: number }
 export interface QuizOption { id: string; text: string }
-export interface OpenQuestion { stem: string; lead_in: string; selection_mode: "single"; options: QuizOption[] }
+export interface OpenQuestion {
+  stem: string; lead_in: string; selection_mode: "single"; options: QuizOption[];
+  /** built from the web (Wikipedia), not from the course notes */
+  web: boolean;
+  /** "Not from course notes" when web, else null */
+  source_note: string | null;
+}
 export interface OpenQuiz {
   quiz_id: string;
   length: number;
@@ -104,9 +110,17 @@ export interface ResultQuestion {
   label: string;
   review_status: string;
   spans: { source_id: string; span: string }[];
+  web: boolean;
+  source_note: string | null;
 }
 export interface QuizResults { quiz_id: string; score: number; length: number; submitted: string; questions: ResultQuestion[] }
-export interface QuizHistoryItem { id: string; score: number; length: number; submitted: string }
+export interface QuizHistoryItem { id: string; score: number; length: number; submitted: string; title: string; web: boolean }
+export interface GuideHistoryItem { id: string; kind: "guide" | "lecture"; ref: string; title: string; station: number; count: number; updated_at: string }
+export interface WebQuizItem {
+  id: string; student: string; title: string; status: string; score: number | null; length: number; web_questions: number;
+  sources: { title: string; url: string | null; license: string }[]; created_at: string;
+}
+export interface WebQuizPage { items: WebQuizItem[]; total: number }
 
 // ---- Instructor
 export type ReviewType = "confirmed_factual" | "doubtful" | "wording" | "typo" | "start_here" | "student_report";

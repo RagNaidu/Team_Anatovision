@@ -2,8 +2,8 @@
 // so a page reload keeps you signed in, like the real httpOnly cookie). Any password works. Users: "inglis" (instructor), "student1".
 import { ApiError } from "./api";
 import type {
-  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuestionRow, QuizBuildBody,
-  QuizHistoryItem, QuizJob, QuizLatest, QuizResults, ResultQuestion, ReviewItem, ReviewPage, Scope, Source, Station, StationCheck, Student, User,
+  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, GuideHistoryItem, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuestionRow, QuizBuildBody,
+  QuizHistoryItem, QuizJob, QuizLatest, QuizResults, ResultQuestion, ReviewItem, ReviewPage, Scope, Source, Station, StationCheck, Student, User, WebQuizPage,
 } from "./types";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -148,6 +148,14 @@ const NOTES_GATED: Omit<Message, "id" | "created_at"> = {
   footer: { basis_line: "Based on OpenStax and Wikipedia, not Dr. Inglis's notes.", access_note: "Dr. Inglis's notes for this are in Lecture 12, which you don't have yet. Ask him to open it." },
 };
 
+const STEPS: Omit<Message, "id" | "created_at"> = {
+  role: "assistant", kind: "answer", timing_ms: 7300,
+  markdown:
+    "The guide gives these steps for exposing the femoral triangle [1].\n\n1. Mark the anterior superior iliac spine and the pubic tubercle, then cut through skin only along the line between them [1].\n2. Reflect the skin flaps medially and laterally to expose the superficial fascia. Take care to keep the great saphenous vein, which you will need later [1].\n3. Clean the fascia lata below the inguinal ligament:\n   - Remove the fat and lymph nodes in the way.\n   - Keep the femoral sheath intact until you reach it.\n4. Open the femoral sheath along the line of the vessels and identify, from lateral to medial, the artery, the vein and the femoral canal [1].\n\nSlide 8 shows the sheath open.",
+  sources: [{ ...S_NOTES, type: "guide", title: "Dissection guide", subtitle: "Class 17, slides 3-8", snippet: "Mark the anterior superior iliac spine and the pubic tubercle. Cut through skin only. Reflect the skin flaps." }],
+  footer: null,
+};
+
 function pickAnswer(q: string): Omit<Message, "id" | "created_at"> {
   const t = q.toLowerCase();
   if (t.startsWith("explain this more simply")) return SIMPLE;
@@ -155,6 +163,7 @@ function pickAnswer(q: string): Omit<Message, "id" | "created_at"> {
   if (/waldeyer/.test(t)) return WALDEYER;
   if (/sciatic/.test(t)) return NOTES_GATED;
   if (/^\s*apex\s*\??$/.test(t)) return APEX;
+  if (/\bhow (do|can) i\b.*expose|steps/.test(t)) return STEPS;
   if (/femoral triangle|expose the femoral/.test(t)) return FEMORAL;
   return NOT_COVERED;
 }
@@ -333,12 +342,27 @@ const BANK: { lead: string; stem: string; options: string[]; answer: number; why
   { stem: "", lead: "Which muscles form the floor of the femoral triangle?", options: ["Gracilis and sartorius", "Iliopsoas, pectineus and adductor longus", "Vastus medialis and rectus femoris", "Gluteus medius and piriformis"], answer: 1, why: "The floor is formed by iliopsoas, pectineus and adductor longus.", alts: ["Sartorius forms a border, not the floor.", "", "Those are quadriceps components lateral to the triangle.", "Those are gluteal muscles."], evidence: "Its floor is formed by iliopsoas, pectineus and adductor longus.", span: "iliopsoas, pectineus and adductor longus" },
   { stem: "", lead: "Where does the apex of the femoral triangle point?", options: ["Superiorly", "Laterally", "Inferiorly", "Medially"], answer: 2, why: "The apex points inferiorly, where sartorius crosses adductor longus.", alts: ["The base is superior.", "", "", "Medial is the adductor longus border."].map((s, i) => (i === 2 ? "" : s)), evidence: "The apex of the femoral triangle points inferiorly, where sartorius crosses adductor longus.", span: "points inferiorly" },
 ];
-interface QuizRec { id: string; status: "open" | "offer"; length: number; picks: Record<string, string[]>; current: number; submitted: string | null; user: string }
+const WEB_BANK: typeof BANK = [
+  { stem: "", lead: "Which tonsil sits in the roof of the nasopharynx?", options: ["Palatine tonsil", "Pharyngeal tonsil (adenoids)", "Lingual tonsil", "Tubal tonsil"], answer: 1, why: "The pharyngeal tonsil, also called the adenoids, lies in the roof of the nasopharynx.", alts: ["The palatine tonsils sit between the palatal arches.", "", "The lingual tonsil is at the back of the tongue.", "The tubal tonsils lie near the opening of the auditory tube."], evidence: "Waldeyer's tonsillar ring consists of the pharyngeal tonsil, tubal tonsils, palatine tonsils and lingual tonsil.", span: "pharyngeal tonsil, tubal tonsils, palatine tonsils and lingual tonsil" },
+  { stem: "", lead: "What kind of tissue forms Waldeyer's ring?", options: ["Skeletal muscle", "Lymphoid tissue", "Cartilage", "Adipose tissue"], answer: 1, why: "It is an annular arrangement of lymphoid tissue in the pharynx.", alts: ["", "", "", ""].map((_, i) => (i === 1 ? "" : "Not what the ring is made of.")), evidence: "Waldeyer's tonsillar ring is an annular arrangement of lymphoid tissue in the pharynx.", span: "annular arrangement of lymphoid tissue in the pharynx" },
+  { stem: "", lead: "Where is the lingual tonsil found?", options: ["Roof of the nasopharynx", "Back of the tongue", "Beside the auditory tube", "Between the palatal arches"], answer: 1, why: "The lingual tonsil is at the back of the tongue.", alts: ["That is the pharyngeal tonsil.", "", "That is the tubal tonsil.", "That is the palatine tonsil."], evidence: "The lingual tonsil is located at the back of the tongue.", span: "lingual tonsil is located at the back of the tongue" },
+  { stem: "", lead: "In which part of the body is Waldeyer's ring found?", options: ["The pharynx", "The larynx", "The oesophagus", "The thorax"], answer: 0, why: "The ring surrounds the openings of the nose and mouth into the pharynx.", alts: ["", "Not the larynx.", "Not the oesophagus.", "Not the thorax."], evidence: "Waldeyer's tonsillar ring is an annular arrangement of lymphoid tissue in the pharynx.", span: "lymphoid tissue in the pharynx" },
+  { stem: "", lead: "How many palatine tonsils are part of the ring?", options: ["One", "Two", "Three", "Four"], answer: 1, why: "There is one palatine tonsil on each side, so two.", alts: ["Only one palatine tonsil is not right.", "", "Not three.", "Not four."], evidence: "The ring includes two palatine tonsils, one on each side.", span: "two palatine tonsils, one on each side" },
+];
+interface QuizRec { id: string; status: "open" | "offer"; length: number; picks: Record<string, string[]>; current: number; submitted: string | null; user: string; title: string; web: boolean }
 const QUIZZES = new Map<string, QuizRec>();
-QUIZZES.set("qpast1", { id: "qpast1", status: "open", length: 5, picks: { 0: ["B"], 1: ["C"], 2: ["A"], 3: ["B"], 4: ["A"] }, current: 4, submitted: iso(2, 15), user: "student1" });
-QUIZZES.set("qpast2", { id: "qpast2", status: "open", length: 5, picks: { 0: ["B"], 1: ["C"], 2: ["A"], 3: ["B"], 4: ["C"] }, current: 4, submitted: iso(9, 17), user: "student1" });
-const JOBS = new Map<string, { polls: number; body: QuizBuildBody; offer: boolean; fail: boolean }>();
+QUIZZES.set("qpast1", { id: "qpast1", status: "open", length: 5, picks: { 0: ["B"], 1: ["C"], 2: ["A"], 3: ["B"], 4: ["A"] }, current: 4, submitted: iso(0, 8), user: "student1", title: "Femoral triangle", web: false });
+QUIZZES.set("qpast2", { id: "qpast2", status: "open", length: 5, picks: { 0: ["B"], 1: ["C"], 2: ["A"], 3: ["B"], 4: ["C"] }, current: 4, submitted: iso(9, 17), user: "student1", title: "The Hand +1", web: false });
+QUIZZES.set("qpast3", { id: "qpast3", status: "open", length: 5, picks: { 0: ["B"], 1: ["B"], 2: ["A"], 3: ["A"], 4: ["C"] }, current: 4, submitted: iso(1, 12), user: "student1", title: "Waldeyer's ring", web: true });
+const JOBS = new Map<string, { polls: number; body: QuizBuildBody; offer: boolean; fail: boolean; web: boolean }>();
 let lastOffer: string | null = null;
+
+function titleOf(b: QuizBuildBody): string {
+  if (b.mode === "topic") return (b.topic ?? "Quiz").trim().replace(/^./, (c) => c.toUpperCase());
+  const first = LECTURES.find((l) => b.lecture_ids?.includes(l.id))?.title.replace(/^Lecture \d+\s*-\s*/, "") ?? GUIDE_LIST.find((g) => b.guide_ids?.includes(g.id))?.title ?? "Quiz";
+  const n = (b.lecture_ids?.length ?? 0) + (b.guide_ids?.length ?? 0);
+  return n > 1 ? `${first} +${n - 1}` : first;
+}
 
 export async function buildQuiz(body: QuizBuildBody): Promise<{ job_id: string }> {
   await delay();
@@ -346,7 +370,8 @@ export async function buildQuiz(body: QuizBuildBody): Promise<{ job_id: string }
   if ([...JOBS.values()].some((j) => j.polls < 6)) throw new ApiError("A quiz is already being prepared. Wait for it to finish.", 409);
   if (body.mode === "topic" && (!body.topic || body.topic.trim().length < 3)) throw new ApiError("A topic needs 3 to 80 characters.", 422);
   const id = `job${Math.random().toString(36).slice(2, 8)}`;
-  JOBS.set(id, { polls: 0, body, offer: body.n === 10, fail: /zzz/.test(body.topic ?? "") });
+  const web = body.mode === "topic" && !/femoral|thigh|hip|knee|gluteal|hand|carpal/i.test(body.topic ?? "");
+  JOBS.set(id, { polls: 0, body, offer: body.n === 10, fail: /zzz/.test(body.topic ?? "") || (web && Boolean(body.reviewed_only)), web });
   return { job_id: id };
 }
 export async function quizJob(id: string): Promise<QuizJob> {
@@ -359,14 +384,14 @@ export async function quizJob(id: string): Promise<QuizJob> {
   const target = j.fail ? 0 : j.offer ? 6 : req;
   const have = Math.min(target, Math.round((j.polls / 4) * req));
   if (j.polls < 4) return { done: false, have, requested: req, note: j.polls < 2 ? "Reusing saved questions" : "Writing and checking new questions", result: null };
-  if (j.fail) return { done: true, have: 0, requested: req, note: "", result: { status: "failed", reason: "insufficient_evidence", quiz_id: null, have: 0, requested: req, message: "There isn't enough material on that topic to write good questions. Try a broader topic." } };
+  if (j.fail) return { done: true, have: 0, requested: req, note: "", result: { status: "failed", reason: j.web && j.body.reviewed_only ? "no_approved" : "insufficient_evidence", quiz_id: null, have: 0, requested: req, message: j.web && j.body.reviewed_only ? "Only 0 instructor-approved question(s) match this choice. A quiz needs at least 5, and approved questions are never replaced by unreviewed ones. Questions built from the web are switched off while this is checked." : "There isn't enough material on that topic to write good questions. Try a broader topic." } };
   const qid = `q${Math.random().toString(36).slice(2, 10)}`;
   if (j.offer) {
-    QUIZZES.set(qid, { id: qid, status: "offer", length: 5, picks: {}, current: 0, submitted: null, user: "student1" });
+    QUIZZES.set(qid, { id: qid, status: "offer", length: 5, picks: {}, current: 0, submitted: null, user: "student1", title: titleOf(j.body), web: j.web });
     lastOffer = qid;
     return { done: true, have: 6, requested: 10, note: "", result: { status: "offer", reason: "", quiz_id: qid, have: 6, requested: 10, message: "6 of 10 questions are ready. You can start with 5 or keep preparing." } };
   }
-  QUIZZES.set(qid, { id: qid, status: "open", length: req, picks: {}, current: 0, submitted: null, user: "student1" });
+  QUIZZES.set(qid, { id: qid, status: "open", length: req, picks: {}, current: 0, submitted: null, user: "student1", title: titleOf(j.body), web: j.web });
   return { done: true, have: req, requested: req, note: "", result: { status: "ready", reason: "", quiz_id: qid, have: req, requested: req, message: "" } };
 }
 export async function quizLatest(): Promise<QuizLatest | null> {
@@ -404,7 +429,8 @@ export async function getQuiz(id: string): Promise<OpenQuiz> {
   if (q.status !== "open" || q.submitted) throw new ApiError("That quiz isn't open.", 409);
   return {
     quiz_id: id, length: q.length, current: q.current, answered: Object.keys(q.picks).length,
-    questions: BANK.slice(0, q.length).map((b) => ({ stem: b.stem, lead_in: b.lead, selection_mode: "single" as const, options: b.options.map((t, i) => ({ id: "ABCD"[i], text: t })) })),
+    questions: bankOf(q).slice(0, q.length).map((b) => ({ stem: b.stem, lead_in: b.lead, selection_mode: "single" as const, options: b.options.map((t, i) => ({ id: "ABCD"[i], text: t })),
+      web: q.web, source_note: q.web ? "Not from course notes" : null })),
     selections: clone(q.picks),
   };
 }
@@ -421,8 +447,9 @@ export async function setCurrent(id: string, index: number): Promise<{ ok: true 
   getRec(id).current = index;
   return { ok: true };
 }
+function bankOf(q: QuizRec) { return q.web ? WEB_BANK : BANK; }
 function resultsFor(q: QuizRec): QuizResults {
-  const questions: ResultQuestion[] = BANK.slice(0, q.length).map((b, i) => {
+  const questions: ResultQuestion[] = bankOf(q).slice(0, q.length).map((b, i) => {
     const selected = q.picks[String(i)] ?? [];
     const ansId = "ABCD"[b.answer];
     const alternatives: Record<string, string> = {};
@@ -430,9 +457,12 @@ function resultsFor(q: QuizRec): QuizResults {
     return {
       n: i + 1, stem: b.stem, lead_in: b.lead, options: b.options.map((t, k) => ({ id: "ABCD"[k], text: t })), selected, answer_ids: [ansId],
       correct: selected.length === 1 && selected[0] === ansId, explanation: b.why, alternatives,
-      evidence: [{ id: "e1", label: "Lecture 08 - Anterior and Medial Thigh › Femoral Triangle", tier: "Course material", url: null, visible: true, text: b.evidence, license: null }],
+      evidence: [q.web
+        ? { id: "e1", label: "Web: Waldeyer's tonsillar ring (Wikipedia)", tier: "Web (Wikipedia, not course notes)", url: "https://en.wikipedia.org/wiki/Waldeyer%27s_tonsillar_ring", visible: true, text: b.evidence, license: "CC BY-SA 4.0" }
+        : { id: "e1", label: "Lecture 08 - Anterior and Medial Thigh › Femoral Triangle", tier: "Course material", url: null, visible: true, text: b.evidence, license: null }],
       label: "AI-checked (two models agreed and sources were checked). Not reviewed by Dr. Inglis.", review_status: "unreviewed",
       spans: [{ source_id: "e1", span: b.span }],
+      web: q.web, source_note: q.web ? "Not from course notes" : null,
     };
   });
   return { quiz_id: q.id, score: questions.filter((x) => x.correct).length, length: q.length, submitted: q.submitted ?? new Date().toISOString(), questions };
@@ -453,10 +483,53 @@ export async function quizResults(id: string): Promise<QuizResults> {
   return resultsFor(q);
 }
 export async function quizHistory(): Promise<QuizHistoryItem[]> {
-  await delay();
+  await sleep(350);
   studentSession();
   return [...QUIZZES.values()].filter((q) => q.submitted).sort((a, b) => (b.submitted ?? "").localeCompare(a.submitted ?? ""))
-    .map((q) => ({ id: q.id, score: resultsFor(q).score, length: q.length, submitted: q.submitted! }));
+    .map((q) => ({ id: q.id, score: resultsFor(q).score, length: q.length, submitted: q.submitted!, title: q.title, web: q.web }));
+}
+export async function deleteQuizHistory(id: string): Promise<{ ok: true }> {
+  await sleep(250);
+  studentSession();
+  const q = QUIZZES.get(id);
+  if (!q || !q.submitted) throw new ApiError("That quiz was not found.", 404);
+  QUIZZES.delete(id);
+  return { ok: true };
+}
+
+// guide history (sidebar)
+const GUIDE_HISTORY: GuideHistoryItem[] = [
+  { id: "guide:class-17", kind: "guide", ref: "class-17", title: "Class 17 · The Hip and Knee Joints", station: 2, count: 4, updated_at: iso(0, 7) },
+  { id: "guide:class-14", kind: "guide", ref: "class-14", title: "Class 14 · Gluteal Region", station: 1, count: 4, updated_at: iso(2, 15) },
+  { id: "lecture:L08", kind: "lecture", ref: "L08", title: "Lecture 08 · Anterior and Medial Thigh", station: 1, count: 3, updated_at: iso(9, 11) },
+];
+export async function guideHistory(): Promise<GuideHistoryItem[]> {
+  await sleep(350);
+  studentSession();
+  if (readSession()?.preview) return [];
+  return clone(GUIDE_HISTORY).sort((a, b) => b.updated_at.localeCompare(a.updated_at));
+}
+export async function saveGuideHistory(kind: "guide" | "lecture", ref: string, station: number): Promise<{ ok: true }> {
+  await sleep(100);
+  studentSession();
+  if (readSession()?.preview) return { ok: true };
+  const id = `${kind}:${ref}`;
+  const found = GUIDE_HISTORY.find((h) => h.id === id);
+  const g = GUIDE_LIST.find((x) => x.id === ref);
+  const l = LECTURES.find((x) => x.id === ref);
+  const title = kind === "guide" ? `Class ${g?.class_number} · ${g?.title}` : (l?.title ?? ref).replace(/\s+-\s+/, " · ");
+  const count = kind === "guide" ? (STATIONS[ref]?.length ?? 1) : LECTURE_STATIONS.length;
+  if (found) { found.station = Math.max(found.station, station); found.updated_at = new Date().toISOString(); }
+  else GUIDE_HISTORY.push({ id, kind, ref, title, station, count, updated_at: new Date().toISOString() });
+  return { ok: true };
+}
+export async function deleteGuideHistory(id: string): Promise<{ ok: true }> {
+  await sleep(250);
+  studentSession();
+  const i = GUIDE_HISTORY.findIndex((h) => h.id === id);
+  if (i < 0) throw new ApiError("That item was not found.", 404);
+  GUIDE_HISTORY.splice(i, 1);
+  return { ok: true };
 }
 export function _lastOffer() { return lastOffer; }
 
@@ -525,6 +598,12 @@ const STUDENTS: Student[] = [
   { id: "student1", name: "Student One", username: "student1", lecture_ids: ["L08", "L09", "L10", "L11"], guide_ids: ["class-17", "class-14", "class-10", "class-05"] },
   { id: "student2", name: "Student Two", username: "student2", lecture_ids: ["L08"], guide_ids: ["class-17"] },
 ];
+export async function adminWebQuizzes(): Promise<WebQuizPage> {
+  await delay();
+  instructorSession();
+  return { items: [{ id: "qpast3", student: "student1", title: "Waldeyer's ring", status: "submitted", score: 3, length: 5, web_questions: 5, created_at: iso(1, 12),
+    sources: [{ title: "Web: Waldeyer's tonsillar ring (Wikipedia)", url: "https://en.wikipedia.org/wiki/Waldeyer%27s_tonsillar_ring", license: "CC BY-SA 4.0" }] }], total: 1 };
+}
 export async function adminStudents(): Promise<Student[]> {
   await delay();
   instructorSession();

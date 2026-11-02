@@ -31,19 +31,22 @@ export function initials(name: string): string {
 const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
 
 export type ChatGroupLabel = "Today" | "Yesterday" | "Previous 7 days" | "Older";
-export function groupChats(chats: ChatSummary[], now = new Date()): { label: ChatGroupLabel; chats: ChatSummary[] }[] {
+/** Today / Yesterday / Previous 7 days / Older, newest first, empty groups left out. */
+export function groupByDate<T>(items: T[], dateOf: (t: T) => string, now = new Date()): { label: ChatGroupLabel; items: T[] }[] {
   const today = startOfDay(now);
   const day = 86_400_000;
-  const groups: Record<ChatGroupLabel, ChatSummary[]> = { Today: [], Yesterday: [], "Previous 7 days": [], Older: [] };
-  for (const c of [...chats].sort((a, b) => b.updated_at.localeCompare(a.updated_at))) {
-    const t = startOfDay(new Date(c.updated_at));
-    const diff = Math.round((today - t) / day);
+  const groups: Record<ChatGroupLabel, T[]> = { Today: [], Yesterday: [], "Previous 7 days": [], Older: [] };
+  for (const c of [...items].sort((a, b) => dateOf(b).localeCompare(dateOf(a)))) {
+    const diff = Math.round((today - startOfDay(new Date(dateOf(c)))) / day);
     if (diff <= 0) groups.Today.push(c);
     else if (diff === 1) groups.Yesterday.push(c);
     else if (diff <= 7) groups["Previous 7 days"].push(c);
     else groups.Older.push(c);
   }
-  return (Object.keys(groups) as ChatGroupLabel[]).filter((k) => groups[k].length).map((label) => ({ label, chats: groups[label] }));
+  return (Object.keys(groups) as ChatGroupLabel[]).filter((k) => groups[k].length).map((label) => ({ label, items: groups[label] }));
+}
+export function groupChats(chats: ChatSummary[], now = new Date()): { label: ChatGroupLabel; chats: ChatSummary[] }[] {
+  return groupByDate(chats, (c) => c.updated_at, now).map((g) => ({ label: g.label, chats: g.items }));
 }
 
 export function formatDate(iso: string, opts: Intl.DateTimeFormatOptions = { month: "short", day: "numeric" }): string {
@@ -82,4 +85,18 @@ export const BODY_LEVELS = {
 export interface BodyType { fat: string; muscle: string; build: string }
 export function bodyTypeString(b: BodyType): string {
   return `${b.fat} fat, ${b.muscle} muscle, ${b.build} build`;
+}
+
+/** "Lecture 16b - Middle Ear" -> {num: 16, suffix: "b"}; "ANA407 Class 28" is kept apart and sorts last. */
+function lectureKey(title: string): { extra: boolean; num: number; suffix: string; rest: string } {
+  const m = title.match(/^Lecture\s+(\d+)\s*([a-z]?)\b\s*[-:]?\s*(.*)$/i);
+  if (m) return { extra: false, num: Number(m[1]), suffix: m[2].toLowerCase(), rest: m[3] };
+  const c = title.match(/Class\s+(\d+)/i);
+  return { extra: true, num: c ? Number(c[1]) : 9999, suffix: "", rest: title };
+}
+/** Natural order: lecture number, then the letter after it, then the title (14, 15 and 16 repeat), with "ANA407 Class 28" at the end. */
+export function compareLectures(a: string, b: string): number {
+  const x = lectureKey(a), y = lectureKey(b);
+  if (x.extra !== y.extra) return x.extra ? 1 : -1;
+  return x.num - y.num || x.suffix.localeCompare(y.suffix) || x.rest.localeCompare(y.rest, undefined, { numeric: true, sensitivity: "base" });
 }

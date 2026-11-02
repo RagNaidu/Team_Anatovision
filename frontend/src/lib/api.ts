@@ -2,8 +2,8 @@
 // VITE_USE_MOCK !== "false" (the default) -> realistic mock data from ./mock with a 600 to 1,200 ms delay.
 // VITE_USE_MOCK === "false"               -> fetch(`${VITE_API_URL ?? ""}/api/...`, { credentials: "include" }).
 import type {
-  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuizBuildBody, QuizHistoryItem,
-  QuizJob, QuizLatest, QuizResults, ReviewPage, Scope, Station, StationCheck, Student, User,
+  AdminStats, AskBody, AskStatus, ChatDetail, ChatSummary, GuideHistoryItem, GuideSummary, Me, Message, OpenQuiz, QuestionPage, QuizBuildBody, QuizHistoryItem,
+  QuizJob, QuizLatest, QuizResults, ReviewPage, Scope, Station, StationCheck, Student, User, WebQuizPage,
 } from "./types";
 
 export const USE_MOCK: boolean = String(import.meta.env.VITE_USE_MOCK ?? "true") !== "false";
@@ -125,6 +125,12 @@ export const api = {
   checkStation: (id: string, index: number, description: string): Promise<StationCheck> =>
     USE_MOCK ? mock().then((m) => m.checkStation(id, index, description)) : http("POST", `/guides/${encodeURIComponent(id)}/stations/${index}/check`, { description }),
 
+  guideHistory: (): Promise<GuideHistoryItem[]> => (USE_MOCK ? mock().then((m) => m.guideHistory()) : http("GET", "/guide-history")),
+  saveGuideHistory: (kind: "guide" | "lecture", ref: string, station: number): Promise<{ ok: true }> =>
+    USE_MOCK ? mock().then((m) => m.saveGuideHistory(kind, ref, station)) : http("PUT", "/guide-history", { kind, ref, station }),
+  deleteGuideHistory: (id: string): Promise<{ ok: true }> =>
+    USE_MOCK ? mock().then((m) => m.deleteGuideHistory(id)) : http("DELETE", `/guide-history/${encodeURIComponent(id)}`),
+
   // ---- Quiz
   buildQuiz: (body: QuizBuildBody): Promise<{ job_id: string }> => (USE_MOCK ? mock().then((m) => m.buildQuiz(body)) : http("POST", "/quiz/build", body)),
   quizJob: (id: string): Promise<QuizJob> => (USE_MOCK ? mock().then((m) => m.quizJob(id)) : http("GET", `/quiz/jobs/${encodeURIComponent(id)}`)),
@@ -140,7 +146,11 @@ export const api = {
   quizResults: (id: string): Promise<QuizResults> => (USE_MOCK ? mock().then((m) => m.quizResults(id)) : http("GET", `/quiz/${encodeURIComponent(id)}/results`)),
   quizHistory: (): Promise<QuizHistoryItem[]> => (USE_MOCK ? mock().then((m) => m.quizHistory()) : http("GET", "/quiz/history")),
 
+  deleteQuizHistory: (id: string): Promise<{ ok: true }> =>
+    USE_MOCK ? mock().then((m) => m.deleteQuizHistory(id)) : http("DELETE", `/quiz/history/${encodeURIComponent(id)}`),
+
   // ---- Instructor
+  adminWebQuizzes: (page?: number): Promise<WebQuizPage> => (USE_MOCK ? mock().then((m) => m.adminWebQuizzes()) : http("GET", `/admin/web-quizzes${qs({ page })}`)),
   adminStats: (): Promise<AdminStats> => (USE_MOCK ? mock().then((m) => m.adminStats()) : http("GET", "/admin/stats")),
   adminReview: (q: { type?: string; status?: string; lecture?: string; page?: number }): Promise<ReviewPage> =>
     USE_MOCK ? mock().then((m) => m.adminReview(q)) : http("GET", `/admin/review${qs(q)}`),

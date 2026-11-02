@@ -9,6 +9,10 @@ test("login, ask, citation click, quiz start", async ({ page }) => {
   await page.goto("/login");
   await page.fill("#username", "student1");
   await page.fill("#password", "anything");
+  await page.getByRole("button", { name: "Show password" }).click();                       // eye toggle
+  await expect(page.locator("#password")).toHaveAttribute("type", "text");
+  await page.getByRole("button", { name: "Hide password" }).click();
+  await expect(page.locator("#password")).toHaveAttribute("type", "password");
   await page.getByRole("button", { name: "Sign in" }).click();
   await expect(page).toHaveURL(/\/ask$/);
   await expect(page.getByText("What would you like to know?")).toBeVisible();
@@ -30,7 +34,12 @@ test("login, ask, citation click, quiz start", async ({ page }) => {
 
   // quiz start
   await page.getByRole("link", { name: "Quiz" }).click();
+  await page.getByRole("button", { name: /^Lectures/ }).click();                            // dropdown with search, checkboxes and "Select all"
+  await expect(page.getByLabel("Search lectures")).toBeVisible();
   await page.getByRole("button", { name: "Select all" }).click();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("button", { name: /^Lectures/ })).toContainText("4 lectures");
+  await expect(page.getByText("Past quizzes", { exact: true })).toBeVisible();              // the history is in the sidebar
   await page.getByRole("button", { name: "Build quiz" }).click();
   await expect(page.getByText("Preparing your quiz")).toBeVisible();
   await expect(page.getByText("Question 1 of 5")).toBeVisible({ timeout: 20_000 });

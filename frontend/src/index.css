@@ -30,6 +30,7 @@
   --side-accent: 240 179 172;
   --side-logo: 224 140 132;
   --side-hover: 58 50 44;
+  --side-edge: 44 38 34;               /* the sidebar's right edge: the same as its background in light mode, so nothing changes there */
   --user-bubble: 44 38 34;
   --user-bubble-ink: 244 239 230;
   --ok: 46 107 79;
@@ -54,9 +55,10 @@
   --accent-soft: 74 41 38;
   --accent-soft-ink: 240 179 172;
   --accent-fg: 27 23 21;
-  --side: 20 17 16;
+  --side: 14 12 11;
   --side-line: 52 45 40;
-  --side-hover: 36 31 28;
+  --side-hover: 33 29 26;
+  --side-edge: 70 61 54;
   --user-bubble: 58 51 45;
   --user-bubble-ink: 239 231 218;
   --ok: 143 208 174;
@@ -82,9 +84,10 @@
     --accent-soft: 74 41 38;
     --accent-soft-ink: 240 179 172;
     --accent-fg: 27 23 21;
-    --side: 20 17 16;
+    --side: 14 12 11;
     --side-line: 52 45 40;
-    --side-hover: 36 31 28;
+    --side-hover: 33 29 26;
+    --side-edge: 70 61 54;
     --user-bubble: 58 51 45;
     --user-bubble-ink: 239 231 218;
     --ok: 143 208 174;
@@ -130,10 +133,18 @@
 .prose-answer p { margin: 0; }
 .prose-answer h1, .prose-answer h2, .prose-answer h3, .prose-answer h4 { font-family: "Source Serif 4 Variable", Georgia, serif; font-weight: 600; line-height: 1.3; margin-top: 1.2em; }
 .prose-answer h1 { font-size: 22px; } .prose-answer h2 { font-size: 20px; } .prose-answer h3, .prose-answer h4 { font-size: 17px; }
-.prose-answer ul { list-style: disc; padding-left: 1.3em; }
-.prose-answer ol { list-style: decimal; padding-left: 1.4em; }
-.prose-answer li + li { margin-top: .3em; }
-.prose-answer li::marker { color: rgb(var(--muted)); }
+/* Lists: the number or bullet hangs OUTSIDE the text, so wrapped lines line up with the first line of the item. */
+.prose-answer ul, .prose-answer ol { margin: 0; padding-left: 1.6em; list-style-position: outside; }
+.prose-answer ul { list-style-type: disc; }
+.prose-answer ol { list-style-type: decimal; padding-left: 1.9em; }
+.prose-answer li { padding-left: .2em; }
+.prose-answer li + li { margin-top: .45em; }
+.prose-answer li::marker { color: rgb(var(--muted)); font-variant-numeric: tabular-nums; }
+.prose-answer li > p { margin: 0; }
+.prose-answer li > p + p, .prose-answer li > p + ul, .prose-answer li > p + ol { margin-top: .4em; }
+.prose-answer li > ul, .prose-answer li > ol { margin-top: .4em; padding-left: 1.5em; }
+.prose-answer li > ul { list-style-type: circle; }
+.prose-answer li > ul > li > ul { list-style-type: square; }
 .prose-answer strong { font-weight: 600; }
 .prose-answer a:not(.cite) { color: rgb(var(--accent)); text-decoration: underline; text-underline-offset: 2px; }
 .prose-answer table { border-collapse: collapse; font-size: 14px; }
@@ -141,15 +152,15 @@
 .prose-answer code { background: rgb(var(--surface-2)); padding: 1px 5px; border-radius: 5px; font-size: .9em; }
 .prose-answer blockquote { border-left: 2px solid rgb(var(--line-strong)); padding-left: 12px; color: rgb(var(--body-2)); }
 
-/* Waiting dots: CSS only, 1.4 s, one after another. */
-.wait-dot { width: 5px; height: 5px; border-radius: 9999px; background: rgb(var(--muted)); opacity: .2; animation: dot 1.4s ease-in-out infinite; }
-.wait-dot:nth-child(2) { animation-delay: .2s; }
-.wait-dot:nth-child(3) { animation-delay: .4s; }
+/* Waiting dots: CSS only. Three dots that softly pulse in size and brightness, one after another, a 1.2 s loop. */
+.wait-dot { width: 6px; height: 6px; border-radius: 9999px; background: rgb(var(--muted)); opacity: .25; transform: scale(.7); animation: dot 1.2s ease-in-out infinite; }
+.wait-dot:nth-child(2) { animation-delay: .15s; }
+.wait-dot:nth-child(3) { animation-delay: .3s; }
 .stage-pulse { animation: pulseSoft 1.4s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
-  .wait-dot { animation: none; opacity: .6; }
+  .wait-dot { animation: none; opacity: .6; transform: none; }
   .stage-pulse { animation: none; }
   .skeleton { animation: none; }
 }

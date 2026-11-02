@@ -31,6 +31,7 @@ export default {
         "side-accent": "rgb(var(--side-accent) / <alpha-value>)",
         "side-logo": "rgb(var(--side-logo) / <alpha-value>)",
         "side-hover": "rgb(var(--side-hover) / <alpha-value>)",
+        "side-edge": "rgb(var(--side-edge) / <alpha-value>)",
         "user-bubble": "rgb(var(--user-bubble) / <alpha-value>)",
         "user-bubble-ink": "rgb(var(--user-bubble-ink) / <alpha-value>)",
         ok: "rgb(var(--ok) / <alpha-value>)",
@@ -44,12 +45,12 @@ export default {
         soft: "0 1px 2px rgba(30,26,23,.05)",
       },
       keyframes: {
-        dot: { "0%, 80%, 100%": { opacity: ".2" }, "40%": { opacity: "1" } },
+        dot: { "0%, 70%, 100%": { opacity: ".25", transform: "scale(.7)" }, "35%": { opacity: "1", transform: "scale(1.2)" } },
         pulseSoft: { "0%, 100%": { opacity: ".45" }, "50%": { opacity: "1" } },
         shimmer: { "0%": { backgroundPosition: "-200% 0" }, "100%": { backgroundPosition: "200% 0" } },
       },
       animation: {
-        dot: "dot 1.4s ease-in-out infinite",
+        dot: "dot 1.2s ease-in-out infinite",
         pulseSoft: "pulseSoft 1.4s ease-in-out infinite",
         shimmer: "shimmer 1.6s linear infinite",
       },

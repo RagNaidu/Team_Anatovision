@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Lock } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { api, errorMessage } from "@/lib/api";
-import type { QuizBuildBody, QuizHistoryItem, QuizLatest } from "@/lib/types";
+import type { QuizBuildBody, QuizLatest } from "@/lib/types";
 import { useData } from "@/state/data";
 import { Notice, PageTitle, Segmented, Skeleton } from "@/components/ui/misc";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { formatDate, cn } from "@/lib/utils";
+import { compareLectures } from "@/lib/utils";
+import { MultiSelect } from "@/components/MultiSelect";
 import { QuizFrame, lastBuild, rememberBuild } from "./shared";
 
 export default function QuizSetup() {
@@ -23,15 +23,12 @@ export default function QuizSetup() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [latest, setLatest] = useState<QuizLatest | null | undefined>(undefined);
-  const [history, setHistory] = useState<QuizHistoryItem[] | null>(null);
-  const [histError, setHistError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const auto = useRef(false);
 
   useEffect(() => {
     let live = true;
     api.quizLatest().then((l) => live && setLatest(l)).catch((e) => { if (live) { setLatest(null); setNotice(errorMessage(e)); } });
-    api.quizHistory().then((h) => live && setHistory(h)).catch((e) => live && setHistError(errorMessage(e)));
     return () => { live = false; };
   }, []);
 
@@ -77,10 +74,9 @@ export default function QuizSetup() {
     await start({ ...b, continue_quiz_id: id });
   }
 
-  const grantedLectures = scope?.lectures ?? [];
-  const guides = scope?.guides ?? [];
-  const toggle = (arr: string[], set: (a: string[]) => void, id: string, on: boolean) => set(on ? [...arr, id] : arr.filter((x) => x !== id));
-  const allIds = { l: grantedLectures.filter((l) => l.granted).map((l) => l.id), g: guides.filter((g) => g.granted).map((g) => g.id) };
+  const lectureOptions = useMemo(() => [...(scope?.lectures ?? [])].sort((a, b) => compareLectures(a.title, b.title)).map((l) => ({ id: l.id, label: l.title, locked: !l.granted })), [scope]);
+  const guideOptions = useMemo(() => [...(scope?.guides ?? [])].sort((a, b) => a.class_number - b.class_number || a.title.localeCompare(b.title))
+    .map((g) => ({ id: g.id, label: `Class ${g.class_number} · ${g.title}`, locked: !g.granted })), [scope]);
 
   return (
     <QuizFrame>
@@ -115,43 +111,10 @@ export default function QuizSetup() {
           options={[{ value: "materials", label: "My lectures and guides" }, { value: "topic", label: "A topic" }]} />
 
         {mode === "materials" ? (
-          scopeError ? <Notice tone="error">{scopeError}</Notice> : !scope ? <Skeleton className="h-40 !rounded-xl" /> : (
-            <div className="space-y-5">
-              <div className="flex items-center justify-between">
-                <p className="serif-label !text-[15px]">Choose what to include</p>
-                <button type="button" className="text-[13px] text-accent underline underline-offset-2"
-                  onClick={() => { const all = lectureIds.length === allIds.l.length && guideIds.length === allIds.g.length; setLectureIds(all ? [] : allIds.l); setGuideIds(all ? [] : allIds.g); }}>
-                  {lectureIds.length === allIds.l.length && guideIds.length === allIds.g.length && allIds.l.length + allIds.g.length > 0 ? "Clear all" : "Select all"}
-                </button>
-              </div>
-              <fieldset>
-                <legend className="mb-1.5 text-[14px] font-medium text-body-2">Lectures</legend>
-                <ul className="grid gap-1 sm:grid-cols-2">
-                  {grantedLectures.map((l) => (
-                    <li key={l.id}>
-                      <label className={cn("flex items-center gap-2.5 rounded-lg border border-line bg-surface px-3 py-2.5 text-[14px]", l.granted ? "cursor-pointer hover:bg-surface-2" : "cursor-not-allowed opacity-60")}>
-                        <Checkbox disabled={!l.granted} checked={lectureIds.includes(l.id)} onCheckedChange={(c) => toggle(lectureIds, setLectureIds, l.id, c === true)} aria-label={l.title} />
-                        <span className="min-w-0 flex-1">{l.title}</span>
-                        {!l.granted && <span className="flex shrink-0 items-center gap-1 text-[12px] text-muted"><Lock size={12} strokeWidth={1.5} aria-hidden /> Ask your instructor</span>}
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-              </fieldset>
-              <fieldset>
-                <legend className="mb-1.5 text-[14px] font-medium text-body-2">Dissection guides</legend>
-                <ul className="grid gap-1 sm:grid-cols-2">
-                  {guides.map((g) => (
-                    <li key={g.id}>
-                      <label className={cn("flex items-center gap-2.5 rounded-lg border border-line bg-surface px-3 py-2.5 text-[14px]", g.granted ? "cursor-pointer hover:bg-surface-2" : "cursor-not-allowed opacity-60")}>
-                        <Checkbox disabled={!g.granted} checked={guideIds.includes(g.id)} onCheckedChange={(c) => toggle(guideIds, setGuideIds, g.id, c === true)} aria-label={`Class ${g.class_number} ${g.title}`} />
-                        <span className="min-w-0 flex-1"><span className="serif-label mr-1.5">Class {g.class_number}</span>{g.title}</span>
-                        {!g.granted && <span className="flex shrink-0 items-center gap-1 text-[12px] text-muted"><Lock size={12} strokeWidth={1.5} aria-hidden /> Ask your instructor</span>}
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-              </fieldset>
+          scopeError ? <Notice tone="error">{scopeError}</Notice> : !scope ? <Skeleton className="h-28 !rounded-xl" /> : (
+            <div className="grid gap-4 sm:grid-cols-2">
+              <MultiSelect label="Lectures" noun="lecture" nounPlural="lectures" options={lectureOptions} value={lectureIds} onChange={setLectureIds} />
+              <MultiSelect label="Dissection guides" noun="guide" nounPlural="guides" options={guideOptions} value={guideIds} onChange={setGuideIds} />
             </div>
           )
         ) : (
@@ -159,7 +122,10 @@ export default function QuizSetup() {
             <label htmlFor="topic" className="serif-label mb-1.5 block !text-[15px]">Topic</label>
             <input id="topic" value={topic} maxLength={80} onChange={(e) => setTopic(e.target.value)} placeholder="For example: rotator cuff muscles"
               className="h-11 w-full rounded-lg border border-line-strong bg-surface px-3 text-[15px]" />
-            <p className="mt-1 text-right text-[12px] tabular-nums text-muted">{topic.length} / 80</p>
+            <div className="mt-1 flex items-start justify-between gap-4 text-[12px] text-muted">
+              <span>If your course material doesn't cover the topic, questions are built from Wikipedia and are marked "Not from course notes".</span>
+              <span className="shrink-0 tabular-nums">{topic.length} / 80</span>
+            </div>
           </div>
         )}
 
@@ -173,27 +139,14 @@ export default function QuizSetup() {
             Only questions approved by the instructor
           </label>
         </div>
+        {mode === "topic" && reviewedOnly && (
+          <Notice>Questions built from the web are switched off while this is checked. Only instructor-approved questions from the course material are used.</Notice>
+        )}
 
         {error && <Notice tone="error">{error}</Notice>}
         <Button type="submit" size="lg" disabled={busy}>{busy ? "Starting…" : "Build quiz"}</Button>
       </form>
 
-      <section className="mt-12" aria-label="Past quizzes">
-        <h2 className="serif-label mb-2 !text-[15px]">Past quizzes</h2>
-        {histError ? <p className="text-[14px] text-muted">{histError}</p> : !history ? <Skeleton className="h-10" /> : history.length === 0 ? (
-          <p className="text-[14px] text-muted">Quizzes you finish will be listed here.</p>
-        ) : (
-          <ul className="divide-y divide-line border-y border-line">
-            {history.map((h) => (
-              <li key={h.id}>
-                <Link to={`/quiz/${h.id}/results`} className="flex items-center justify-between px-1 py-3 text-[15px] hover:bg-surface-2">
-                  <span>{formatDate(h.submitted)}</span><span className="text-body-2">{h.score} of {h.length}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
     </QuizFrame>
   );
 }

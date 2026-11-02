@@ -6,7 +6,7 @@ import type { EvidenceItem, QuizResults, ResultQuestion } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Notice, Skeleton } from "@/components/ui/misc";
 import { cn } from "@/lib/utils";
-import { QuizFrame } from "./shared";
+import { QuizFrame, WebNote } from "./shared";
 
 /** Split `text` into pieces, marking the parts that equal one of the spans (case and whitespace tolerant). */
 export function highlight(text: string, spans: string[]): { t: string; hit: boolean }[] {
@@ -71,6 +71,7 @@ function QuestionCard({ q }: { q: ResultQuestion }) {
         <span className="serif-label">Question {q.n}</span>
         <span className={cn("inline-flex h-7 items-center rounded-full px-3 text-[13px] font-medium", q.correct ? "bg-ok-soft text-ok" : "bg-accent-soft text-accent-soft-ink")}>{q.correct ? "Correct" : "Incorrect"}</span>
       </div>
+      {q.web && <div className="mt-3"><WebNote note={q.source_note} /></div>}
       {q.stem && <p className="mt-3 text-[16px] leading-relaxed">{q.stem}</p>}
       <p className="mt-2 font-serif text-[18px] font-semibold leading-snug">{q.lead_in}</p>
       <ul className="mt-4 space-y-2">

@@ -7,7 +7,7 @@ import type { OpenQuiz } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Notice, Skeleton } from "@/components/ui/misc";
 import { cn } from "@/lib/utils";
-import { QuizFrame, SegBar } from "./shared";
+import { QuizFrame, SegBar, WebNote } from "./shared";
 
 export default function QuizTake() {
   const { id = "" } = useParams();
@@ -74,6 +74,7 @@ export default function QuizTake() {
       <AnimatePresence mode="wait" initial={false}>
         <motion.div key={cur} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.18 }} className="mt-6">
           <h1 ref={heading} tabIndex={-1} className="sr-only outline-none">Question {cur + 1}</h1>
+          {q.web && <WebNote note={q.source_note} />}
           {q.stem && <p className="mb-3 text-[16px] leading-relaxed">{q.stem}</p>}
           <p className="font-serif text-[19px] font-semibold leading-snug">{q.lead_in}</p>
           <div role="radiogroup" aria-label="Answer options" className="mt-5 space-y-2.5">

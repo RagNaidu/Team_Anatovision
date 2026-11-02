@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { api, errorMessage } from "@/lib/api";
-import type { ChatSummary, Scope } from "@/lib/types";
+import type { ChatSummary, GuideHistoryItem, QuizHistoryItem, Scope } from "@/lib/types";
 import { useAuth } from "./auth";
 
 interface DataValue {
@@ -12,6 +12,14 @@ interface DataValue {
   refreshChats: () => Promise<void>;
   renameChat: (id: string, title: string) => Promise<void>;
   removeChat: (id: string) => Promise<void>;
+  quizHistory: QuizHistoryItem[] | null;
+  quizHistoryError: string | null;
+  refreshQuizHistory: () => Promise<void>;
+  removeQuiz: (id: string) => Promise<void>;
+  guideHistory: GuideHistoryItem[] | null;
+  guideHistoryError: string | null;
+  refreshGuideHistory: () => Promise<void>;
+  removeGuideHistory: (id: string) => Promise<void>;
 }
 const Ctx = createContext<DataValue | null>(null);
 
@@ -49,7 +57,35 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setChats((cs) => cs.filter((c) => c.id !== id));
   }, []);
 
-  const value = useMemo(() => ({ scope, scopeError, chats, chatsLoading, chatsError, refreshChats, renameChat, removeChat }), [scope, scopeError, chats, chatsLoading, chatsError, refreshChats, renameChat, removeChat]);
+  const [quizHistory, setQuizHistory] = useState<QuizHistoryItem[] | null>(null);
+  const [quizHistoryError, setQuizHistoryError] = useState<string | null>(null);
+  const [guideHistory, setGuideHistory] = useState<GuideHistoryItem[] | null>(null);
+  const [guideHistoryError, setGuideHistoryError] = useState<string | null>(null);
+  // histories belong to one student: forget them when the user or the preview changes
+  useEffect(() => { setQuizHistory(null); setGuideHistory(null); }, [user, preview]);
+
+  const refreshQuizHistory = useCallback(async () => {
+    if (!studentTools) return;
+    try { setQuizHistory(await api.quizHistory()); setQuizHistoryError(null); } catch (e) { setQuizHistoryError(errorMessage(e)); }
+  }, [studentTools]);
+  const removeQuiz = useCallback(async (id: string) => {
+    await api.deleteQuizHistory(id);
+    setQuizHistory((h) => h?.filter((q) => q.id !== id) ?? null);
+  }, []);
+  const refreshGuideHistory = useCallback(async () => {
+    if (!studentTools) return;
+    try { setGuideHistory(await api.guideHistory()); setGuideHistoryError(null); } catch (e) { setGuideHistoryError(errorMessage(e)); }
+  }, [studentTools]);
+  const removeGuideHistory = useCallback(async (id: string) => {
+    await api.deleteGuideHistory(id);
+    setGuideHistory((h) => h?.filter((g) => g.id !== id) ?? null);
+  }, []);
+
+  const value = useMemo(() => ({
+    scope, scopeError, chats, chatsLoading, chatsError, refreshChats, renameChat, removeChat,
+    quizHistory, quizHistoryError, refreshQuizHistory, removeQuiz, guideHistory, guideHistoryError, refreshGuideHistory, removeGuideHistory,
+  }), [scope, scopeError, chats, chatsLoading, chatsError, refreshChats, renameChat, removeChat, quizHistory, quizHistoryError, refreshQuizHistory, removeQuiz,
+    guideHistory, guideHistoryError, refreshGuideHistory, removeGuideHistory]);
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 export function useData(): DataValue {

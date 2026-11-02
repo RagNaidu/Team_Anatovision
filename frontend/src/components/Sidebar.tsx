@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Plus, LogOut, Sun, Moon, Monitor } from "lucide-react";
 import { Wordmark } from "./Wordmark";
 import { ChatList } from "./ChatList";
+import { GuideHistory, QuizHistory } from "./SidebarHistories";
 import { useAuth } from "@/state/auth";
 import { cn, initials, store } from "@/lib/utils";
 import { Menu, MenuContent, MenuItem, MenuTrigger } from "@/components/ui/dropdown";
@@ -29,7 +30,7 @@ export function Sidebar({ slotRef }: { slotRef: (el: HTMLElement | null) => void
   const inGuideStation = /^\/guide\/[^/]+/.test(pathname);
 
   return (
-    <div className="on-dark flex h-full flex-col bg-side text-side-ink">
+    <div className="on-dark flex h-full flex-col border-r border-side-edge bg-side text-side-ink">
       <div className="px-5 pb-4 pt-6">
         <Link to={instructorShell ? "/admin" : "/ask"} className="block rounded-md">
           <Wordmark onDark size={26} />
@@ -40,7 +41,7 @@ export function Sidebar({ slotRef }: { slotRef: (el: HTMLElement | null) => void
       {instructorShell ? (
         <nav aria-label="Instructor" className="px-3">
           {[
-            ["/admin", "Overview", true], ["/admin/review", "Review queue", false], ["/admin/questions", "Questions", false],
+            ["/admin", "Overview", true], ["/admin/review", "Review queue", false], ["/admin/questions", "Questions", false], ["/admin/web-quizzes", "Web quizzes", false],
             ["/admin/access", "Access", false], ["/admin/preview", "Preview as student", false],
           ].map(([to, label, end]) => (
             <NavLink key={String(to)} to={String(to)} end={Boolean(end)}
@@ -65,7 +66,12 @@ export function Sidebar({ slotRef }: { slotRef: (el: HTMLElement | null) => void
               <Plus size={16} strokeWidth={2} className="text-[#8A2D2A]" aria-hidden /> New chat
             </button>
           </div>
-          {mode === "ask" ? <ChatList /> : <div ref={slotRef} className="scroll-side flex min-h-0 flex-1 flex-col overflow-y-auto" />}
+          {mode === "ask" ? <ChatList /> : mode === "quiz" ? <QuizHistory /> : (
+            <div className="scroll-side flex min-h-0 flex-1 flex-col overflow-y-auto">
+              <GuideHistory collapsible={inGuideStation} />
+              <div ref={slotRef} />
+            </div>
+          )}
         </>
       )}
       {instructorShell && <div className="flex-1" />}

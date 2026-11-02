@@ -32,7 +32,7 @@ const PROGRESS_KEY = "av_guide_progress";
 export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   const { id = "", index: indexParam } = useParams();
   const navigate = useNavigate();
-  const { scope } = useData();
+  const { scope, refreshGuideHistory } = useData();
   const [stations, setStations] = useState<Station[] | null>(null);
   const [guide, setGuide] = useState<GuideSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -75,6 +75,14 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
     const all = store.get<Record<string, number>>(PROGRESS_KEY, {});
     if ((all[key] ?? 0) < cur) { all[key] = cur; store.set(PROGRESS_KEY, all); setFurthest(cur); }
   }, [stations, st, cur, count, kind, id, key, shortHeading]);
+
+  // the server keeps the guide and the station reached, for the sidebar's history
+  useEffect(() => {
+    if (!stations || !st) return;
+    let live = true;
+    api.saveGuideHistory(kind, id, cur).then(() => { if (live) void refreshGuideHistory(); }).catch(() => undefined);
+    return () => { live = false; };
+  }, [stations, st, cur, kind, id, refreshGuideHistory]);
 
   const go = useCallback((i: number) => navigate(`/guide/${kind === "lecture" ? "lecture/" : ""}${id}/${i}`), [navigate, kind, id]);
 

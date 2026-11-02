@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Globe } from "lucide-react";
 import { cn, store } from "@/lib/utils";
 import type { QuizBuildBody } from "@/lib/types";
 
@@ -22,5 +23,14 @@ export function SegBar({ length, answered, current }: { length: number; answered
         <span key={i} className={cn("h-1.5 flex-1 rounded-full transition-colors duration-200", answered(i) ? "bg-accent" : "bg-line-strong", current === i && !answered(i) && "bg-accent/40")} />
       ))}
     </div>
+  );
+}
+
+/** Every question built from the web says so: it is not from Dr. Inglis's notes (the source is Wikipedia, CC BY-SA 4.0). */
+export function WebNote({ note }: { note: string | null }) {
+  return (
+    <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-warn-soft px-3 py-1 text-[13px] font-medium text-warn">
+      <Globe size={13} strokeWidth={1.75} aria-hidden /> {note ?? "Not from course notes"} <span className="font-normal opacity-80">· Wikipedia</span>
+    </p>
   );
 }
