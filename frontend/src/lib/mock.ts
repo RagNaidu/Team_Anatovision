@@ -248,11 +248,10 @@ export async function ask(body: AskBody, requestId?: string): Promise<Message> {
 const STAGES = ["searching", "reading", "writing", "checking"] as const;
 export async function askStatus(requestId: string): Promise<AskStatus | null> {
   const p = PLANS.get(requestId);
-  if (!p) return { stage: "searching", stages: [] };
-  const frac = Math.min(1, (Date.now() - p.start) / p.total);
-  const i = Math.min(3, Math.floor(frac * 4));
-  const done = STAGES.slice(0, i).map((key, k) => ({ key, seconds: Math.round(((p.total / 4) * (0.8 + k * 0.15)) / 100) / 10 }));
-  return { stage: STAGES[i], stages: done };
+  if (!p) return null; // like the real API: 404 until the POST registered the id
+  const frac = (Date.now() - p.start) / p.total;
+  if (frac >= 1) return { stage: "done" };
+  return { stage: STAGES[Math.min(3, Math.floor(frac * 4))] };
 }
 export async function flagMessage(_id: string, reason: string, _comment?: string): Promise<{ ok: true }> {
   await sleep(300);

@@ -92,6 +92,8 @@ export default function AskPage() {
     const asked = new Date().toISOString();
     try {
       if (!id) {
+        // the header shows the question as the title until the backend's own title arrives with the chat list
+        setTitle(question.length > 48 ? question.slice(0, 48).replace(/\s+\S*$/, "") + "…" : question);
         const c = await api.createChat();
         id = c.id;
         justCreated.current = id;
@@ -115,7 +117,9 @@ export default function AskPage() {
         ...(selected.length ? { lecture_ids: selected } : {}),
         ...(body ? { body_type: bodyTypeString(body) } : {}),
       }, requestId);
-      const stages = (stagesRef.current.get(requestId) ?? []).map((s): StageView => ({ ...s, state: "done", seconds: s.seconds }));
+      const seen = stagesRef.current.get(requestId) ?? [];
+      const known = seen.reduce((t, s) => t + (s.seconds ?? 0), 0);
+      const stages = seen.map((s, i): StageView => ({ ...s, state: "done", seconds: s.seconds ?? (i === seen.length - 1 ? Math.max(0, Math.round((a.timing_ms / 1000 - known) * 10) / 10) : null) }));
       stagesRef.current.delete(requestId);
       setItems((is) => is.map((i) => (i.type === "pending" && i.id === requestId ? { type: "msg", msg: a, fresh: true, stages } : i)));
       void refreshChats();

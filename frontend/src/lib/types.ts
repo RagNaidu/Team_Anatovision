@@ -46,6 +46,8 @@ export interface AskBody {
   lecture_ids?: string[];
   /** "<more|average|less> fat, <more|average|less> muscle, <large|average|small> build"; anything else is 422 */
   body_type?: string;
+  /** client-made id ([A-Za-z0-9_-], max 64): lets the UI poll GET /api/ask/status/{request_id} for the real stage */
+  request_id?: string;
 }
 
 export const FLAG_REASONS = [
@@ -139,6 +141,6 @@ export interface QuestionRow {
 export interface QuestionPage { items: QuestionRow[]; total: number }
 export interface Student { id: string; name: string; username: string; lecture_ids: string[]; guide_ids: string[] }
 
-/** Ask progress (Step D). The contract entry is added by Step D; this is the shape the UI expects. */
+/** GET /api/ask/status/{request_id}: only the stage word; 404 until the POST registered the id (treat as "searching"). */
 export type AskStageKey = "searching" | "reading" | "writing" | "checking";
-export interface AskStatus { stage: AskStageKey | "done" | string; stages?: { key: string; seconds?: number | null }[] }
+export interface AskStatus { stage: AskStageKey | "done" }

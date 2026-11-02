@@ -102,6 +102,7 @@ export default function ReviewQueue() {
   const [total, setTotal] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [sel, setSel] = useState<string | null>(null);
+  const [snap, setSnap] = useState<ReviewItem | null>(null); // keeps a just-decided item on screen after the list reloads without it
   const [tries, setTries] = useState(0);
 
   const load = useCallback(() => setTries((t) => t + 1), []);
@@ -113,7 +114,7 @@ export default function ReviewQueue() {
     return () => { live = false; };
   }, [type, status, lecture, page, tries]);
 
-  const current = items?.find((i) => i.id === sel) ?? null;
+  const current = items?.find((i) => i.id === sel) ?? (snap && snap.id === sel ? snap : null);
   const detail = current && <Detail item={current} onDecided={load} onClose={isDesktop ? undefined : () => setSel(null)} />;
 
   return (
@@ -143,7 +144,7 @@ export default function ReviewQueue() {
               <ul className="space-y-2">
                 {items.map((i) => (
                   <li key={i.id}>
-                    <button type="button" onClick={() => setSel(i.id)} aria-pressed={sel === i.id}
+                    <button type="button" onClick={() => { setSel(i.id); setSnap(i); }} aria-pressed={sel === i.id}
                       className={cn("w-full rounded-xl border px-4 py-3 text-left transition-colors duration-150 hover:bg-surface-2", sel === i.id ? "border-accent bg-surface-2" : "border-line bg-surface")}>
                       <span className="flex items-center gap-2 text-[12px]">
                         <span className="rounded-full bg-accent-soft px-2 py-0.5 font-medium text-accent-soft-ink">{TYPE_LABEL[i.type]}</span>

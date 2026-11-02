@@ -1,6 +1,11 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { api } from "@/lib/api";
 import type { Preview, User } from "@/lib/types";
+import { store } from "@/lib/utils";
+
+// The session cookie is httpOnly, so the page cannot see it. This hint says "this browser signed in before", so a first visit
+// goes straight to the login page without a pointless GET /api/auth/me that would answer 401 (and show up as a console error).
+const HINT = "av_signed_in";
 
 interface AuthValue {
   status: "loading" | "in" | "out";
@@ -21,12 +26,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [notice, setNotice] = useState<string | null>(null);
 
   const refresh = useCallback(async () => {
+    if (!store.get<boolean>(HINT, false)) { setUser(null); setPreview(null); setStatus("out"); return; }
     try {
       const me = await api.me();
       setUser(me.user);
       setPreview(me.preview ?? null);
       setStatus("in");
     } catch {
+      store.remove(HINT);
       setUser(null);
       setPreview(null);
       setStatus("out");
@@ -36,6 +43,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => { void refresh(); }, [refresh]);
   useEffect(() => {
     const on = () => {
+      store.remove(HINT);
       setUser(null);
       setPreview(null);
       setStatus("out");
@@ -47,6 +55,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signIn = useCallback(async (username: string, password: string) => {
     const r = await api.login(username, password);
+    store.set(HINT, true);
     setNotice(null);
     setUser(r.user);
     setPreview(null);
@@ -55,6 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
   const signOut = useCallback(async () => {
     try { await api.logout(); } catch { /* the cookie may already be gone */ }
+    store.remove(HINT);
     setUser(null);
     setPreview(null);
     setStatus("out");

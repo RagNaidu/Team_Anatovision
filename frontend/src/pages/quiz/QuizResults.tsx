@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Check, ChevronDown, ExternalLink, X } from "lucide-react";
 import { api, errorMessage } from "@/lib/api";
@@ -36,6 +36,13 @@ export function highlight(text: string, spans: string[]): { t: string; hit: bool
 }
 
 function Evidence({ ev, spans }: { ev: EvidenceItem; spans: string[] }) {
+  const box = useRef<HTMLParagraphElement>(null);
+  // a long passage scrolls inside its box, starting at the first supporting line
+  useEffect(() => {
+    const el = box.current;
+    const hit = el?.querySelector("mark");
+    if (el && hit && el.scrollHeight > el.clientHeight) el.scrollTop = Math.max(0, (hit as HTMLElement).offsetTop - 24);
+  }, [ev.text, spans.length]);
   return (
     <li className="rounded-lg bg-surface-2 px-3.5 py-3">
       <div className="flex flex-wrap items-center gap-x-2 text-[13px]">
@@ -45,7 +52,7 @@ function Evidence({ ev, spans }: { ev: EvidenceItem; spans: string[] }) {
         {ev.license && <span className="text-muted">{ev.license}</span>}
       </div>
       {ev.visible ? (
-        <p className="mt-1.5 font-serif text-[15px] leading-relaxed">
+        <p ref={box} tabIndex={0} aria-label="Evidence passage" className="scroll-quiet relative mt-1.5 max-h-64 overflow-y-auto font-serif text-[15px] leading-relaxed">
           {highlight(ev.text, spans).map((p, i) => (p.hit ? <mark key={i} className="span-hit">{p.t}</mark> : <Fragment key={i}>{p.t}</Fragment>))}
         </p>
       ) : (

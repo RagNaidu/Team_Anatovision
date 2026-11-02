@@ -107,7 +107,7 @@ export const api = {
 
   // ---- Ask
   ask: (body: AskBody, requestId?: string): Promise<Message> =>
-    USE_MOCK ? mock().then((m) => m.ask(body, requestId)) : http("POST", "/ask", body, requestId ? { headers: { "X-Request-Id": requestId } } : undefined),
+    USE_MOCK ? mock().then((m) => m.ask(body, requestId)) : http("POST", "/ask", requestId ? { ...body, request_id: requestId } : body),
   askStatus: async (requestId: string): Promise<AskStatus | null> => {
     if (USE_MOCK) return mock().then((m) => m.askStatus(requestId));
     if (!(await askStatusAvailable())) return null;

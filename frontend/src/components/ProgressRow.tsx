@@ -31,7 +31,7 @@ export function ProgressRow({
     );
 
   return (
-    <div className={cn("text-muted", className)}>
+    <div className={cn("text-muted", className)} data-testid="progress-row">
       {expandable ? (
         <button type="button" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}
           className="-ml-1 inline-flex items-center gap-2 rounded-md px-1 py-1 hover:text-body-2">
