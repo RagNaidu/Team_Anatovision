@@ -46,6 +46,7 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   // the cadaver's body type for THIS guide: undefined = not known yet, null = not chosen (ask first)
   const [bodyType, setBodyType] = useState<GuideBodyType | null | undefined>(undefined);
   const [tip, setTip] = useState<BodyTip | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);        // set once when a revised guide moved or reset the place
 
   const key = `${kind}:${id}`;
   const btKey = `av_guide_bt:${id}`;
@@ -79,7 +80,7 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
     let live = true;
     setBodyType(undefined);
     const local = store.get<GuideBodyType | null>(btKey, null);
-    api.guideHistory().then((h) => live && setBodyType(h.find((x) => x.id === key)?.body_type ?? local)).catch(() => live && setBodyType(local));
+    api.guideHistory().then((h) => { if (!live) return; const row = h.find((x) => x.id === key); setNotice(row?.notice ?? null); setBodyType(row?.body_type ?? local); }).catch(() => live && setBodyType(local));
     return () => { live = false; };
   }, [kind, key, btKey]);
 
@@ -111,11 +112,11 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
 
   // the server keeps the guide and the station reached, for the sidebar's history
   useEffect(() => {
-    if (!stations || !st) return;
+    if (!stations || !st || bodyType === undefined) return;          // wait until the saved notice and body type have been read
     let live = true;
     api.saveGuideHistory(kind, id, cur).then(() => { if (live) void refreshGuideHistory(); }).catch(() => undefined);
     return () => { live = false; };
-  }, [stations, st, cur, kind, id, refreshGuideHistory]);
+  }, [stations, st, cur, kind, id, refreshGuideHistory, bodyType === undefined]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const go = useCallback((i: number) => navigate(`/guide/${kind === "lecture" ? "lecture/" : ""}${id}/${i}`), [navigate, kind, id]);
 
@@ -175,6 +176,7 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
             <span className="text-[14px] text-muted">{heading}</span>
           </div>
 
+          {notice && <Notice className="mt-4">{notice}</Notice>}
           {error ? (
             <Notice tone="error" className="mt-6" action={<Button size="sm" variant="outline" onClick={() => setTries((t) => t + 1)}>Try again</Button>}>{error}</Notice>
           ) : !stations ? (

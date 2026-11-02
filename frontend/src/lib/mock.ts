@@ -517,9 +517,9 @@ export async function deleteQuizHistory(id: string): Promise<{ ok: true }> {
 
 // guide history (sidebar)
 const GUIDE_HISTORY: GuideHistoryItem[] = [
-  { id: "guide:class-17", kind: "guide", ref: "class-17", title: "Class 17 · The Hip and Knee Joints", station: 2, count: 4, updated_at: iso(0, 7), body_type: "more_fat" },
-  { id: "guide:class-14", kind: "guide", ref: "class-14", title: "Class 14 · Gluteal Region", station: 1, count: 4, updated_at: iso(2, 15), body_type: null },
-  { id: "lecture:L08", kind: "lecture", ref: "L08", title: "Lecture 08 · Anterior and Medial Thigh", station: 1, count: 3, updated_at: iso(9, 11), body_type: null },
+  { id: "guide:class-17", kind: "guide", ref: "class-17", title: "Class 17 · The Hip and Knee Joints", station: 2, count: 4, updated_at: iso(0, 7), body_type: "more_fat", notice: null },
+  { id: "guide:class-14", kind: "guide", ref: "class-14", title: "Class 14 · Gluteal Region", station: 1, count: 4, updated_at: iso(2, 15), body_type: null, notice: null },
+  { id: "lecture:L08", kind: "lecture", ref: "L08", title: "Lecture 08 · Anterior and Medial Thigh", station: 1, count: 3, updated_at: iso(9, 11), body_type: null, notice: null },
 ];
 export async function guideHistory(): Promise<GuideHistoryItem[]> {
   await sleep(350);
@@ -538,7 +538,7 @@ export async function saveGuideHistory(kind: "guide" | "lecture", ref: string, s
   const title = kind === "guide" ? `Class ${g?.class_number} · ${g?.title}` : (l?.title ?? ref).replace(/\s+-\s+/, " · ");
   const count = kind === "guide" ? (STATIONS[ref]?.length ?? 1) : LECTURE_STATIONS.length;
   if (found) { found.station = Math.max(found.station, station); found.updated_at = new Date().toISOString(); if (bodyType) found.body_type = bodyType; }
-  else GUIDE_HISTORY.push({ id, kind, ref, title, station, count, updated_at: new Date().toISOString(), body_type: bodyType ?? null });
+  else GUIDE_HISTORY.push({ id, kind, ref, title, station, count, updated_at: new Date().toISOString(), body_type: bodyType ?? null, notice: null });
   return { ok: true };
 }
 export async function deleteGuideHistory(id: string): Promise<{ ok: true }> {
@@ -560,6 +560,7 @@ const REVIEW: ReviewItem[] = [
   { id: "r5", type: "typo", status: "open", lecture: "Lecture 10 - Gluteal Region", section: "Muscles", original_text: "Gluteus medius abducts the thigh and tilts the pelvis.", ai_note: "Possible typo: 'tilts' may be 'stabilises'.", sources: [] },
   { id: "r6", type: "student_report", status: "open", lecture: "Lecture 08 - Anterior and Medial Thigh", section: "Femoral Triangle", original_text: "The femoral triangle is a region in the upper anterior thigh. Boundaries: inguinal ligament, sartorius, adductor longus [1]", ai_note: "student1: A citation points to the wrong place. The [1] marker next to the roof points to the floor sentence.", sources: [] },
   { id: "r7", type: "wording", status: "verified", lecture: "Lecture 11 - Posterior Thigh and Popliteal Fossa", section: "Hamstrings", original_text: "Hamstrings extend the hip and flex the knee joint.", ai_note: "Wording only.", sources: [] },
+  { id: "r9", type: "confirmed_factual", status: "changed", lecture: "Lecture 08 - Anterior and Medial Thigh", section: "Femoral Triangle › Boundaries", original_text: "Superior – inguinal canal", ai_note: "Changed in the revised notes: the quoted line is no longer there.\nNew wording: Superior: inguinal ligament.\nThe boundary is the inguinal ligament, not the canal.", sources: [{ ...S_NOTES, n: 1, title: "Lecture notes (revised)", snippet: "Superior: inguinal ligament." }] },
   { id: "r8", type: "doubtful", status: "dismissed", lecture: "Lecture 09 - The Hand", section: "Carpal Tunnel", original_text: "Nine tendons pass through the carpal tunnel.", ai_note: "Correct: four FDS, four FDP and FPL.", sources: [] },
 ];
 export async function adminStats(): Promise<AdminStats> {

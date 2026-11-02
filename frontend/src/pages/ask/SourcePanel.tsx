@@ -55,6 +55,7 @@ function PanelBody({ sources, activeN, onSelect, onClose, onExplain, quiz }: Pan
       <div className="scroll-quiet min-h-0 flex-1 overflow-y-auto px-5 pb-4 pt-3">
         <h2 className="font-serif text-[24px] font-semibold leading-snug">{s.title}</h2>
         {s.subtitle && <p className="mt-0.5 text-[14px] text-muted">{s.subtitle.replace(", ", " · ")}</p>}
+        {s.revision && <p className="mt-2 inline-block rounded-full bg-warn-soft px-3 py-1 text-[13px] font-medium text-warn">{s.revision === "removed" ? "Source removed" : "Source updated"} <span className="font-normal">· this answer was written before the notes were revised</span></p>}
         <blockquote className="mt-4 rounded-lg bg-surface-2 px-4 py-3.5 font-serif text-[16px] leading-relaxed">{s.snippet}</blockquote>
         <div className="mt-4">
           <Dl rows={[

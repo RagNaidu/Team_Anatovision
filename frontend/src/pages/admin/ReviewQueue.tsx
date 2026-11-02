@@ -21,6 +21,7 @@ function Detail({ item, onDecided, onClose }: { item: ReviewItem; onDecided: () 
   const [done, setDone] = useState<string | null>(null);
   const report = item.type === "student_report";
   const decided = item.status !== "open" || done;
+  const changed = item.status === "changed";
   useEffect(() => { setFix(""); setError(null); setDone(null); }, [item.id]);
 
   async function decide(action: "verify" | "dismiss") {
@@ -69,7 +70,7 @@ function Detail({ item, onDecided, onClose }: { item: ReviewItem; onDecided: () 
         </section>
       )}
       {decided ? (
-        <Notice>{done ?? (item.status === "verified" ? "Already verified." : "Already dismissed.")}</Notice>
+        <Notice>{done ?? (changed ? "This line changed in the revised notes, so there is nothing left to decide. The new wording is shown above." : item.status === "verified" ? "Already verified." : "Already dismissed.")}</Notice>
       ) : (
         <section className="space-y-3 border-t border-line pt-4">
           <p className="text-[13px] text-muted">The AI only flags. You decide.</p>
@@ -126,7 +127,7 @@ export default function ReviewQueue() {
           </Select></label>
         <label className="flex items-center gap-2 text-[14px] text-body-2">Status
           <Select value={status} onChange={(e) => setStatus(e.target.value as ReviewStatus | "")}>
-            <option value="">All</option><option value="open">Open</option><option value="decided">Decided</option><option value="verified">Verified</option><option value="dismissed">Dismissed</option>
+            <option value="">All</option><option value="open">Open</option><option value="changed">Changed in revised notes</option><option value="decided">Decided</option><option value="verified">Verified</option><option value="dismissed">Dismissed</option>
           </Select></label>
         <label className="flex items-center gap-2 text-[14px] text-body-2">Lecture
           <Select value={lecture} onChange={(e) => setLecture(e.target.value)} className="max-w-[220px]">
@@ -149,7 +150,7 @@ export default function ReviewQueue() {
                       <span className="flex items-center gap-2 text-[12px]">
                         <span className="rounded-full bg-accent-soft px-2 py-0.5 font-medium text-accent-soft-ink">{TYPE_LABEL[i.type]}</span>
                         <span className="text-muted">{shortLecture(i.lecture)}</span>
-                        {i.status !== "open" && <span className="ml-auto text-muted">{i.status === "verified" ? "Verified" : "Dismissed"}</span>}
+                        {i.status !== "open" && <span className="ml-auto text-muted">{i.status === "verified" ? "Verified" : i.status === "changed" ? "Changed in revised notes" : "Dismissed"}</span>}
                       </span>
                       <span className="mt-1.5 line-clamp-2 block text-[14px] leading-snug">{i.original_text}</span>
                     </button>

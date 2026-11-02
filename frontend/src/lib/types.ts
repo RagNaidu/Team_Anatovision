@@ -22,6 +22,8 @@ export interface Source {
   snippet: string;
   retrieved_at: string | null;
   license: string | null;
+  /** an old answer's notes / guide source that the revised notes changed or removed */
+  revision?: "updated" | "removed" | null;
 }
 
 export type MessageKind = "answer" | "term_lookup" | "not_covered" | "refused" | "error";
@@ -118,7 +120,7 @@ export interface ResultQuestion {
 }
 export interface QuizResults { quiz_id: string; score: number; length: number; submitted: string; questions: ResultQuestion[] }
 export interface QuizHistoryItem { id: string; score: number; length: number; submitted: string; title: string; web: boolean }
-export interface GuideHistoryItem { id: string; kind: "guide" | "lecture"; ref: string; title: string; station: number; count: number; updated_at: string; body_type: GuideBodyType | null }
+export interface GuideHistoryItem { id: string; kind: "guide" | "lecture"; ref: string; title: string; station: number; count: number; updated_at: string; body_type: GuideBodyType | null; notice: string | null }
 export interface WebQuizItem {
   id: string; student: string; title: string; status: string; score: number | null; length: number; web_questions: number;
   sources: { title: string; url: string | null; license: string }[]; created_at: string;
@@ -127,7 +129,7 @@ export interface WebQuizPage { items: WebQuizItem[]; total: number }
 
 // ---- Instructor
 export type ReviewType = "confirmed_factual" | "doubtful" | "wording" | "typo" | "start_here" | "student_report";
-export type ReviewStatus = "open" | "verified" | "dismissed" | "decided";
+export type ReviewStatus = "open" | "verified" | "dismissed" | "changed" | "decided";
 export interface AdminStats {
   questions_7d: number;
   flagged_open: number;

@@ -35,7 +35,7 @@ export function GuideHistory({ collapsible }: { collapsible: boolean }) {
   useEffect(() => { setOpen(!collapsible); }, [collapsible]);
   useEffect(() => { void refreshGuideHistory(); }, [refreshGuideHistory, pathname.split("/").slice(0, 4).join("/")]); // eslint-disable-line react-hooks/exhaustive-deps
   const items: HistoryEntry[] | null = guideHistory && guideHistory.map((g) => ({
-    id: g.id, updated_at: g.updated_at, plainLabel: g.title, label: g.title, sub: `Station ${g.station + 1} of ${g.count}`,
+    id: g.id, updated_at: g.updated_at, plainLabel: g.title, label: g.title, sub: g.notice ? "Updated: your place was reset" : `Station ${g.station + 1} of ${g.count}`,
     to: g.kind === "lecture" ? `/guide/lecture/${g.ref}/${g.station}` : `/guide/${g.ref}/${g.station}`,
   }));
   const here = (e: HistoryEntry) => pathname.startsWith(e.to.split("/").slice(0, e.to.includes("/lecture/") ? 4 : 3).join("/"));

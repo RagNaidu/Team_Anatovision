@@ -14,6 +14,7 @@ export function SourcesRow({ sources, activeN, onOpen }: { sources: Source[]; ac
               activeN === s.n ? "border-accent bg-accent-soft text-accent-soft-ink" : "border-line-strong bg-surface text-body-2 hover:bg-surface-2")}>
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent-soft text-[11px] font-semibold text-accent-soft-ink">{s.n}</span>
             <span>{pillLabel(s)}</span>
+            {s.revision && <span className="text-warn">· {s.revision === "removed" ? "source removed" : "source updated"}</span>}
             {s.url && <ArrowUpRight size={12} strokeWidth={1.75} aria-hidden />}
           </button>
         </li>
