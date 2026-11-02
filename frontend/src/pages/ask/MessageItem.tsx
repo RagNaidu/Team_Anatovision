@@ -36,7 +36,7 @@ export function AssistantMessage({
   }
 
   return (
-    <motion.article {...(animate ? rise : {})} aria-label="Answer" className="group">
+    <motion.article {...(animate ? rise : {})} aria-label="Answer" className="group lg:-ml-10">
       {fresh && message.timing_ms > 0 && <ProgressRow phase="done" totalMs={message.timing_ms} stages={stages} className="mb-2" />}
       {calm || isError ? (
         <div role={isError ? "alert" : undefined} className="flex items-start gap-3 rounded-xl border border-line bg-surface px-4 py-3.5">

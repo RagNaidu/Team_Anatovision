@@ -17,6 +17,7 @@
   --muted: 107 98 89;
   --line: 221 211 194;
   --line-strong: 214 203 184;
+  --topline: 221 211 194;              /* the line under the mobile top bar (same as --line in light mode) */
   --accent: 138 45 42;
   --accent-hover: 110 34 32;
   --accent-soft: 234 219 211;
@@ -50,15 +51,16 @@
   --muted: 179 168 152;
   --line: 58 51 45;
   --line-strong: 74 65 57;
+  --topline: 40 35 31;
   --accent: 224 140 132;
   --accent-hover: 235 162 155;
   --accent-soft: 74 41 38;
   --accent-soft-ink: 240 179 172;
   --accent-fg: 27 23 21;
-  --side: 14 12 11;
+  --side: 11 9 8;
   --side-line: 52 45 40;
   --side-hover: 33 29 26;
-  --side-edge: 70 61 54;
+  --side-edge: 255 255 255;            /* used at 6% opacity: a barely visible edge */
   --user-bubble: 58 51 45;
   --user-bubble-ink: 239 231 218;
   --ok: 143 208 174;
@@ -79,15 +81,16 @@
     --muted: 179 168 152;
     --line: 58 51 45;
     --line-strong: 74 65 57;
+    --topline: 40 35 31;
     --accent: 224 140 132;
     --accent-hover: 235 162 155;
     --accent-soft: 74 41 38;
     --accent-soft-ink: 240 179 172;
     --accent-fg: 27 23 21;
-    --side: 14 12 11;
+    --side: 11 9 8;
     --side-line: 52 45 40;
     --side-hover: 33 29 26;
-    --side-edge: 70 61 54;
+    --side-edge: 255 255 255;
     --user-bubble: 58 51 45;
     --user-bubble-ink: 239 231 218;
     --ok: 143 208 174;

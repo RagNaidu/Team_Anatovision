@@ -3,6 +3,15 @@ import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import type { Source } from "./types";
 
+/** Stray punctuation just before a marker ("artery,. [1]", "it. . [1]", "artery, [1]") is cleaned: a run of commas, colons, semicolons, dots and spaces becomes one full stop
+ *  if it contained a dot (three or more dots stay an ellipsis), otherwise nothing. */
+export function tidyBeforeMarkers(text: string): string {
+  return text.replace(/([^\s,;:.])[ \t]*([,;:.][,;:. \t]*)(?=\[\d{1,3}\](?!\())/g, (_m, c: string, run: string) => {
+    const dots = (run.match(/\./g) ?? []).length;
+    return c + (dots >= 3 ? "..." : dots ? "." : "") + " ";
+  });
+}
+
 /** Turn "[1]" markers that have a Source into links "[1](cite:1)". A marker without a Source is dropped, never printed. Code is left alone. */
 export function linkCitations(md: string, sources: Pick<Source, "n">[]): string {
   const valid = new Set(sources.map((s) => s.n));
@@ -10,7 +19,7 @@ export function linkCitations(md: string, sources: Pick<Source, "n">[]): string 
     .split(/(```[\s\S]*?```)/g)
     .map((part, i) => {
       if (i % 2 === 1) return part;
-      return part.replace(/[ \t]?\[(\d{1,3})\](?!\()/g, (m, n: string) => (valid.has(Number(n)) ? `${m.startsWith("[") ? "" : m[0]}[${n}](cite:${n})` : ""));
+      return tidyBeforeMarkers(part).replace(/[ \t]?\[(\d{1,3})\](?!\()/g, (m, n: string) => (valid.has(Number(n)) ? `${m.startsWith("[") ? "" : m[0]}[${n}](cite:${n})` : ""));
     })
     .join("");
 }

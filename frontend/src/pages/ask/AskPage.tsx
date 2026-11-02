@@ -16,8 +16,8 @@ import { Composer, type ComposerHandle } from "./Composer";
 import { AssistantMessage, UserMessage } from "./MessageItem";
 import { SourcePanelHost } from "./SourcePanel";
 
-/** The message column: a fixed 56 px (40 + the 16 px padding) from the sidebar on desktop (centred on tablet and phone), never wider than 700 px; header, messages and composer share it. */
-const COLUMN = "w-full max-w-[700px] mx-auto lg:mx-0 lg:ml-10";
+/** Assistant answers (and the thinking line) sit 40 px left of the column's left edge on desktop; user bubbles and the composer stay in the column. */
+const ASSISTANT_SHIFT = "lg:-ml-10";
 
 const EXAMPLES = [
   "What are the boundaries and contents of the femoral triangle?",
@@ -150,15 +150,13 @@ export default function AskPage() {
   return (
     <div className="flex h-full min-h-0">
       <section className="flex min-w-0 flex-1 flex-col" aria-label="Chat">
-        <header className="shrink-0">
-          <div className={`flex h-14 items-center justify-between gap-4 px-4 ${COLUMN}`}>
-            <h1 className="truncate font-serif text-[20px] font-semibold text-ink">{title}</h1>
-            {scopeLabel && <span className="serif-label shrink-0">{scopeLabel}</span>}
-          </div>
+        <header className="flex h-14 shrink-0 items-center justify-between gap-4 px-6 max-lg:px-4">
+          <h1 className="truncate font-serif text-[20px] font-semibold text-ink">{title}</h1>
+          {scopeLabel && <span className="serif-label shrink-0">{scopeLabel}</span>}
         </header>
 
         <div ref={scrollRef} className="scroll-quiet relative min-h-0 flex-1 overflow-y-auto" data-testid="chat-scroll">
-          <div ref={contentRef} className={`px-4 pb-6 pt-2 ${COLUMN}`}>
+          <div ref={contentRef} className="mx-auto w-full max-w-[700px] px-6 pb-6 pt-2 max-lg:px-4">
             {loading ? (
               <div className="space-y-4 pt-6" aria-label="Loading chat">
                 <Skeleton className="ml-auto h-10 w-2/5 !rounded-2xl" />
@@ -193,7 +191,7 @@ export default function AskPage() {
                       );
                     }
                     if (it.type === "pending") {
-                      return <motion.div key={it.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.2 }}><Pending requestId={it.requestId} onStages={onStages} /></motion.div>;
+                      return <motion.div key={it.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.2 }} className={ASSISTANT_SHIFT}><Pending requestId={it.requestId} onStages={onStages} /></motion.div>;
                     }
                     return (
                       <motion.div key={it.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
@@ -207,7 +205,7 @@ export default function AskPage() {
           </div>
         </div>
 
-        <div className="relative shrink-0 pb-4 pt-1">
+        <div className="relative shrink-0 px-6 pb-4 pt-1 max-lg:px-3">
           <AnimatePresence>
             {!atBottom && items.length > 0 && (
               <motion.button key="latest" type="button" onClick={() => toBottom(true)} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 6 }}
@@ -216,7 +214,7 @@ export default function AskPage() {
               </motion.button>
             )}
           </AnimatePresence>
-          <div className={`px-4 ${COLUMN}`}>
+          <div className="mx-auto w-full max-w-[700px]">
             <Composer ref={composer} disabled={busy || loading} length={length} onLength={setLength} lectures={scope?.lectures ?? null}
               selected={selected} onSelected={setSelected} body={body} onBody={setBody} onSend={(q) => void send(q)} />
           </div>

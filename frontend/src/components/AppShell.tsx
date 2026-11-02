@@ -30,7 +30,7 @@ export function AppShell() {
           )}
           <div className="flex min-w-0 flex-1 flex-col">
             {!isDesktop && (
-              <header className="flex h-12 shrink-0 items-center gap-3 border-b border-line bg-bone px-3">
+              <header className="flex h-12 shrink-0 items-center gap-3 border-b border-[rgb(var(--topline))] bg-bone px-3">
                 <button type="button" aria-label="Open menu" onClick={() => setDrawer(true)} className="rounded-md p-2 text-body-2 hover:bg-surface-2">
                   <MenuIcon size={20} strokeWidth={1.5} />
                 </button>
