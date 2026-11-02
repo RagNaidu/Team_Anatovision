@@ -31,7 +31,9 @@
   --side-accent: 240 179 172;
   --side-logo: 224 140 132;
   --side-hover: 58 50 44;
-  --side-edge: 44 38 34;               /* the sidebar's right edge: the same as its background in light mode, so nothing changes there */
+  --side-edge: 44 38 34;
+  --border: #DDD3C2;                   /* default border colour (the same as --line) */
+  --sidebar-edge: #2C2622;             /* the sidebar's right edge: the same as its background in light mode, so nothing changes there */
   --user-bubble: 44 38 34;
   --user-bubble-ink: 244 239 230;
   --ok: 46 107 79;
@@ -60,7 +62,9 @@
   --side: 11 9 8;
   --side-line: 52 45 40;
   --side-hover: 33 29 26;
-  --side-edge: 255 255 255;            /* used at 6% opacity: a barely visible edge */
+  --side-edge: 255 255 255;
+  --border: #2A2420;
+  --sidebar-edge: #221D1A;             /* a solid, barely visible edge between the sidebar (11 9 8) and the page (27 23 21) */
   --user-bubble: 58 51 45;
   --user-bubble-ink: 239 231 218;
   --ok: 143 208 174;
@@ -91,6 +95,8 @@
     --side-line: 52 45 40;
     --side-hover: 33 29 26;
     --side-edge: 255 255 255;
+    --border: #2A2420;
+    --sidebar-edge: #221D1A;
     --user-bubble: 58 51 45;
     --user-bubble-ink: 239 231 218;
     --ok: 143 208 174;
@@ -102,6 +108,8 @@
 }
 
 @layer base {
+  /* a bare `border` class can never fall back to Tailwind's grey (rgb 229,231,235): every element starts from the theme border colour */
+  *, ::before, ::after { border-color: var(--border); }
   html, body, #root { height: 100%; }
   body {
     @apply bg-bone text-ink font-sans antialiased;
@@ -169,3 +177,6 @@
 }
 
 mark.span-hit { background: rgb(var(--warn-soft)); color: inherit; border-radius: 3px; padding: 0 1px; }
+
+/* The sidebar's right edge is a plain solid colour (no Tailwind colour or opacity class involved). */
+.sidebar-edge { border-right: 1px solid var(--sidebar-edge); }
