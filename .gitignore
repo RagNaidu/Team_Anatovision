@@ -1,0 +1,64 @@
+# secrets and private data: never commit
+.env
+.streamlit/secrets.toml
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+# everything under data/ (notes, guides, indexes, databases, users, logs, caches, backups, question bank)
+data/
+# any notes, guides, zips, databases or keys, wherever they are
+*.docx
+*.doc
+*.pptx
+*.pdf
+*.zip
+*.db
+*.db-*
+*.sqlite*
+users.json
+question_log.jsonl
+verified_fixes.jsonl
+flags.jsonl
+chroma/
+outputs/
+reports/backup_*/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+# reports hold quotes from the notes: keep the markdown, not the data dumps
+reports/*.json
+reports/*.jsonl
+reports/*.txt
+reports/ui_screenshots/
+
+# ---- added before the first push ----
+# any env file except the example; keys and certificates
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+# build output and caches, wherever they are
+dist/
+build/
+.vite/
+test-results/
+playwright-report/
+*.tsbuildinfo
+# backups and temp copies
+backups/
+*.bak
+*.orig
+~*
+# chat / session / usage history, wherever it ends up
+chats.db
+*_sessions.db
+*.jsonl
+# reports quote Dr. Inglis's notes (fact-check, live evals, quiz drafts, diffs, status logs): keep only these two documents
+reports/*
+!reports/decisions_log.md
+!reports/quiz_item_writing_checklist.md
+
