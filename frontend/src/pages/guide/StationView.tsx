@@ -2,8 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ImageIcon } from "lucide-react";
-import { api, ApiError, errorMessage } from "@/lib/api";
-import type { BodyTip, GuideBodyType, GuideSummary, Station, StationCheck, Verdict } from "@/lib/types";
+import { api, ApiError, errorMessage, imageSrc } from "@/lib/api";
+import type { BodyTip, Explanation, GuideBodyType, GuideSummary, Station, StationCheck, Verdict } from "@/lib/types";
 import { bodyAdapts, bodyLabel } from "@/lib/bodyType";
 import { BodyTypeAsk, BodyTypeChip } from "@/components/BodyTypeChoice";
 import { useData } from "@/state/data";
@@ -16,6 +16,9 @@ import { cn, roman, store } from "@/lib/utils";
 import { LAST_GUIDE_KEY, type LastGuide } from "@/components/Sidebar";
 import { AnswerMarkdown } from "@/pages/ask/AnswerMarkdown";
 import { SourcePanelHost } from "@/pages/ask/SourcePanel";
+import { MarkedImage } from "@/components/guide/MarkedImage";
+import { DISCLAIMER, Lightbox } from "@/components/guide/Lightbox";
+import { DescribeBox } from "./DescribeBox";
 
 const VERDICT: Record<Verdict, { label: string; cls: string }> = {
   correct: { label: "Correct", cls: "bg-ok-soft text-ok" },
@@ -48,6 +51,11 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   const [tip, setTip] = useState<BodyTip | null>(null);
   const [notice, setNotice] = useState<string | null>(null);        // set once when a revised guide moved or reset the place
 
+  const [stepSel, setStepSel] = useState(0);                      // the selected step of the station (only used when the station has approved marks)
+  const [imgIdx, setImgIdx] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
+  const [explain, setExplain] = useState<{ phase: "idle" | "loading" | "done" | "error"; data?: Explanation; error?: string }>({ phase: "idle" });
+
   const key = `${kind}:${id}`;
   const btKey = `av_guide_bt:${id}`;
   const index = Math.max(0, Number.parseInt(indexParam ?? "0", 10) || 0);
@@ -73,6 +81,10 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   const st = stations && stations[Math.min(index, stations.length - 1)];
   const cur = st ? st.index : 0;
   const count = stations?.length ?? 0;
+  const images = st?.images ?? [];
+  const hasMarks = images.some((i) => i.marks.length > 0) && !!st && st.steps.length > 0;
+  const activeStep = hasMarks ? Math.min(stepSel, (st?.steps.length ?? 1) - 1) : null;
+  useEffect(() => { setStepSel(0); setImgIdx(0); setLightbox(false); setExplain({ phase: "idle" }); }, [st?.index, id]);
 
   // the saved body type of this guide (the server first, then this browser); none yet = ask before the first station
   useEffect(() => {
@@ -123,9 +135,9 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
   const check = checks[cur] ?? { text: "", phase: "idle" as const };
   const setCheck = (patch: Partial<CheckState>) => setChecks((c) => ({ ...c, [cur]: { ...(c[cur] ?? { text: "", phase: "idle" as const }), ...patch } }));
 
-  async function runCheck() {
+  async function runCheck(override?: string) {
     if (!st) return;
-    const text = check.text.trim();
+    const text = (override ?? check.text).trim();
     if (!text) return;
     setCheck({ phase: "loading", error: undefined });
     try {
@@ -170,7 +182,7 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
     <div className="flex h-full min-h-0">
       {sidebar && <SidebarPortal>{sidebar}</SidebarPortal>}
       <div className="scroll-quiet min-w-0 flex-1 overflow-y-auto">
-        <div className="mx-auto w-full max-w-[760px] px-6 py-6 max-lg:px-4">
+        <div className={cn("mx-auto w-full px-6 py-6 max-lg:px-4", images.length ? "max-w-[1280px]" : "max-w-[760px]")}>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <Link to={backTo} className="inline-flex items-center gap-1.5 rounded-md text-[14px] text-body-2 hover:text-accent"><ArrowLeft size={15} strokeWidth={1.5} aria-hidden /> All guides</Link>
             <span className="text-[14px] text-muted">{heading}</span>
@@ -201,26 +213,80 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
                 </div>
                 <h1 className="mt-1 font-serif text-[32px] font-semibold leading-tight max-sm:text-[26px]">{st.title}</h1>
 
-                {st.image_only ? (
-                  <div className="mt-5 flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-4 text-[15px]">
-                    <ImageIcon size={18} strokeWidth={1.5} className="text-muted" aria-hidden />
-                    See slide {st.slides[0]} in your lab guide
+                <div className={cn("mt-5", images.length > 0 && "grid items-start gap-x-8 gap-y-5 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]")}>
+                  <div className={cn(images.length > 0 && "max-lg:order-2")}>
+                    {st.image_only && images.length === 0 ? (
+                      <div className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-4 text-[15px]">
+                        <ImageIcon size={18} strokeWidth={1.5} className="text-muted" aria-hidden />
+                        See slide {st.slides[0]} in your lab guide
+                      </div>
+                    ) : st.image_only ? null : (
+                      <ol className="space-y-3" aria-label="Steps">
+                        {st.steps.map((s, i) => {
+                          const on = hasMarks && i === activeStep;
+                          const body = (
+                            <>
+                              <span className={cn("mt-[2px] flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[12px]", on ? "border-accent bg-accent text-accent-fg" : "border-line-strong text-body-2")} aria-hidden>{i + 1}</span>
+                              <span className="text-[16px] leading-relaxed">{s}</span>
+                            </>
+                          );
+                          return (
+                            <li key={i}>
+                              {hasMarks ? (
+                                <button type="button" onClick={() => setStepSel(i)} aria-pressed={on} aria-label={`Step ${i + 1}: ${s}`}
+                                  className={cn("flex w-full gap-3 rounded-xl border px-3 py-2.5 text-left transition-colors duration-150", on ? "border-accent bg-accent-soft/50" : "border-transparent hover:bg-surface-2")}>{body}</button>
+                              ) : <div className="flex gap-3">{body}</div>}
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    )}
+                    {kind === "guide" && !st.image_only && st.steps.length > 0 && (
+                      <div className="mt-4">
+                        <Button variant="outline" size="sm" disabled={explain.phase === "loading"} onClick={async () => {
+                          setExplain({ phase: "loading" });
+                          try { setExplain({ phase: "done", data: await api.explainStation(id, st.index, bodyType ?? null) }); } catch (e) { setExplain({ phase: "error", error: errorMessage(e) }); }
+                        }}>{explain.phase === "loading" ? "Explaining…" : explain.phase === "done" ? "Explain again" : "Explain simply"}</Button>
+                        <div aria-live="polite">
+                          {explain.phase === "error" && <p role="alert" className="mt-2 text-[14px] text-accent">{explain.error}</p>}
+                          {explain.phase === "done" && explain.data && (
+                            <aside className="mt-3 rounded-xl border border-line bg-surface-2 px-4 py-3.5" aria-label="AI explanation">
+                              <p className="serif-label !text-[13px]">{explain.data.label}</p>
+                              <p className="mt-1.5 text-[15px] leading-relaxed">{explain.data.text}</p>
+                              <p className="mt-2 text-[12px] text-muted">From: {explain.data.sources.map((s) => `${s.title}, ${s.subtitle}`).join(" · ")}</p>
+                            </aside>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    {st.slides.length > 0 && !st.image_only && (
+                      <ul className="mt-4 flex flex-wrap gap-2" aria-label="Slides">
+                        {st.slides.map((n) => <li key={n} className="rounded-full border border-line-strong bg-surface px-2.5 py-0.5 text-[12px] text-body-2">Slide {n}</li>)}
+                      </ul>
+                    )}
                   </div>
-                ) : (
-                  <ol className="mt-5 space-y-3">
-                    {st.steps.map((s, i) => (
-                      <li key={i} className="flex gap-3">
-                        <span className="mt-[2px] flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-line-strong text-[12px] text-body-2" aria-hidden>{i + 1}</span>
-                        <span className="text-[16px] leading-relaxed">{s}</span>
-                      </li>
-                    ))}
-                  </ol>
-                )}
-                {st.slides.length > 0 && !st.image_only && (
-                  <ul className="mt-4 flex flex-wrap gap-2" aria-label="Slides">
-                    {st.slides.map((n) => <li key={n} className="rounded-full border border-line-strong bg-surface px-2.5 py-0.5 text-[12px] text-body-2">Slide {n}</li>)}
-                  </ul>
-                )}
+                  {images.length > 0 && (
+                    <figure className="max-lg:order-1 lg:sticky lg:top-4" aria-label="Slide image" data-image-panel>
+                      <button type="button" onClick={() => setLightbox(true)} aria-label={`Enlarge ${images[Math.min(imgIdx, images.length - 1)].alt}`} className="block w-full cursor-zoom-in rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">
+                        <MarkedImage image={images[Math.min(imgIdx, images.length - 1)]} step={activeStep} eager={imgIdx === 0} />
+                      </button>
+                      <figcaption className="mt-2 text-[13px] text-muted">{images[Math.min(imgIdx, images.length - 1)].caption} · {DISCLAIMER}</figcaption>
+                      {hasMarks && activeStep !== null && <p className="mt-1 text-[13px] text-body-2" aria-live="polite">Showing the marks for step {activeStep + 1} of {st.steps.length}.</p>}
+                      {images.length > 1 && (
+                        <ul className="mt-3 flex gap-2 overflow-x-auto" aria-label="Slides of this station">
+                          {images.map((im, k) => (
+                            <li key={`${im.slide}-${im.crop ?? 1}`}>
+                              <button type="button" onClick={() => setImgIdx(k)} aria-label={`Show slide ${im.slide}${(im.crop ?? 1) > 1 || images.filter((x) => x.slide === im.slide).length > 1 ? `, picture ${im.crop ?? 1}` : ""}`} aria-current={k === imgIdx} className={cn("block w-20 overflow-hidden rounded-lg border-2", k === imgIdx ? "border-accent" : "border-line")}>
+                                <img src={imageSrc(im.thumb_url)} alt="" loading="lazy" className="block w-full bg-white" />
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      <Lightbox images={images} index={Math.min(imgIdx, images.length - 1)} onIndex={setImgIdx} open={lightbox} onClose={() => setLightbox(false)} step={activeStep} />
+                    </figure>
+                  )}
+                </div>
 
                 {tip && tip.lines.length > 0 && (
                   <aside aria-label={`Tip for a ${bodyLabel(bodyType).toLowerCase()} cadaver`} className="mt-5 rounded-xl border border-line bg-surface-2 px-4 py-3.5">
@@ -236,17 +302,8 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
 
                 {kind === "guide" && !st.image_only ? (
                   <section className="mt-8" aria-label="Check your description">
-                    <label htmlFor="describe" className="serif-label mb-2 block !text-[15px]">Describe what you see or what you did</label>
-                    <div className="rounded-xl border border-line-strong bg-surface p-3 shadow-soft">
-                      <textarea id="describe" rows={3} value={check.text} maxLength={1000} disabled={check.phase === "loading"}
-                        onChange={(e) => setCheck({ text: e.target.value, phase: check.phase === "done" || check.phase === "error" ? "idle" : check.phase })}
-                        placeholder="For example: I found the great saphenous vein near the saphenous opening."
-                        className="block w-full resize-y bg-transparent px-1.5 py-1 text-[15px] outline-none placeholder:text-muted" />
-                      <div className="mt-2 flex items-center justify-between">
-                        <span className="text-[12px] tabular-nums text-muted">{check.text.length} / 1000</span>
-                        <Button onClick={() => void runCheck()} disabled={!check.text.trim() || check.phase === "loading"}>Check</Button>
-                      </div>
-                    </div>
+                    <DescribeBox key={st.index} text={check.text} loading={check.phase === "loading"} onCheck={(t) => void runCheck(t)}
+                      onChange={(t) => setCheck({ text: t, phase: check.phase === "done" || check.phase === "error" ? "idle" : check.phase })} />
                     <div className="mt-4" aria-live="polite">
                       {check.phase === "loading" && <ProgressRow phase="waiting" label="Checking your description" />}
                       {check.phase === "error" && (
@@ -274,8 +331,10 @@ export default function StationView({ kind }: { kind: "guide" | "lecture" }) {
                 ) : null}
 
                 <div className="mt-10 flex items-center justify-between border-t border-line pt-5">
-                  <Button variant="outline" onClick={() => go(cur - 1)} disabled={cur === 0}><ArrowLeft size={15} strokeWidth={1.5} /> Back</Button>
-                  {cur < count - 1 ? (
+                  <Button variant="outline" onClick={() => (hasMarks && (activeStep ?? 0) > 0 ? setStepSel((activeStep ?? 0) - 1) : go(cur - 1))} disabled={cur === 0 && (!hasMarks || (activeStep ?? 0) === 0)}><ArrowLeft size={15} strokeWidth={1.5} /> {hasMarks && (activeStep ?? 0) > 0 ? "Back a step" : "Back"}</Button>
+                  {hasMarks && activeStep !== null && activeStep < st.steps.length - 1 ? (
+                    <Button onClick={() => setStepSel(activeStep + 1)}>Next step <ArrowRight size={15} strokeWidth={1.5} /></Button>
+                  ) : cur < count - 1 ? (
                     <Button onClick={() => go(cur + 1)}>Next station <ArrowRight size={15} strokeWidth={1.5} /></Button>
                   ) : (
                     <Button onClick={() => navigate(backTo)}>Finish</Button>

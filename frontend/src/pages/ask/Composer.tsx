@@ -5,6 +5,8 @@ import { Popover, PopoverContent, PopoverTrigger, PopoverClose } from "@/compone
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select } from "@/components/ui/misc";
 import type { AnswerLength, ScopeLecture } from "@/lib/types";
+import { useSpeechInput } from "@/hooks/useSpeechInput";
+import { MicButton, VoiceNote } from "@/components/voice/Voice";
 
 export const MAX_Q = 600;
 export interface ComposerHandle { focus: () => void }
@@ -36,10 +38,14 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ di
   const trimmed = text.trim();
   const can = trimmed.length > 0 && !disabled && text.length <= MAX_Q;
   function send() {
-    if (!can) return;
-    onSend(trimmed);
+    const t = text.trim();
+    if (!t || disabled || t.length > MAX_Q) return;
+    onSend(t);
     setText("");
   }
+  // Voice: dictation fills the box and is NEVER sent by itself: the person reviews it, then presses Enter or Send.
+  const textRef = useRef(text); textRef.current = text;
+  const voice = useSpeechInput({ getText: () => textRef.current, onText: setText, maxLength: MAX_Q });
   const granted = lectures?.filter((l) => l.granted) ?? [];
   const scopeLabel = selected.length === 0 ? "All lectures" : selected.length === 1 ? (lectures?.find((l) => l.id === selected[0])?.title.match(/^Lecture\s+\d+\w*/)?.[0] ?? "1 lecture") : `${selected.length} lectures`;
   const bodyLabel = body ? `${body.fat} fat · ${body.muscle} muscle · ${body.build}` : "Body type";
@@ -49,9 +55,9 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ di
       <label htmlFor="composer" className="sr-only">Ask about a structure, region or dissection step</label>
       <textarea
         id="composer" ref={ta} rows={1} value={text} maxLength={MAX_Q + 40}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => { voice.userEdited(); setText(e.target.value); }}
         onKeyDown={(e) => {
-          if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); send(); }
+          if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); voice.finish(); send(); }
         }}
         placeholder="Ask about a structure, region or dissection step"
         className="block max-h-[200px] w-full resize-none bg-transparent px-1.5 py-1 text-[15px] leading-relaxed text-ink outline-none placeholder:text-muted focus-visible:outline-none"
@@ -124,11 +130,13 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ di
         <span className={cn("text-[12px] tabular-nums", text.length >= MAX_Q ? "font-medium text-accent" : text.length >= 550 ? "text-warn" : "text-muted")} aria-live="off">
           {text.length} / {MAX_Q}
         </span>
-        <button type="button" onClick={send} disabled={!can} aria-label="Send question"
+        <MicButton voice={voice} label="voice input for your question" />
+        <button type="button" onClick={() => { voice.finish(); send(); }} disabled={!can} aria-label="Send question"
           className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-accent-fg transition-colors duration-150 hover:bg-accent-hover disabled:opacity-40">
           <ArrowUp size={18} strokeWidth={2} />
         </button>
       </div>
+      <VoiceNote voice={voice} className="mt-2" />
     </div>
   );
 });

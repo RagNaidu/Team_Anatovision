@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { compareLectures } from "@/lib/utils";
 import { MultiSelect } from "@/components/MultiSelect";
 import { QuizFrame, lastBuild, rememberBuild } from "./shared";
+import { TopicInput } from "./TopicInput";
 
 export default function QuizSetup() {
   const { scope, scopeError } = useData();
@@ -20,6 +21,7 @@ export default function QuizSetup() {
   const [topic, setTopic] = useState("");
   const [n, setN] = useState<5 | 10>(5);
   const [reviewedOnly, setReviewedOnly] = useState(false);
+  const [differentStyle, setDifferentStyle] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [latest, setLatest] = useState<QuizLatest | null | undefined>(undefined);
@@ -56,10 +58,10 @@ export default function QuizSetup() {
     if (mode === "topic") {
       const t = topic.trim();
       if (t.length < 3) { setError("A topic needs 3 to 80 characters."); return; }
-      void start({ mode, topic: t, n, reviewed_only: reviewedOnly });
+      void start({ mode, topic: t, n, reviewed_only: reviewedOnly, different_style: differentStyle });
     } else {
       if (!lectureIds.length && !guideIds.length) { setError("Choose at least one lecture or guide."); return; }
-      void start({ mode, lecture_ids: lectureIds, guide_ids: guideIds, n, reviewed_only: reviewedOnly });
+      void start({ mode, lecture_ids: lectureIds, guide_ids: guideIds, n, reviewed_only: reviewedOnly, different_style: differentStyle });
     }
   }
   async function discard(id: string) {
@@ -119,9 +121,7 @@ export default function QuizSetup() {
           )
         ) : (
           <div>
-            <label htmlFor="topic" className="serif-label mb-1.5 block !text-[15px]">Topic</label>
-            <input id="topic" value={topic} maxLength={80} onChange={(e) => setTopic(e.target.value)} placeholder="For example: rotator cuff muscles"
-              className="h-11 w-full rounded-lg border border-line-strong bg-surface px-3 text-[15px]" />
+            <TopicInput value={topic} onChange={setTopic} />
             <div className="mt-1 flex items-start justify-between gap-4 text-[12px] text-muted">
               <span>If your course material doesn't cover the topic, questions are built from Wikipedia and are marked "Not from course notes".</span>
               <span className="shrink-0 tabular-nums">{topic.length} / 80</span>
@@ -137,6 +137,10 @@ export default function QuizSetup() {
           <label className="flex cursor-pointer items-center gap-2.5 text-[14px]">
             <Checkbox checked={reviewedOnly} onCheckedChange={(c) => setReviewedOnly(c === true)} aria-label="Only questions approved by the instructor" />
             Only questions approved by the instructor
+          </label>
+          <label className="flex cursor-pointer items-center gap-2.5 text-[14px]">
+            <Checkbox checked={differentStyle} onCheckedChange={(c) => setDifferentStyle(c === true)} aria-label="A different style from the instructor's examples" disabled={reviewedOnly} />
+            A different style from the instructor's examples
           </label>
         </div>
         {mode === "topic" && reviewedOnly && (

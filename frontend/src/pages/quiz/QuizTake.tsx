@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Notice, Skeleton } from "@/components/ui/misc";
 import { cn } from "@/lib/utils";
 import { QuizFrame, SegBar, WebNote } from "./shared";
+import { QuizVoice } from "./QuizVoice";
 
 export default function QuizTake() {
   const { id = "" } = useParams();
@@ -16,6 +17,7 @@ export default function QuizTake() {
   const [quiz, setQuiz] = useState<OpenQuiz | null>(null);
   const [sel, setSel] = useState<Record<string, string[]>>({});
   const [cur, setCur] = useState(0);
+  const [pending, setPending] = useState<string | null>(null);   // an option heard by voice but not yet confirmed (not saved)
   const [error, setError] = useState<string | null>(null);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [tries, setTries] = useState(0);
@@ -44,10 +46,12 @@ export default function QuizTake() {
 
   const goto = useCallback((i: number) => {
     setCur(i);
+    setPending(null);
     void api.setCurrent(id, i).catch(() => undefined);
   }, [id]);
 
   async function choose(optionId: string) {
+    setPending(null);
     const prev = sel[String(cur)];
     setSel((s) => ({ ...s, [String(cur)]: [optionId] }));
     setSaveError(null);
@@ -57,8 +61,8 @@ export default function QuizTake() {
     }
   }
 
-  if (error) return <QuizFrame><Notice tone="error" action={<div className="flex gap-2"><Button size="sm" variant="outline" onClick={() => setTries((t) => t + 1)}>Try again</Button><Button size="sm" variant="outline" onClick={() => navigate("/quiz")}>Back to Quiz</Button></div>}>{error}</Notice></QuizFrame>;
-  if (!quiz) return <QuizFrame><div className="space-y-4" aria-label="Loading quiz"><Skeleton className="h-2 w-full" /><Skeleton className="h-4 w-1/4" /><Skeleton className="h-6 w-4/5" />{[0, 1, 2, 3].map((i) => <Skeleton key={i} className="h-[52px] !rounded-xl" />)}</div></QuizFrame>;
+  if (error) return <QuizFrame center><Notice tone="error" action={<div className="flex gap-2"><Button size="sm" variant="outline" onClick={() => setTries((t) => t + 1)}>Try again</Button><Button size="sm" variant="outline" onClick={() => navigate("/quiz")}>Back to Quiz</Button></div>}>{error}</Notice></QuizFrame>;
+  if (!quiz) return <QuizFrame center><div className="space-y-4" aria-label="Loading quiz"><Skeleton className="h-2 w-full" /><Skeleton className="h-4 w-1/4" /><Skeleton className="h-6 w-4/5" />{[0, 1, 2, 3].map((i) => <Skeleton key={i} className="h-[52px] !rounded-xl" />)}</div></QuizFrame>;
 
   const q = quiz.questions[cur];
   const total = quiz.questions.length;
@@ -67,12 +71,22 @@ export default function QuizTake() {
   const last = cur === total - 1;
 
   return (
-    <QuizFrame>
+    <QuizFrame center>
       <div className="mb-1"><SegBar length={total} answered={answered} current={cur} /></div>
       <p className="mt-2 text-[13px] text-muted">Question {cur + 1} of {total}</p>
 
+      <div className="mt-6 grid">
+      {/* every question is laid out invisibly in the same cell, so the block is as tall as the TALLEST question: nothing moves between questions */}
+      {quiz.questions.map((m, i) => (
+        <div key={i} aria-hidden className="pointer-events-none invisible [grid-area:1/1]">
+          {m.web && <div className="mb-3 h-6" />}
+          {m.stem && <p className="mb-3 text-[16px] leading-relaxed">{m.stem}</p>}
+          <p className="font-serif text-[19px] font-semibold leading-snug">{m.lead_in}</p>
+          <div className="mt-5 space-y-2.5">{m.options.map((o) => <div key={o.id} className="flex min-h-[52px] items-center gap-3.5 rounded-xl border px-4 py-3 text-[15px]"><span className="h-7 w-7 shrink-0" /><span className="min-w-0 flex-1">{o.text}</span></div>)}</div>
+        </div>
+      ))}
       <AnimatePresence mode="wait" initial={false}>
-        <motion.div key={cur} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.18 }} className="mt-6">
+        <motion.div key={cur} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.18 }} className="[grid-area:1/1]">
           <h1 ref={heading} tabIndex={-1} className="sr-only outline-none">Question {cur + 1}</h1>
           {q.web && <WebNote note={q.source_note} />}
           {q.stem && <p className="mb-3 text-[16px] leading-relaxed">{q.stem}</p>}
@@ -81,9 +95,9 @@ export default function QuizTake() {
             {q.options.map((o) => {
               const on = chosen.includes(o.id);
               return (
-                <button key={o.id} type="button" role="radio" aria-checked={on} onClick={() => void choose(o.id)}
+                <button key={o.id} type="button" role="radio" aria-checked={on} data-pending={pending === o.id ? "true" : undefined} onClick={() => void choose(o.id)}
                   className={cn("flex min-h-[52px] w-full items-center gap-3.5 rounded-xl border px-4 py-3 text-left text-[15px] transition-colors duration-150",
-                    on ? "border-accent bg-accent-soft text-ink" : "border-line-strong bg-surface hover:bg-surface-2")}>
+                    on ? "border-accent bg-accent-soft text-ink" : pending === o.id ? "border-dashed border-accent bg-surface ring-2 ring-accent/30" : "border-line-strong bg-surface hover:bg-surface-2")}>
                   <span className={cn("flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-[13px] font-semibold", on ? "border-accent bg-accent text-accent-fg" : "border-line-strong text-body-2")} aria-hidden>{o.id}</span>
                   <span className="min-w-0 flex-1">{o.text}</span>
                 </button>
@@ -92,6 +106,9 @@ export default function QuizTake() {
           </div>
         </motion.div>
       </AnimatePresence>
+      </div>
+      <QuizVoice key={id} options={q.options.map((o) => o.id)} pending={pending} onPending={setPending} chosen={chosen} questionNo={cur + 1}
+        onConfirm={(oid) => choose(oid)} onNext={() => (last ? navigate(`/quiz/${id}/review`) : goto(cur + 1))} />
       <div aria-live="polite" className="mt-3 min-h-[20px]">{saveError && <p role="alert" className="text-[13px] text-accent">{saveError}</p>}</div>
 
       <div className="mt-6 flex items-center justify-between gap-3">
