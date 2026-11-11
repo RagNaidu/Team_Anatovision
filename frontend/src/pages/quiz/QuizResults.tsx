@@ -132,11 +132,11 @@ export default function QuizResultsPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, tries]);
 
-  if (error) return <QuizFrame><Notice tone="error" action={<div className="flex gap-2"><Button size="sm" variant="outline" onClick={() => setTries((t) => t + 1)}>Try again</Button><Button size="sm" variant="outline" onClick={() => navigate("/quiz")}>Back to Quiz</Button></div>}>{error}</Notice></QuizFrame>;
-  if (!r) return <QuizFrame wide><div className="space-y-4" aria-label="Loading results"><Skeleton className="h-14 w-40" />{[0, 1].map((i) => <Skeleton key={i} className="h-64 !rounded-xl" />)}</div></QuizFrame>;
+  if (error) return <QuizFrame center><Notice tone="error" action={<div className="flex gap-2"><Button size="sm" variant="outline" onClick={() => setTries((t) => t + 1)}>Try again</Button><Button size="sm" variant="outline" onClick={() => navigate("/quiz")}>Back to Quiz</Button></div>}>{error}</Notice></QuizFrame>;
+  if (!r) return <QuizFrame wide center><div className="space-y-4" aria-label="Loading results"><Skeleton className="h-14 w-40" />{[0, 1].map((i) => <Skeleton key={i} className="h-64 !rounded-xl" />)}</div></QuizFrame>;
 
   return (
-    <QuizFrame wide>
+    <QuizFrame wide center>
       <p className="serif-label">Your result</p>
       <h1 className="font-serif text-[56px] font-semibold leading-none max-sm:text-[44px]">{r.score} of {r.length}</h1>
       <div className="mt-5 flex gap-2">

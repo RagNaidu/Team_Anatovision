@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Bar, BarChart, Cell, LabelList, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { Link } from "react-router-dom";
 import { api, errorMessage } from "@/lib/api";
 import type { AdminStats } from "@/lib/types";
 import { Skeleton } from "@/components/ui/misc";
@@ -36,6 +37,18 @@ export default function Overview() {
               </div>
             ))}
           </dl>
+          <section className="mt-8 rounded-xl border border-line bg-surface p-5" aria-label="Question bank">
+            <div className="flex items-baseline justify-between"><h2 className="font-serif text-[20px] font-semibold">Question bank</h2><Link to="/admin/bank" className="text-[14px] text-accent hover:underline">Open the bank</Link></div>
+            <p className="serif-label mb-3">{s?.bank_counts ? `${s.bank_counts.total} question${s.bank_counts.total === 1 ? "" : "s"}` : "Your questions and the AI questions students' quizzes produce."}</p>
+            <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {([["Draft", "draft", "status=draft"], ["Approved", "approved", "status=approved"], ["Flagged", "flagged", "flagged=true"], ["Exam-secure", "exam_secure", "use=exam_secure"]] as const).map(([label, key, q]) => (
+                <Link key={key} to={`/admin/bank?${q}`} className="rounded-lg border border-line bg-surface-2 p-3 hover:border-line-strong">
+                  <dt className="text-[13px] text-muted">{label}</dt>
+                  <dd className="mt-1 font-serif text-[28px] font-semibold leading-none">{s ? (s.bank_counts ? s.bank_counts[key] : "–") : <Skeleton className="h-7 w-10" />}</dd>
+                </Link>
+              ))}
+            </dl>
+          </section>
           <section className="mt-8 rounded-xl border border-line bg-surface p-5" aria-label="Review breakdown">
             <h2 className="font-serif text-[20px] font-semibold">Fact-check breakdown</h2>
             <p className="serif-label mb-3">AI suggestions waiting for a decision. The AI only flags.</p>

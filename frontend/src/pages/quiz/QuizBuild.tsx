@@ -68,7 +68,7 @@ export default function QuizBuild() {
   const pct = requested ? Math.round((have / requested) * 100) : 0;
 
   return (
-    <QuizFrame>
+    <QuizFrame center>
       <PageTitle>{result ? (result.status === "offer" ? "Some questions are ready" : "Quiz not ready") : "Quiz"}</PageTitle>
       {error ? (
         <Notice tone="error" action={<div className="flex gap-2"><Button size="sm" variant="outline" onClick={() => setTick((t) => t + 1)}>Try again</Button><Button size="sm" variant="outline" onClick={() => navigate("/quiz")}>Back</Button></div>}>{error}</Notice>

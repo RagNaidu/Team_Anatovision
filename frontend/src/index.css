@@ -180,3 +180,8 @@ mark.span-hit { background: rgb(var(--warn-soft)); color: inherit; border-radius
 
 /* The sidebar's right edge is a plain solid colour (no Tailwind colour or opacity class involved). */
 .sidebar-edge { border-right: 1px solid var(--sidebar-edge); }
+
+/* marks on guide slide images fade in when the selected step changes */
+@keyframes mark-fade { from { opacity: 0; } to { opacity: 1; } }
+.mark-fade { animation: mark-fade 0.35s ease-out; }
+@media (prefers-reduced-motion: reduce) { .mark-fade { animation: none; } }

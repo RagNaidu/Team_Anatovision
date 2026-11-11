@@ -6,6 +6,7 @@ import type { StageView } from "@/hooks/useAskProgress";
 import { AnswerMarkdown } from "./AnswerMarkdown";
 import { SourcesRow } from "./SourcesRow";
 import { FlagDialog } from "./FlagDialog";
+import { ChatImages } from "@/components/guide/ChatImages";
 import { ProgressRow } from "@/components/ProgressRow";
 import { Button } from "@/components/ui/button";
 
@@ -50,6 +51,7 @@ export function AssistantMessage({
         <AnswerMarkdown markdown={message.markdown} sources={message.sources} activeN={activeN} onCite={cur} reveal={fresh} />
       )}
       {!calm && !isError && message.sources.length > 0 && <div className="mt-4"><SourcesRow sources={message.sources} activeN={activeN} onOpen={cur} /></div>}
+      {!calm && !isError && message.images && message.images.length > 0 && <ChatImages images={message.images} />}
       {message.footer && (message.footer.basis_line || message.footer.access_note) && (
         <div className="mt-3 space-y-0.5 text-[13px] text-muted">
           {message.footer.basis_line && <p>{message.footer.basis_line}</p>}

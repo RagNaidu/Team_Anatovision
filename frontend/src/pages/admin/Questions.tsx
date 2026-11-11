@@ -61,7 +61,7 @@ export default function Questions() {
   const current = rows?.find((r) => r.id === sel) ?? null;
 
   return (
-    <AdminFrame title="Questions" sub="What students asked. Preview questions are never listed." wide>
+    <AdminFrame title="Student questions" sub="What students asked. Preview questions are never listed." wide>
       <div className="mb-4 flex flex-wrap gap-6">
         <label className="flex cursor-pointer items-center gap-2.5 text-[14px]"><Checkbox checked={web} onCheckedChange={(c) => setWeb(c === true)} aria-label="Web-sourced only" /> Web-sourced only</label>
         <label className="flex cursor-pointer items-center gap-2.5 text-[14px]"><Checkbox checked={flagged} onCheckedChange={(c) => setFlagged(c === true)} aria-label="Flagged only" /> Flagged only</label>
