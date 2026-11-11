@@ -7,10 +7,11 @@ export const LAST_BUILD_KEY = "av_last_build";
 export const rememberBuild = (b: QuizBuildBody) => store.set(LAST_BUILD_KEY, b);
 export const lastBuild = () => store.get<QuizBuildBody | null>(LAST_BUILD_KEY, null);
 
-export function QuizFrame({ children, wide }: { children: ReactNode; wide?: boolean }) {
+/** The shell (AppShell) owns the scrolling: this frame only needs min-h-full so `center` can work. center: on screens taller than 700px the block sits in the vertical middle (margin auto, so a block taller than the area is top-aligned and scrolls: never clipped). */
+export function QuizFrame({ children, wide, center }: { children: ReactNode; wide?: boolean; center?: boolean }) {
   return (
-    <div className="scroll-quiet h-full overflow-y-auto">
-      <div className={cn("mx-auto w-full px-6 py-8 max-lg:px-4", wide ? "max-w-[840px]" : "max-w-[720px]")}>{children}</div>
+    <div className="flex min-h-full flex-col">
+      <div className={cn("mx-auto w-full px-6 py-8 max-lg:px-4", center && "[@media(min-height:700px)]:my-auto", wide ? "max-w-[840px]" : "max-w-[720px]")}>{children}</div>
     </div>
   );
 }

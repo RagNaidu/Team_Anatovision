@@ -20,15 +20,16 @@ export function AppShell() {
 
   return (
     <SlotContext.Provider value={slot}>
-      <div className="flex h-dvh flex-col bg-bone">
+      {/* Fixed-height shell: the window never scrolls (overflow-hidden also clips absolutely positioned sr-only text that used to stretch the document), the sidebar keeps its place, and only <main> scrolls. */}
+      <div className="relative flex h-screen flex-col overflow-hidden bg-bone supports-[height:100dvh]:h-dvh" data-testid="app-shell">
         <PreviewBar />
-        <div className="flex min-h-0 flex-1">
+        <div className="flex min-h-0 flex-1 overflow-hidden">
           {isDesktop ? (
-            <aside className="w-[272px] shrink-0"><Sidebar slotRef={setSlot} /></aside>
+            <aside className="h-full min-h-0 w-[272px] shrink-0 overflow-hidden" data-testid="app-sidebar"><Sidebar slotRef={setSlot} /></aside>
           ) : (
             <Sheet open={drawer} onOpenChange={setDrawer} side="left" title="Menu"><Sidebar slotRef={setSlot} /></Sheet>
           )}
-          <div className="flex min-w-0 flex-1 flex-col">
+          <div className="flex min-h-0 min-w-0 flex-1 flex-col">
             {!isDesktop && (
               <header className="flex h-12 shrink-0 items-center gap-3 border-b border-[rgb(var(--topline))] bg-bone px-3">
                 <button type="button" aria-label="Open menu" onClick={() => setDrawer(true)} className="rounded-md p-2 text-body-2 hover:bg-surface-2">
@@ -37,7 +38,7 @@ export function AppShell() {
                 <Wordmark size={20} />
               </header>
             )}
-            <main className="min-h-0 flex-1" id="main">
+            <main className="scroll-quiet min-h-0 flex-1 overflow-y-auto overscroll-y-contain" id="main" data-testid="app-main">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div key={segment} className="h-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
                   <Outlet />

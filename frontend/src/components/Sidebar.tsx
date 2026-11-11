@@ -30,7 +30,7 @@ export function Sidebar({ slotRef }: { slotRef: (el: HTMLElement | null) => void
   const inGuideStation = /^\/guide\/[^/]+/.test(pathname);
 
   return (
-    <div className="on-dark sidebar-edge flex h-full flex-col bg-side text-side-ink">
+    <div className="on-dark sidebar-edge flex h-full min-h-0 flex-col overflow-hidden bg-side text-side-ink">
       <div className="px-5 pb-4 pt-6">
         <Link to={instructorShell ? "/admin" : "/ask"} className="block rounded-md">
           <Wordmark onDark size={26} />
@@ -39,9 +39,9 @@ export function Sidebar({ slotRef }: { slotRef: (el: HTMLElement | null) => void
       </div>
 
       {instructorShell ? (
-        <nav aria-label="Instructor" className="px-3">
+        <nav aria-label="Instructor" className="scroll-side min-h-0 flex-1 overflow-y-auto px-3">
           {[
-            ["/admin", "Overview", true], ["/admin/review", "Review queue", false], ["/admin/questions", "Questions", false], ["/admin/web-quizzes", "Web quizzes", false],
+            ["/admin", "Overview", true], ["/admin/review", "Review queue", false], ["/admin/notes", "Notes", false], ["/admin/bank", "Question bank", false], ["/admin/questions", "Student questions", false], ["/admin/web-quizzes", "Web quizzes", false],
             ["/admin/access", "Access", false], ["/admin/preview", "Preview as student", false],
           ].map(([to, label, end]) => (
             <NavLink key={String(to)} to={String(to)} end={Boolean(end)}
@@ -74,7 +74,6 @@ export function Sidebar({ slotRef }: { slotRef: (el: HTMLElement | null) => void
           )}
         </>
       )}
-      {instructorShell && <div className="flex-1" />}
 
       {!instructorShell && last && !inGuideStation && (
         <Link to={last.kind === "lecture" ? `/guide/lecture/${last.id}/${last.index}` : `/guide/${last.id}/${last.index}`}

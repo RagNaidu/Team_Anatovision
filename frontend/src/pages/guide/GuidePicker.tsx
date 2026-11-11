@@ -44,7 +44,7 @@ export default function GuidePicker() {
   const regions = REGION_ORDER.map((r) => ({ region: r, items: (guides ?? []).filter((g) => (REGION_ORDER.includes(g.region) ? g.region : "Other") === r).sort((a, b) => a.class_number - b.class_number) })).filter((r) => r.items.length);
 
   return (
-    <div className="scroll-quiet h-full overflow-y-auto">
+    <div className="min-h-full">
       <div className="mx-auto w-full max-w-[960px] px-6 py-8 max-lg:px-4">
         <PageTitle sub="Pick a dissection guide to work through, station by station.">Guide</PageTitle>
         <Segmented<"guides" | "lectures"> label="Source" value={tab} onChange={setTab}

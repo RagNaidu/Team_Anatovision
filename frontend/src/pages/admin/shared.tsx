@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function AdminFrame({ title, sub, children, wide }: { title: string; sub?: ReactNode; children: ReactNode; wide?: boolean }) {
   return (
-    <div className="scroll-quiet h-full overflow-y-auto">
+    <div className="min-h-full">
       <div className={cn("mx-auto w-full px-6 py-8 max-lg:px-4", wide ? "max-w-[1200px]" : "max-w-[960px]")}>
         <div className="mb-6">
           <h1 className="font-serif text-[32px] font-semibold leading-tight">{title}</h1>
