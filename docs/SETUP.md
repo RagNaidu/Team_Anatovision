@@ -108,7 +108,7 @@ npm run test:unit        # voice-input logic, node's built-in test runner
 npm run test:e2e         # Playwright in mock mode; needs Google Chrome installed, starts its own dev server on port 5174
 ```
 
-The backend tests use temporary copies for everything they write; they never change your `data/` files. Tests that read the real notes and index need the data bundle; without it those tests fail or are skipped, and the front-end tests are not affected.
+The backend tests use temporary copies for everything they write; they never change your `data/` files, and they need no BullsAI key and no network (checked on a fresh clone with the data bundle and no `.env`: 1,120 passed, 9 skipped). Tests that read the real notes and index need the data bundle; without it they are skipped or fail. The front-end tests do not need it.
 
 ## Things that are easy to get wrong
 

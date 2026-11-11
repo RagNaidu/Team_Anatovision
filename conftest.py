@@ -23,6 +23,12 @@ def _never_touch_real_runtime_files(tmp_path, monkeypatch):
     monkeypatch.setenv("WEB_FALLBACK", "off")    # no test touches the network unless it turns the web on AND fakes the lookup
     monkeypatch.setenv("WEB_ALLOW_WIKIPEDIA", "off")
     monkeypatch.setenv("TAVILY_API_KEY", "")
+    # a fresh clone has no .env: the tests that build a client with a fake model still need the settings to exist (nothing here ever reaches the gateway)
+    import os
+    if not os.environ.get("BULLSAI_API_KEY"):
+        monkeypatch.setenv("BULLSAI_API_KEY", "test-key-not-real")
+    if not os.environ.get("BULLSAI_BASE_URL"):
+        monkeypatch.setenv("BULLSAI_BASE_URL", "http://127.0.0.1:9/v1")
 
 
 def pytest_sessionstart(session):
